@@ -100,9 +100,9 @@ header {
     width: 8%;
 }
 
-.left::-webkit-scrollbar {
+/*.left::-webkit-scrollbar {
     width: 0;
-}
+}*/
 
 #arrow-left {
     filter: invert(1);
