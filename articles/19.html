@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name="to-top19-2">
+            <h1>§ 19. Изучение и изменение готовых программ</h1>
+        </a>
+        <p>Запишем алгоритм построения изображения домика для исполнителя Чертежник.</p>
+        <p>Выберем следующий алгоритм построения изображения:
+            <div class="catalog">
+                <img width="50%" src="images/img1/19-16.jpg" alt="">
+            </div>
+            <ol>
+                <li>Создать поле Чертежника размером 10 x 9.</li>
+                <li>Сместиться в точку (2, 5).</li>
+                <li>Опустить перо.</li>
+                <li>Сместиться в точку (8, 5).</li>
+                <li>Сместиться в точку (8, 1).</li>
+                <li>Сместиться в точку (2, 1).</li>
+                <li>Сместиться в точку (2, 5).</li>
+                <li>Сместиться в точку (5, 7).</li>
+                <li>Сместиться в точку (8, 5).</li>
+                <li>Поднять перо.</li>
+                <li>Сместиться в точку (3, 4).</li>
+                <li>Опустить перо и получить изображение окна.</li>
+                <li>Поднять перо.</li>
+                <li>Сместиться в точку (6, 1).</li>
+                <li>Опустить перо и получить изображение двери.</li>
+                <li>Поднять перо.</li>
+            </ol>
+        </p>
+        <p>Готовое изображение домика и программа для его построения представлены в
+            <a href="#ei1-2-1">примере&nbsp;19.1.</a>
+        </p>
+        <p>Имеющиеся программы с некоторыми изменениями можно использовать для решения других задач.</p>
+        <p>Рассмотрим
+            <a href="#ei1-2-2">пример&nbsp;19.2.</a> В нем требуется изменить изображение домика, представленного в примере&nbsp;19.1.</p>
+        <p>При сравнении нового изображения и изображения из примера 19.1 обнаружим два отличия: первое — в размерах
+            поля Чертежника,
+            второе — в форме окон. В целом рисунки похожи. Значит, для создания нового домика можно использовать
+            программу
+            из примера&nbsp;19.1. Внесем изменения в текст программы в окне редактора среды программирования PascalABC.NET,
+            используя
+            правила редактирования текста.
+        </p>
+        <p>Приведем такой пример. Нужно записать программу построения изображения треугольника: </p>
+        <div class="catalog">
+            <img src="images/img2/19-4.jpg" alt="">
+        </div>
+        <p>Мы видим, что изображение похоже на крышу домика из примеров&nbsp;19.1 и 19.2, но с другими размерами поля
+            Чертежника
+            (4 х 3) и координатами точек. Покажем разницу в координатах:
+        </p>
+        <table class="info-type pascal">
+            <tr>
+                <th>Старые координаты
+                </th>
+                <th>Новые координаты
+                </th>
+            </tr>
+            <tr>
+                <td>(2, 5)</td>
+                <td>(1, 1)</td>
+            </tr>
+            <tr>
+                <td>(5, 7)</td>
+                <td>(2, 2)</td>
+            </tr>
+            <tr>
+                <td>(8, 5)</td>
+                <td> (3, 1)</td>
+            </tr>
+        </table>
+        <p>Вставим новые координаты в уже известную нам программу для изображения треугольника
+            <a href="#ei1-2-3">(пример&nbsp;19.3)</a>. Таким образом, известные программы можно использовать для построения
+            новых изображений. </p>
+        <p>Чтобы сделать программы более понятными, их снабжают пояснительными текстами — комментариями. Комментарий
+            начинается
+            с символов //
+            <a href="#ei1-2-4">(пример&nbsp;19.4).</a>
+        </p>
+        <p>Познакомимся еще с одной командой исполнителя Чертежник.</p>
+        <p>OnVector(a,b) — переместить перо Чертежника на вектор (<em>a, b</em>), т. е. на a единиц вдоль оси <em>x</em> и на <em>b</em> — вдоль
+            оси <em>y</em>.</p>
+        <p>При перемещении вправо a > 0, вверх b > 0. При перемещении влево a
+            < 0, вниз b < 0.</p> <p>На рисунке в
+                <a href="#ei1-2-5">примере&nbsp;19.5</a> показано, как найти значения измененных координат для построения
+                изображения прямоугольного
+                треугольника.</p>
+        <p>Соответствующие команды для построения этого изображения с помощью исполнителя Чертежник:
+            <pre>
+                ToPoint(1,2); 
+                PenDown;
+                OnVector(2,0);
+                OnVector(0,3);
+                OnVector(-2,-3);
+            </pre>
+        </p>
+        <p>
+            Запишем программу решения примера&nbsp;19.3 с помощью команды OnVector
+            <a href="#ei1-2-6">(пример&nbsp;19.6). </a>Эту программу можно использовать для построения похожего изображения
+            <a href="#ei1-2-7">(пример&nbsp;19.7).</a>
+        </p>
+        <p>Запишем программу построения изображения цифры 3 в почтовом индексе с помощью исполнителя Чертежник (по
+            образцу,
+            представленному в
+            <a href="#ei1-2-8"> примере 19.8</a>).</p>
+        <p>Алгоритм построения изображения:
+            <ol>
+                <li>Задать поле для исполнителя Чертежник размером 3 x 4.</li>
+                <li>Сместиться в точку (1, 3).</li>
+                <li>Опустить перо.</li>
+                <li>Изобразить цифру, двигаясь по отрезкам 1—2, 2—3, 3—4, 4—5.</li>
+                <li>Поднять перо.</li>
+            </ol>
+        </p>
+        <p>В некоторых изображениях повторяются одинаковые фрагменты. Для создания программ построения таких
+            изображений
+            можно скопировать повторяющийся фрагмент программы и использовать его нужное число раз.</p>
+        <p>Так, в
+            <a href="#ei1-2-9">примере&nbsp;19.9</a> требуется записать программу для построения изображения, состоящего из
+            трех цифр «3».
+        </p>
+        <p>Мы видим, что программу построения изображения можно составить на основе программы из примера 19.8.
+            Изображение
+            первой цифры начинается от верхней точки слева, ее координаты (1, 3). Координаты такой же точки для второй
+            цифры (3, 3), для третьей цифры (5, 3).</p>
+        <p>Таким образом, для создания изображения из трех цифр «3» нужно скопировать в тексте программы примера 19.8
+            следующий фрагмент:
+            <pre>
+            ToPoint(1,3);
+            PenDown;
+            OnVector(1,0);
+            OnVector(-1,-1);
+            OnVector(1,0);
+            OnVector(-1,-1);
+            PenUp;
+        </pre>
+        </p>
+        <p>
+            Затем следует вставить скопированный фрагмент нужное количество раз и внести изменения.</p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder19()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Как получить справочную информацию о командах ToPoint, OnVector?<br>
+                            <label class="q632"><input class='true133' type="radio" name='info' value=''> Использовать
+                                пункт меню &nbsp; <b>Помощь</b>.</label>
+                            <label class="q633"><input type="radio" name='info' value=''> Использовать пункт меню
+                                &nbsp; <b>Найти</b>. </label>
+                            <label class="q634"><input type="radio" name='info' value=''> Использовать пункт меню
+                                &nbsp; <b>Файл</b>.</label>
+                            <label class="q635"><input type="radio" name='info' value=''> Использовать пункт меню
+                                &nbsp; <b>Вид</b>.</label>
+                        </div>
+
+                        <button class="check nineteen1-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            В чем отличие между командами Чертежника ToPoint и OnVector? <br>
+                            <label class="q636"><input class='false134' type="checkbox" name='info' value=''> Команда
+                                ToPoint(x, y) перемещает перо Чертежника на вектор (x, y).</label>
+                            <label class="q637"><input class='true134' type="checkbox" name='info' value=''> Команда
+                                ToPoint(x, y) перемещает перо Чертежника в точку с координатами (x, y). </label>
+                            <label class="q638"><input class='false134' type="checkbox" name='info' value=''> Команда
+                                OnVector(x, y) перемещает перо Чертежника в точку с координатами (x, y).</label>
+                            <label class="q639"><input class='true134' type="checkbox" name='info' value=''> Команда
+                                OnVector(x, y) перемещает перо Чертежника на вектор (x, y).</label>
+                        </div>
+
+                        <button class="check nineteen2-1">Проверить</button>
+                    </li>
+                    <li>
+                        Установите соответствие:<br>
+                        <table width="70%">
+                            <tr>
+                                <th>Команда</th>
+                                <th>Назначение</th>
+                            </tr>
+                            <tr>
+                                <td>1. Field(a, b)</td>
+                                <td>1. Сместить перо Чертежника в точку (x, y)</td>
+                            </tr>
+                            <tr>
+                                <td>2. PenUp</td>
+                                <td>2. Поднять перо Чертежника</td>
+                            </tr>
+                            <tr></tr>
+                            <td>3. ToPoint(x, y)</td>
+                            <td>3. Создать поле Чертежника размером a x b</td>
+                            <tr>
+                                <td>4. PenDown</td>
+                                <td>4. Сместить перо Чертежника на вектор (x, y)</td>
+                            </tr>
+                            <tr>
+                                <td>5. OnVector(x, y)</td>
+                                <td>5. Опустить перо Чертежника</td>
+                            </tr>
+                        </table> <br>
+                        1 - <input type="text" size='2' class="field1"> <br>
+                        2 - <input type="text" size='2' class="field2"> <br>
+                        3 - <input type="text" size='2' class="field3"> <br>
+                        4 - <input type="text" size='2' class="field4"> <br>
+                        5 - <input type="text" size='2' class="field5"> <br>
+
+                        <button class="check nineteen3-1">Проверить</button>
+                    </li>
+
+
+
+
+
+                </ol>
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Измените программу из <a href="#ei1-2-1">примера 19.1</a> для
+                        построения изображений:</li>
+                    <div class="flex-row1">
+                        а)
+                        <img src="images/img1/19-1.jpg" alt="">
+                        б)
+                        <img src="images/img1/19-2.jpg" alt="">
+                    </div>
+                    <div class="flex-row1">
+                        в)
+                        <img src="images/img1/19-3.jpg" alt=""> г)
+                        <img src="images/img1/19-4.jpg" alt="">
+                    </div>
+                    <div class="flex-row1">
+                        д)
+                        <img src="images/img1/19-5.jpg" alt=""> е)
+                        <img src="images/img1/19-6.jpg" alt="">
+                    </div>
+                    <li><b class="circled">2</b>Измените программу из <a href="#ei1-2-6">примера 19.6</a> для
+                        построения изображений:</li>
+                    <div class="flex-row3">
+                        a) <img src="images/img1/19-7.jpg" alt="">
+                        б) <img src="images/img1/19-8.jpg" alt="">
+                        в) <img src="images/img1/19-9.jpg" alt="">
+                    </div>
+                    <li><b class="circled">3</b>Откройте файл с текстом программы и определите результат ее выполнения.
+                        <pre>
+                        <b>uses</b> Drawman;
+                        <b>begin</b>
+                                Field(10,5);
+                                //буква Б
+                                OnVector(2,4); PenDown;
+                                OnVector(-1,0); OnVector(0,-3);
+                                OnVector(2,0); OnVector(0,2);
+                                OnVector(-2,0); PenUp;
+                                //буква Г
+                                OnVector(5,1); PenDown;
+                                OnVector(-2,0); OnVector(0,-3);
+                                PenUp;
+                                //буква У
+                                OnVector(3,3); PenDown;
+                                OnVector(2,-2); PenUp;
+                                OnVector(0,2); PenDown;
+                                OnVector(0,-3); OnVector(-1,0);
+                                PenUp;
+                        <b>end</b>.
+            </pre>
+
+                    </li>
+                    <p>Измените программу для построения изображения: </p>
+                    <div class="catalog">
+                        <img width='20%' src="images/img1/19-10.jpg" alt="">
+                    </div>
+                    <li><b class="circled">4</b>Откройте файл с текстом программы и определите результат ее выполнения.
+                        <pre>
+                        <b>uses</b> Drawman;
+                        <b>begin</b>
+                                Field(7,4);   ToPoint(1,3);   PenDown;
+                                OnVector(1,0);   OnVector(0,-2);
+                                OnVector(-1,0);   OnVector(0,2);
+                                PenUp;
+                        <b>end</b>.  
+                        </pre>
+                    </li>
+                    <p>Измените программу для построения изображения: </p>
+                    <div class="catalog">
+                        <img width='20%' src="images/img1/19-11.jpg" alt="">
+                    </div>
+                    <li><b class="circled">5</b>Составьте программы для выполнения проверяемых заданий. </li>
+                    <div class="flex-row">
+                        <div>Задание а2</div>
+                        <div>Задание а3</div>
+                    </div>
+                    <div class="flex-row">
+
+                        <img width="35%" height="10%" src="images/img1/19-12.jpg" alt="">
+
+                        <img width="35%" height="10%" src="images/img1/19-13.jpg" alt="">
+                    </div>
+                    <br>
+                    <div class="flex-row">
+                        <div>Задание а4</div>
+                        <div>Задание а5</div>
+                    </div>
+                    <div class="flex-row">
+
+                        <img width="35%" height="10%" src="images/img1/19-14.jpg" alt="">
+
+                        <img width="35%" height="10%" src="images/img1/19-15.jpg" alt="">
+                    </div>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <hr>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top18-2">&#8592 Предыдущий параграф </a></div>
+        <div class="to-right next"><a href="#to-top20-2">Следующий параграф &#8594</a></div><br><br><br>
+    </div>
+    <script>
+
+
+        $('.nineteen1-1').click(function(){
+                if($($('.true133')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.nineteen2-1').click(function(){
+                if($($('.true134')[0]).prop('checked')
+                    && $($('.true134')[1]).prop('checked')
+                    && !$($('.false134')[0]).prop('checked')
+                    && !$($('.false134')[1]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.nineteen3-1').click(function(){
+                    if($('.field1').val()==='3'
+                    && $('.field2').val()==='2'
+                    && $('.field3').val()==='1'
+                    && $('.field4').val()==='5'
+                    && $('.field5').val()==='4'){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+
+    </script>
+    <div lang='bel'>
+        <a name="to-top19-1">
+            <h1>§ 19. Вывучэнне і змяненне гатовых праграм</h1>
+        </a>
+        <p>Запішам алгарытм пабудовы відарыса доміка для выканаўцы Чарцёжнік.</p>
+        <p>Выберам наступны алгарытм пабудовы відарыса:
+            <div class="catalog">
+                <img width = "50%" src="images/img1/19-16.jpg" alt="">
+            </div>
+            <ol>
+                <li>Стварыць поле Чарцёжніка памерам 10 x 9.</li>
+                <li>Зрушыцца ў пункт (2, 5).</li>
+                <li>Апусціць пяро.</li>
+                <li>Зрушыцца ў пункт (8, 5).</li>
+                <li>Зрушыцца ў пункт (8, 1).</li>
+                <li>Зрушыцца ў пункт (2, 1).</li>
+                <li>Зрушыцца ў пункт (2, 5).</li>
+                <li>Зрушыцца ў пункт (5, 7).</li>
+                <li>Зрушыцца ў пункт (8, 5).</li>
+                <li>Узняць пяро.</li>
+                <li>Зрушыцца ў пункт (3, 4).</li>
+                <li>Апусціць пяро і атрымаць відарыс акна.</li>
+                <li>Узняць пяро.</li>
+                <li>Зрушыцца ў пункт (6, 1).</li>
+                <li>Апусціць пяро і атрымаць відарыс дзвярэй.</li>
+                <li>Узняць пяро.</li>
+            </ol>
+        </p>
+
+        <p>Гатовы відарыс доміка і праграма для яго пабудовы паказаны ў
+            <a href="#ei1-1-1">прыкладзе&nbsp;19.1.</a>
+        </p>
+        <p>Наяўныя праграмы з некаторымі змяненнямі можна выкарыстоўваць для рашэння іншых задач.</p>
+        <p> Разгледзім
+            <a href="#ei1-1-2">прыклад&nbsp;19.2.</a> У ім трэба змяніць відарыс доміка, паказанага ў прыкладзе 19.1.</p>
+        <p> Пры параўнанні новага відарыса і відарыса з прыкладу&nbsp;19.1 выявім два адрозненні: першае — у памерах поля
+            Чарцёжніка,
+            другое — у форме акон. У цэлым рысункі падобныя. Значыць, для стварэння новага доміка можна выкарыстоўваць
+            праграму
+            з прыкладу&nbsp;19.1. Унясём змяненні ў тэкст праграмы ў акне рэдактара асяроддзя праграміравання PascalABC.NET,
+            выкарыстоўваючы
+            правілы рэдагавання тэксту.
+        </p>
+        <p> Прывядзём такі прыклад. Трэба запісаць праграму пабудовы відарыса трохвугольніка: </p>
+        <div class="catalog">
+            <img src="images/img2/19-4.jpg" alt="">
+        </div>
+        <p>Мы бачым, што відарыс падобны да даху доміка з прыкладаў&nbsp;19.1 і 19.2, але з іншымі памерамі поля Чарцёжніка
+            (4 x
+            3) і каардынатамі пунктаў. Пакажам розніцу ў каардынатах:
+        </p>
+        <table class="info-type pascal">
+            <tr>
+                <th>Старыя каардынаты </th>
+                <th>Новыя каардынаты
+                </th>
+            </tr>
+            <tr>
+                <td>(2, 5)</td>
+                <td>(1, 1)</td>
+            </tr>
+            <tr>
+                <td>(5, 7)</td>
+                <td>(2, 2)</td>
+            </tr>
+            <tr>
+                <td>(8, 5)</td>
+                <td>(3, 1)</td>
+            </tr>
+        </table>
+        <p>Уставім новыя каардынаты ва ўжо вядомую нам праграму для адлюстравання трохвугольніка
+            <a href="#ei1-1-3"> (прыклад&nbsp;19.3)</a>. Такім чынам, вядомыя праграмы можна выкарыстоўваць для пабудовы
+            новых відарысаў. </p>
+        <p> Каб зрабіць праграмы больш зразумелымі, іх забяспечваюць тлумачальнымі тэкстамі — каментарыямі. Каментарый
+            пачынаецца
+            са знакаў //
+            <a href="#ei1-1-4">(прыклад&nbsp;19.4).</a>
+        </p>
+        <p> Пазнаёмімся яшчэ з адной камандай выканаўцы Чарцёжнік.</p>
+        <p> OnVector(a,b) — перамясціць пяро Чарцёжніка на вектар (<em>a, b</em>), г. зн. на a адзінак уздоўж восі <em>x</em> і на <em>b</em> —
+            уздоўж восі
+            <em>y</em>.</p>
+        <p> Пры перамяшчэнні ўправа a > 0, уверх b > 0. Пры перамяшчэнні ўлева a
+            < 0, уніз b < 0.</p> <p> На рысунку ў
+                <a href="#ei1-1-5"> прыкладзе&nbsp;19.5</a> паказана, як знайсці значэнні змененых каардынат для пабудовы
+                відарыса прамавугольнага
+                трохвугольніка.</p>
+        <p> Адпаведныя каманды для пабудовы гэтага відарыса з дапамогай выканаўцы Чарцёжнік:
+            <pre>
+                    ToPoint(1,2); 
+                    PenDown;
+                    OnVector(2,0);
+                    OnVector(0,3);
+                    OnVector(-2,-3);
+                </pre>
+        </p>
+        <p>
+
+
+            Запішам праграму рашэння прыкладу 19.3 з дапамогай каманды OnVector
+            <a href="#ei1-1-6">(прыклад&nbsp;19.6).</a>  </a>    Гэту праграму можна выкарыстоўваць для пабудовы падобнага
+            відарыса
+            <a href="#ei1-1-7">
+                (прыклад&nbsp;19.7).</a>
+        </p>
+        <p>Запішам праграму пабудовы відарыса лічбы 3 у паштовым індэксе з дапамогай выканаўцы Чарцёжнік (па ўзоры,
+            паказаным у
+            <a href="#ei1-1-8">прыкладзе&nbsp;19.8</a>).</p>
+        <p> Алгарытм пабудовы відарыса:
+            <ol>
+                <li>Задаць поле для выканаўцы Чарцёжнік памерам 3 x 4.</li>
+                <li>Зрушыцца ў пункт (1, 3).</li>
+                <li>Апусціць пяро.</li>
+                <li>Адлюстраваць лічбу, рухаючыся па адрэзках 1—2, 2—3, 3—4, 4—5.</li>
+                <li>Узняць пяро.</li>
+            </ol>
+        </p>
+
+
+        <p>У некаторых відарысах паўтараюцца аднолькавыя фрагменты. Для стварэння праграм пабудовы такіх відарысаў
+            можна
+            скапіраваць фрагмент праграмы, які паўтараецца, і выкарыстоўваць яго патрэбную колькасць разоў.</p>
+        <p>Так, у
+            <a href="#ei1-1-9">прыкладзе&nbsp;19.9</a> трэба запісаць праграму для пабудовы відарыса, які складаецца з трох
+            лічбаў «3». </p>
+        <p> Мы бачым, што праграму пабудовы відарыса можна скласці на аснове праграмы з прыкладу 19.8. Відарыс першай
+            лічбы пачынаецца ад верхняга пункта злева, яго каардынаты (1, 3). Каардынаты такога ж пункта для другой
+            лічбы (3, 3), для трэцяй лічбы (5, 3).</p>
+        <p> Такім чынам, для стварэння відарыса з трох лічбаў «3» трэба скапіраваць у тэксце праграмы прыкладу 19.8
+            наступны
+            фрагмент:
+            <pre>
+                ToPoint(1,3);
+                PenDown;
+                OnVector(1,0);
+                OnVector(-1,-1);
+                OnVector(1,0);
+                OnVector(-1,-1);
+                PenUp;
+            </pre>
+        </p>
+        <p>
+
+            Затым неабходна ўставіць скапіраваны фрагмент патрэбную колькасць разоў і ўнесці змяненні.</p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder19()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Як атрымаць даведачную інфармацыю пра каманды ToPoint, OnVector?<br>
+                            <label class="q632"><input class='true133-2' type="radio" name='info' value=''> Выкарыстаць
+                                пункт меню &nbsp; <b>Помощь</b>.</label>
+                            <label class="q633"> <input type="radio" name='info' value=''> Выкарыстаць пункт меню
+                                &nbsp; <b>Найти</b>. </label>
+                            <label class="q634"><input type="radio" name='info' value=''> Выкарыстаць пункт меню &nbsp;
+                                <b>Файл</b>.</label>
+                            <label class="q635"><input type="radio" name='info' value=''> Выкарыстаць пункт меню &nbsp;
+                                <b>Вид</b>.</label>
+                        </div>
+
+                        <button class="check nineteen1-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            У чым адрозненне паміж камандамі Чарцёжніка ToPoint і OnVector? <br>
+                            <label class="q636"><input class='false134-2' type="checkbox" name='info' value=''> Каманда
+                                ToPoint(x, y) перамяшчае пяро Чарцёжніка на вектар (x, y).</label>
+                            <label class="q637"><input class='true134-2' type="checkbox" name='info' value=''> Каманда
+                                ToPoint(x, y) перамяшчае пяро Чарцёжніка ў пункт з каардынатамі (x, y). </label>
+                            <label class="q638"><input class='false134-2' type="checkbox" name='info' value=''> Каманда
+                                OnVector(x, y) перамяшчае пяро Чарцёжніка ў пункт з каардынатамі (x, y).</label>
+                            <label class="q639"><input class='true134-2' type="checkbox" name='info' value=''> Каманда
+                                OnVector(x, y) перамяшчае пяро Чарцёжніка на вектар (x, y).</label>
+                        </div>
+
+                        <button class="check nineteen2-2">Праверыць</button>
+                    </li>
+                    <li>
+                        Устанавіце адпаведнасць:<br>
+                        <table width="70%">
+                            <tr>
+                                <th>Каманда</th>
+                                <th>Прызначэнне</th>
+                            </tr>
+                            <tr>
+                                <td>1. Field(a, b)</td>
+                                <td>1. Зрушыць пяро Чарцёжніка ў пункт (x, y)</td>
+                            </tr>
+                            <tr>
+                                <td>2. PenUp</td>
+                                <td>2. Узняць пяро Чарцёжніка</td>
+                            </tr>
+                            <tr></tr>
+                            <td>3. ToPoint(x, y)</td>
+                            <td>3. Стварыць поле Чарцёжніка памерам a x b</td>
+                            <tr>
+                                <td>4. PenDown</td>
+                                <td>4. Зрушыць пяро Чарцёжніка на вектар (x, y)</td>
+                            </tr>
+                            <tr>
+                                <td>5. OnVector(x, y)</td>
+                                <td>5. Апусціць пяро Чарцёжніка</td>
+                            </tr>
+                        </table> <br>
+                        1 - <input type="text" size='2' class="field1-2"> <br>
+                        2 - <input type="text" size='2' class="field2-2"> <br>
+                        3 - <input type="text" size='2' class="field3-2"> <br>
+                        4 - <input type="text" size='2' class="field4-2"> <br>
+                        5 - <input type="text" size='2' class="field5-2"> <br>
+
+                        <button class="check nineteen3-2">Праверыць</button>
+                    </li>
+
+                </ol>
+            </div>
+
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Змяніце праграму з <a href="#ei1-1-1">прыкладу 19.1</a> для пабудовы
+                        відарысаў:</li>
+                    <div class="flex-row1">
+                        а)
+                        <img src="images/img1/19-1.jpg" alt="">
+                        б)
+                        <img src="images/img1/19-2.jpg" alt="">
+                    </div>
+                    <div class="flex-row1">
+                        в)
+                        <img src="images/img1/19-3.jpg" alt=""> г)
+                        <img src="images/img1/19-4.jpg" alt="">
+                    </div>
+                    <div class="flex-row1">
+                        д)
+                        <img src="images/img1/19-5.jpg" alt=""> е)
+                        <img src="images/img1/19-6.jpg" alt="">
+                    </div>
+                    <li><b class="circled">2</b>Змяніце праграму з <a href="#ei1-2-6">прыкладу 19.6</a> ддля пабудовы відарысаў:</li>
+                    <div class="flex-row3">
+                        a) <img src="images/img1/19-7.jpg" alt="">
+                        б) <img src="images/img1/19-8.jpg" alt="">
+                        в) <img src="images/img1/19-9.jpg" alt="">
+                    </div>
+                    <li><b class="circled">3</b>Адкрыйце файл з тэкстам праграмы і вызначыце вынік яе выканання.
+                        <pre>
+                            <b>uses</b> Drawman;
+                            <b>begin</b>
+                                    Field(10,5);
+                                    //буква Б
+                                    OnVector(2,4); PenDown;
+                                    OnVector(-1,0); OnVector(0,-3);
+                                    OnVector(2,0); OnVector(0,2);
+                                    OnVector(-2,0); PenUp;
+                                    //буква Г
+                                    OnVector(5,1); PenDown;
+                                    OnVector(-2,0); OnVector(0,-3);
+                                    PenUp;
+                                    //буква У
+                                    OnVector(3,3); PenDown;
+                                    OnVector(2,-2); PenUp;
+                                    OnVector(0,2); PenDown;
+                                    OnVector(0,-3); OnVector(-1,0);
+                                    PenUp;
+                            <b>end</b>.
+                </pre>
+
+                    </li>
+                    <p>Змяніце праграму для пабудовы відарыса: </p>
+                    <div class="catalog">
+                        <img width='20%' src="images/img1/19-10.jpg" alt="">
+                    </div>
+                    <li><b class="circled">4</b>Адкрыйце файл з тэкстам праграмы і вызначыце вынік яе выканання.
+                        <pre>
+                            <b>uses</b> Drawman;
+                            <b>begin</b>
+                                    Field(7,4);   ToPoint(1,3);   PenDown;
+                                    OnVector(1,0);   OnVector(0,-2);
+                                    OnVector(-1,0);   OnVector(0,2);
+                                    PenUp;
+                            <b>end</b>.  
+                            </pre>
+                    </li>
+                    <p>Змяніце праграму для пабудовы відарыса: </p>
+                    <div class="catalog">
+                        <img width='20%' src="images/img1/19-11.jpg" alt="">
+                    </div>
+                    <li><b class="circled">5</b>Складзіце праграмы для выканання заданняў, якія правяраюцца. </li>
+                    <div class="flex-row">
+                        <div> Заданне а2</div>
+                        <div>Заданне а3</div>
+                    </div>
+                    <div class="flex-row">
+
+                        <img width="35%" height="10%" src="images/img1/19-12.jpg" alt="">
+
+                        <img width="35%" height="10%" src="images/img1/19-13.jpg" alt="">
+                    </div>
+                    <br>
+                    <div class="flex-row">
+                        <div> Заданне а4</div>
+                        <div>Заданне а5</div>
+                    </div>
+                    <div class="flex-row">
+
+                        <img width="35%" height="10%" src="images/img1/19-14.jpg" alt="">
+
+                        <img width="35%" height="10%" src="images/img1/19-15.jpg" alt="">
+                    </div>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <hr>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top18-1">&#8592 Папярэдні параграф </a></div>
+        <div class="to-right next"><a href="#to-top20-1">Наступны параграф &#8594</a></div><br><br><br>
+
+    </div>
+    <script>
+        $('.nineteen1-2').click(function () {
+            if ($($('.true133-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.nineteen2-2').click(function () {
+            if ($($('.true134-2')[0]).prop('checked') &&
+                $($('.true134-2')[1]).prop('checked') &&
+                !$($('.false134-2')[0]).prop('checked') &&
+                !$($('.false134-2')[1]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.nineteen3-2').click(function () {
+            if ($('.field1-2').val() === '3' &&
+                $('.field2-2').val() === '2' &&
+                $('.field3-2').val() === '1' &&
+                $('.field4-2').val() === '5' &&
+                $('.field5-2').val() === '4') {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+
+        function changeOrder19() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(4, 1, 4)
+
+            $('.q632').css({
+                'order': arr1[0]
+            })
+            $('.q633').css({
+                'order': arr1[1]
+            })
+            $('.q634').css({
+                'order': arr1[2]
+            })
+            $('.q635').css({
+                'order': arr1[3]
+            })
+            $('.q636').css({
+                'order': arr2[0]
+            })
+            $('.q637').css({
+                'order': arr2[1]
+            })
+            $('.q638').css({
+                'order': arr2[2]
+            })
+            $('.q639').css({
+                'order': arr2[3]
+            })
+
+
+
+        }
+    </script>
+</body>
+
+</html>

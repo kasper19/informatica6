@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <h1><a name="to-top18-2">§ 18. Среда программирования и компьютерный исполнитель
+
+            </a></h1>
+        <h4><a name="eig1-2"> 18.1. Среда программирования PascalABC.NET</a>
+        </h4>
+        <p> Для разработки программ используются среды программирования (интегрированные среды разработки, ИСР, англ.
+            IDE, Integrated Development Environment). </p>
+        <p>
+            <b> <span class="noparset">Среда программирования</span> </b> — комплекс программ, используемых при разработке других программ. </p>
+        <p> При запуске среды программирования открывается одно окно, в котором можно выполнить весь процесс
+            разработки:
+            ввести текст программы, отредактировать его, выполнить программу и т. д. В среду PascalABC.NET входят:
+            редактор текстов; справочная система; исполнитель Чертежник и др. Для создания своей программы нужно
+            запустить PascalABC.NET
+            <a href="#eig1-2-1"> (пример 18.1).</a>
+            Элементы окна среды
+            <a href="#eig1-2-2">(пример 18.2)</a> рассмотрены в Приложении.</p>
+        <p> В окне PascalABC.NET можно набирать и редактировать текст программы. Сохранять и открывать файлы с текстами
+            программ можно так же, как в текстовом и графическом редакторах. При необходимости можно обратиться
+            к справочной системе через меню <b>Помощь</b>
+            <a href="#eig1-2-3">(пример 18.3). </a>
+        </p>
+        <p>
+            Окно <b>Справка</b> содержит две вкладки: <b>Содержание</b> и <b>Указатель</b>. Для чтения нужной
+            информации на вкладке Содержание следует выполнить
+            щелчок мышью на названии раздела. Информация отобразится в правом окне
+            <a href="#eig1-2-4">(пример 18.4).</a>
+        </p>
+        <p>Вкладка <b>Указатель</b> позволяет осуществить поиск справочной информации по ключевому слову. Слово нужно
+            ввести
+            в специальную строку или выбрать из предложенного списка
+            <a href="#eig1-2-5">(пример 18.5). </a>
+        </p>
+        <h4><a name="eig2-2"> 18.2. Компьютерный исполнитель Чертежник</a></h4>
+        <p> Исполнитель Чертежник предназначен для построения рисунков и чертежей на координатной плоскости. Он имеет
+            перо, которое может поднимать, опускать, перемещать. При перемещении опущенного пера за ним остается
+            след. </p>
+        <p>Средой обитания исполнителя Чертежник является часть координатной плоскости
+            <a href="#eig1-2-6">(пример 18.6). </a> </p>
+
+        <p> На уроках математики вы узнали, что координатная плоскость задается системой координат на плоскости. Это
+            позволяет задать координаты любой точки на плоскости.</p>
+        <p> Исходное положение пера исполнителя Чертежник: поднято и находится над точкой (0, 0) — началом координат.
+            После выполнения программы перо должно быть также поднято.</p>
+        <p>Команды исполнителя Чертежник, с помощью которых можно записать программы для него, представлены в таблице.</p>
+        <table class=" pascal">
+            <tr>
+                <th width="35%">Команда</th>
+                <th>Действие</th>
+            </tr>
+            <tr>
+                <td> Field(n,m)</td>
+                <td> Создать поле размером n x m</td>
+            </tr>
+            <tr>
+                <td>ToPoint(x,y)</td>
+                <td> Переместить перо Чертежника в точку (x, y) </td>
+            </tr>
+            <tr>
+                <td> PenUp</td>
+                <td> Поднять перо Чертежника
+                </td>
+            </tr>
+            <tr>
+                <td> PenDown</td>
+                <td>Опустить перо Чертежника
+                </td>
+            </tr>
+        </table>
+        <p>Здесь <em>n, m</em> — натуральные числа, <em>x, y</em> — целые неотрицательные числа. <a href="#eig1-2-7">(Рассмотрите пример 18.7.)</a></p>
+        <p>При работе со средой программирования можно использовать встроенный задачник с проверяемыми заданиями
+            <a href="#eig1-2-8">(пример 18.8)</a> . Для вызова проверяемого задания для исполнителя Чертежник
+            используется следующий
+            шаблон программы:</p>
+        <div class="catalog">
+            <img width="50%" src="images/img1/18-1.png" alt="">
+        </div>
+        <br/>
+        <p>Программа состоит из отдельных команд. В одной строке можно записывать несколько команд, которые отделяются
+            друг от друга символом «точка с запятой» <strong>(;)</strong>. Программа заканчивается символом «точка»
+            <strong>(.)</strong>. Команды
+            алгоритма размещаются в теле программы между словами <strong>begin … end.</strong> </p>
+        <p>Для решения задачи с помощью исполнителя Чертежник нужно:
+            <ol>
+                <li> Составить алгоритм решения задачи
+                    <a href="#eig1-2-9">(пример 18.9).</a>
+                </li>
+                <li>Записать алгоритм в виде программы в окне текстового редактора среды программирования PascalABC.NET
+                    <a href="#eig1-2-10">(пример 18.10)</a> .</li>
+                <li class="small">Выполнить программу: <b>Программа &#8594; Выполнить</b> (можно нажать клавишу F9 или
+                    кнопку <img src="images/img1/play.png" alt=""> на панели
+                    инструментов). </li>
+            </ol>
+        </p>
+        <p>С помощью меню в нижней части окна исполнителя Чертежник
+            <a href="#eig1-2-11">(пример 18.11)</a>
+            или соответствующих клавиш на клавиатуре можно выполнить программу целиком, по шагам, выйти из окна
+            исполнителя, получить
+            справку.</p>
+
+        <p>
+            При выполнении программы в среде PascalABC.NET могут возникать ошибки. Ошибка может оказаться на месте
+            нахождения курсора
+            или в предыдущей строке. При этом в окне вывода результатов выводится соответствующее сообщение
+            <a href="#eig1-2-12"> (пример 18.12).</a>
+        </p>
+        <br>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder18()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Что такое среда программирования? <br>
+                            <label class="q569"><input class='true120' type="radio" name='info' value=''> Комплекс
+                                программ, используемых при разработке других программ.</label>
+                            <label class="q570"><input type="radio" name='info' value=''> Поле исполнителя Чертежник.
+                            </label>
+                            <label class="q571"><input type="radio" name='info' value=''> Совокупность команд, понятных
+                                исполнителю Чертежник.</label>
+                            <label class="q572"><input type="radio" name='info' value=''> Обстановка, в которой
+                                выполняется алгоритм.</label>
+                        </div>
+                        <button class="check eighteen1-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            В какой среде программирования размещается компьютерный исполнитель Чертежник? <br>
+                            <label class="q573"><input type="radio" name='info' value=''> PascalABC.com.</label>
+                            <label class="q574"><input class='true121' type="radio" name='info' value=''>
+                                PascalABC.NET. </label>
+                            <label class="q575"><input type="radio" name='info' value=''> Pascal.NET.</label>
+                            <label class="q576"><input type="radio" name='info' value=''> PascalNET.ABC.</label>
+                        </div>
+                        <button class="check eighteen2-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Как получить справочную информацию об исполнителе Чертежник? <br>
+                            <label class="q577"><input class='true122' type="radio" name='info' value=''> Помощь →
+                                Справка → Указатель → ввести слово Чертежник.</label>
+                            <label class="q578"><input type="radio" name='info' value=''> Помощь → Справка → Модули →
+                                Просмотреть задания.</label>
+                            <label class="q579"><input type="radio" name='info' value=''> Помощь → Справка → Средства
+                                обучения в PascalABC.NET → Исполнитель → Чертежник.</label>
+                            <label class="q580"><input type="radio" name='info' value=''> Правка → Найти.</label>
+                            <label class="q581"><input type="radio" name='info' value=''> Правка → Перейти к строке.</label>
+                        </div>
+                        <button class="check eighteen3-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Как получить справочную информацию о команде ToPoint?<br>
+                            <label class="q582"><input type="radio" name='info' value=''> Помощь → Справка → Модули →
+                                Просмотреть задания.</label>
+                            <label class="q583"><input class='true123' type="radio" name='info' value=''> Помощь →
+                                Справка → Указатель → ввести слово ToPoint.</label>
+                            <label class="q584"><input type="radio" name='info' value=''> Помощь → Справка → Средства
+                                обучения в PascalABC.NET → Исполнитель → Чертежник.</label>
+                            <label class="q585"><input type="radio" name='info' value=''> Правка → Найти.</label>
+                            <label class="q586"><input type="radio" name='info' value=''> Правка → Перейти к строке.</label>
+                        </div>
+                        <button class="check eighteen4-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Для чего предназначен исполнитель Чертежник? <br>
+                            <label class="q587"><input type="radio" name='info' value=''> Для написания букв, слов и
+                                предложений.</label>
+                            <label class="q588"><input type="radio" name='info' value=''> Для подготовки компьютерных
+                                презентаций. </label>
+                            <label class="q589"><input class='true124' type="radio" name='info' value=''> Для
+                                построения рисунков и чертежей на координатной плоскости.</label>
+                            <label class="q590"><input type="radio" name='info' value=''> Для создания и редактирования
+                                изображений.</label>
+                            <label class="q591"><input type="radio" name='info' value=''> Для вычислений.</label>
+                            <label class="q592"><input type="radio" name='info' value=''> Для работы со звуком и видео.</label>
+                        </div>
+                        <button class="check eighteen5-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что является инструментом исполнителя Чертежник?<br>
+                            <label class="q593"> <input type="radio" name='info' value=''> Карандаш.</label>
+                            <label class="q594"><input type="radio" name='info' value=''> Ручка. </label>
+                            <label class="q595"><input type="radio" name='info' value=''> Кисть.</label>
+                            <label class="q596"><input class='true125' type="radio" name='info' value=''> Перо.</label>
+                            <label class="q597"><input type="radio" name='info' value=''> Распылитель.</label>
+                        </div>
+
+                        <button class="check eighteen6-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Среда обитания исполнителя Чертежник — это:<br>
+                            <label class="q598"><input type="radio" name='info' value=''> Клеточное поле.</label>
+                            <label class="q599"><input class='true126' type="radio" name='info' value=''> Часть
+                                координатной плоскости. </label>
+                            <label class="q600"><input type="radio" name='info' value=''> Лабиринт.</label>
+                            <label class="q601"><input type="radio" name='info' value=''> Шахматное поле.</label>
+
+                        </div>
+
+                        <button class="check eighteen7-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Исполнитель Чертежник изображается:<br>
+                            <label class="q602"><input type="radio" name='info' value=''> Маленьким прямоугольником.</label>
+                            <label class="q603"><input class='true127' type="radio" name='info' value=''> Маленьким
+                                квадратом. </label>
+                            <label class="q604"><input type="radio" name='info' value=''> Маленьким кругом.</label>
+                            <label class="q605"><input type="radio" name='info' value=''> Точкой.</label>
+                            <label class="q606"><input type="radio" name='info' value=''> Не изображается никак.</label>
+                        </div>
+                        <button class="check eighteen8-1">Проверить</button>
+                    </li>
+                    <li>
+                        Координаты точки, изображенной на рисунке: <br><br>
+                        <div><img width="20%" src="images/img1/coords.jpg" alt=""></div> <br>
+                        <div class="flex-col"></div>
+                        <label class="q607"><input type="radio" name='info' value=''> (2, 3).</label>
+                        <label class="q608"><input type="radio" name='info' value=''> (2, 1).</label>
+                        <label class="q609"><input type="radio" name='info' value=''> (1, 2).</label>
+                        <label class="q610"><input class='true128' type="radio" name='info' value=''> (3, 2).</label>
+                        <label class="q611"><input type="radio" name='info' value=''> (3, 3).</label>
+                        <label class="q612"><input type="radio" name='info' value=''> Нет правильного ответа..</label>
+                    </li>
+                    <button class="check eighteen9-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Исполнителю Чертежник команду «Поднять перо» нужно записать так:<br>
+                            <label class="q613"><input class='true129' class='true129' type="radio" name='info' value=''>
+                                <span class="curriered"> PenUp.</span></label>
+                            <label class="q614"><input type="radio" name='info' value=''> <span class="curriered">
+                                    PenDown.</span> </label>
+                            <label class="q615"><input type="radio" name='info' value=''> <span class="curriered">
+                                    ToPoint(x,y).</span></label>
+                            <label class="q616"><input type="radio" name='info' value=''> Field(n,m).</label></label>
+                            <label class="q617"><input type="radio" name='info' value=''> <span class="curriered">Uses
+                                    Drawman.</span></label>
+                        </div>
+                        <button class="check eighteen10-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Для вызова исполнителя Чертежник используют команду:<br>
+                            <label class="q618"><input type="radio" name='info' value=''> <span class="curriered">Uses
+                                    Graph.</span></label>
+                            <label class="q619"><input type="radio" name='info' value=''> <span class="curriered">Uses
+                                    Robot.</span> </label>
+                            <label class="q620"><input class='true130' type="radio" name='info' value=''> <span class="curriered">
+                                    Uses Drawman.</span></label>
+                            <label class="q621"> <input type="radio" name='info' value=''> <span class="curriered">
+                                    Uses GraphABC.</span></label>
+                            <label class="q622"><input type="radio" name='info' value=''> <span class="curriered">
+                                    Field(6,5).</span></label>
+                        </div>
+                        <button class="check eighteen11-1">Проверить</button>
+                    </li>
+                    <li>
+
+                        В результате выполнения фрагмента программы<br>
+                        <span class="curriered">Field(4,3); ToPoint(1,1); PenDown;<br>
+                            ToPoint(3,2); PenUp; ToPoint(3,1);</span><br>
+                        будет получен рисунок:<br>
+                        <div class="flex-ro">
+                            <label class="q623"><input type="radio" name='info' value=''> <img width="20%" src="images/img1/ris1.jpg"
+                                    alt=""></label>
+                            <label class="q624"><input class='true131' type="radio" name='info' value=''> <img width="20%"
+                                    src="images/img1/ris2.jpg" alt=""> </label>
+                            <label class="q625"><input type="radio" name='info' value=''> <img class="vert" width="20%"
+                                    src="images/img1/ris3.jpg" alt=""></label>
+                            <label class="q626"><input type="radio" name='info' value=''> <img class="vert" width="20%"
+                                    src="images/img1/ris4.jpg" alt=""></label>
+                            <label class="q626"><input type="radio" name='info' value=''> <img width="20%" src="images/img1/ris4-1.jpg"
+                                    alt=""></label>
+                        </div>
+
+                        <button class="check eighteen12-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Для выполнения программы в системе программирования PascalABC.NET нужно нажать кнопку на
+                            панели инструментов:<br>
+                            <label class="q627"><input type="radio" name='info' value=''> <img src="images/img1/ris5.jpg"
+                                    alt=""></label>
+                            <label class="q628"><input type="radio" name='info' value=''> <img src="images/img1/ris6.jpg"
+                                    alt=""> </label>
+                            <label class="q629"><input class='true132' type="radio" name='info' value=''> <img src="images/img1/ris7.jpg"
+                                    alt=""></label>
+                            <label class="q630"> <input type="radio" name='info' value=''> <img src="images/img1/ris8.jpg"
+                                    alt=""></label>
+                            <label class="q631"><input type="radio" name='info' value=''> <img src="images/img1/ris9.jpg"
+                                    alt=""></label>
+                        </div>
+
+                        <button class="check eighteen13-1">Проверить</button>
+                    </li>
+
+
+
+
+
+
+                </ol>
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>С помощью справочной системы среды программирования PascalABC.NET
+                        получите справку о команде Field.</li>
+                    <li><b class="circled">2</b>Запишите в окне редактора среды программирования PascalABC.NET текст
+                        нижеприведенной программы и
+                        определите результат ее выполнения.
+                        <pre>
+        <strong>uses</strong> Drawman;
+        <strong>begin</strong>
+                    Field(4,4);
+                    ToPoint(1,1);
+                    PenDown;
+                    ToPoint(2,1); ToPoint(2,3);
+                    ToPoint(3,3); ToPoint(3,2);
+                    ToPoint(1,2); ToPoint(1,1);
+                    PenUp;
+        <strong>end</strong>.
+                </pre>
+                    </li>
+                    <li><b class="circled">3</b>Запишите команды для <a href="#eig1-2-7">примера 18.7</a> при условии,
+                        что Чертежник начинает перемещение от точки (3, 1)
+                        и смещается в точку (1, 2).</li>
+                    <li><b class="circled">4<span class="stared">*</span></b>Составьте программу для построения
+                        изображения треугольника. Проверьте правильность выполнения
+                        упражнения на странице
+                        <a href="https://goo.gl/vCBL9U" target="_blank">https://goo.gl/vCBL9U</a> (зайдите гостем).</li>
+                    <div class="catalog">
+                        <img width="40%" src="images/img1/18-2.jpg" alt="">
+                    </div>
+                    <li><b class="circled">5</b>Запишите команды для построения изображения произвольного:
+                        а)&nbsp;квадрата; б)&nbsp;прямоугольника; в)&nbsp;прямоугольного
+                        треугольника; г)&nbsp;равнобедренного треугольника.</li>
+                    <li><b class="circled">6</b>Запишите команды для построения изображения цифры 1.</li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top17-2">&#8592 Предыдущий параграф</a> </div>
+        <div class="to-right next"><a href="#to-top19-2">Следующий параграф &#8594</a></div><br><br><br>
+    </div>
+    <script>
+
+        $('.eighteen1-1').click(function(){
+                if($($('.true120')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen2-1').click(function(){
+                if($($('.true121')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen3-1').click(function(){
+                if($($('.true122')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen4-1').click(function(){
+                if($($('.true123')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen5-1').click(function(){
+                if($($('.true124')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen6-1').click(function(){
+                if($($('.true125')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen7-1').click(function(){
+                if($($('.true126')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen8-1').click(function(){
+                if($($('.true127')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen9-1').click(function(){
+                if($($('.true128')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen10-1').click(function(){
+                if($($('.true129')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen11-1').click(function(){
+                if($($('.true130')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen12-1').click(function(){
+                if($($('.true131')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.eighteen13-1').click(function(){
+                if($($('.true132')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+
+
+
+               
+    </script>
+    <div lang='bel'>
+        <a name="to-top18-1">
+            <h1>§ 18. Асяроддзе праграміравання і камп’ютарны выканаўца
+            </h1>
+        </a>
+        <h4><a name="eig1-1"> 18.1. Асяроддзе праграміравання PascalABC.NET</a></h4>
+        <p> Для распрацоўкі праграм выкарыстоўваюцца асяроддзі праграміравання (інтэграваныя асяроддзі распрацоўкі,
+            ІАР, англ.
+            IDE, Integrated Development Environment). </p>
+        <p>
+            <b> <span class="noparset">Асяроддзе праграміравання</span></b> — комплекс праграм, якія выкарыстоўваюцца пры распрацоўцы іншых праграм.
+        </p>
+        <p> Пры запуску асяроддзя праграміравання адкрываецца адно акно, у якім можна выканаць увесь працэс
+            распрацоўкі. У асяроддзе
+            PascalABC.NET уваходзяць: рэдактар тэкстаў; даведачная сістэма; выканаўца Чарцёжнік і інш. Для стварэння
+            сваёй
+            праграмы трэба запусціць PascalABC.NET
+            <a href="#eig1-1-1">(прыклад 18.1). </a>
+            Элементы акна асяроддзя
+            <a href="#eig1-1-2"> (прыклад 18.2)</a> разгледжаны ў <em>Дадатку</em>.</p>
+        <p> У акне PascalABC.NET можна набіраць і рэдагаваць тэкст праграмы. Захоўваць і адкрываць файлы з тэкстамі
+            праграм можна
+            гэтак жа, як у тэкставым і графічным рэдактарах. Пры неабходнасці можна звярнуцца да даведачнай сістэмы
+            праз
+            меню <strong>Помощь</strong>
+            <a href="#eig1-1-3">(прыклад 18.3). </a>
+        </p>
+        <p>
+            Акно <strong>Справка</strong> змяшчае дзве ўкладкі: <strong>Содержание</strong> і <strong>Указатель</strong>.
+            Для чытання патрэбнай інфармацыі на ўкладцы <strong>Содержание</strong> неабходна
+            выканаць пстрычку мышшу на назве раздзела. Інфармацыя адлюструецца ў правым акне
+            <a href="#eig1-1-4">(прыклад 18.4).</a>
+        </p>
+        <p>Укладка <strong>Указатель</strong> дазваляе ажыццявіць пошук даведачнай інфармацыі па ключавым слове. Слова
+            трэба ўвесці ў спецыяльны
+            радок або выбраць з прапанаванага спіса
+            <a href="#eig1-1-5">(прыклад 18.5). </a>
+        </p>
+        <h4><a name="eig2-1"> 18.2. Камп’ютарны выканаўца Чарцёжнік</a></h4>
+        <p>Выканаўца Чарцёжнік прызначаны для пабудовы рысункаў і чарцяжоў на каардынатнай плоскасці. Ён мае пяро, якое
+            можа
+            паднімаць, апускаць, перамяшчаць. Пры перамяшчэнні апушчанага пяра за ім застаецца след. </p>
+        <p>Асяроддзем існавання выканаўцы Чарцёжнік з’яўляецца частка каардынатнай плоскасці
+            <a href="#eig1-1-6">(прыклад 18.6)</a>.
+        </p>
+        <p> На ўроках матэматыкі вы даведаліся, што каардынатная плоскасць задаецца сістэмай каардынат на плоскасці.
+            Гэта дазваляе
+            задаць каардынаты любога пункта на плоскасці.</p>
+        <p> Зыходнае становішча пяра выканаўцы Чарцёжнік: узнята і знаходзіцца над пунктам (0, 0) — пачаткам каардынат.
+            Пасля
+            выканання праграмы пяро павінна быць таксама ўзнята.</p>
+        <p>Каманды выканаўцы Чарцёжнік, з дапамогай якіх можна запісаць праграмы для яго, прыведзены ў табліцы.</p>
+        <table class="info-type pascal">
+            <tr>
+                <th width="35%">Каманда</th>
+                <th>Дзеянне</th>
+            </tr>
+            <tr>
+                <td> Field(n,m)</td>
+                <td> Стварыць поле памерам n x m</td>
+            </tr>
+            <tr>
+                <td>ToPoint(x,y)</td>
+                <td> Перамясціць пяро Чарцёжніка ў пункт (x, y) </td>
+            </tr>
+            <tr>
+                <td> PenUp</td>
+                <td> Узняць пяро Чарцёжніка</td>
+            </tr>
+            <tr>
+                <td> PenDown</td>
+                <td>Апусціць пяро Чарцёжніка</td>
+            </tr>
+        </table>
+        <p>Тут <em>n, m</em> — натуральныя лікі, <em>x, y</em> — цэлыя неадмоўныя лікі.<a href="#eig1-1-7">(Разгледзьце прыклад 18.7.)</a>
+        </p>
+        
+        <p>Пры рабоце з асяроддзем праграміравання можна выкарыстоўваць убудаваны задачнік з заданнямі, што правяраюцца
+            <a href="#eig1-1-8">(прыклад 18.8). </a>
+            Для выкліку задання, якое правяраецца, для выканаўцы Чарцёжнік выкарыстоўваецца наступны шаблон праграмы:</p>
+        <div class="catalog">
+            <img width="50%" src="images/img1/18-1-b.png" alt="">
+        </div><br/>
+        <p>Праграма складаецца з асобных каманд. У адным радку можна запісваць некалькі каманд, якія аддзяляюцца адна
+            ад адной
+            знакам «кропка з коскай» <strong>(;)</strong>. Праграма заканчваецца знакам «кропка» <strong>(.)</strong>.
+            Каманды алгарытму змяшчаюцца ў
+            целе
+            праграмы паміж словамі <strong>begin ... end.</strong> </p>
+        <p>Для рашэння задачы з дапамогай выканаўцы Чарцёжнік трэба:
+            <ol>
+                <li> Скласці алгарытм рашэння задачы
+                    <a href="#eig1-1-9"> (прыклад 18.9).</a>
+                </li>
+                <li>Запісаць алгарытм у выглядзе праграмы ў акне тэкставага рэдактара асяроддзя PascalABC.NET
+                    <a href="#eig1-1-10">(прыклад 18.10).</a>
+                </li>
+                <li class="small">Выканаць праграму: <b>Программа &#8594; Выполнить</b> (можна націснуць клавішу F9 або
+                    кнопку <img src="images/img1/play.png" alt=""> на панэлі інструментаў).
+                </li>
+            </ol>
+        </p>
+        <p>З дапамогай меню ў ніжняй частцы акна выканаўцы Чарцёжнік
+            <a href="#eig1-1-11">(прыклад 18.11)</a>
+            або адпаведных клавіш на клавіятуры можна выканаць праграму цалкам, па кроках, выйсці з акна выканаўцы,
+            атрымаць даведку.</p>
+
+        <p>
+            Пры выкананні праграмы ў асяроддзі PascalABC.NET могуць узнікаць памылкі. Памылка можа апынуцца на месцы
+            знаходжання курсора
+            або ў папярэднім радку. Пры гэтым у акне вываду вынікаў выводзіцца адпаведнае паведамленне
+            <a href="#eig1-1-12">(прыклад 18.12)</a>.</p>
+        <br>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder18()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Што такое асяроддзе праграміравання? <br>
+                            <label class="q569"><input class='true120-2' type="radio" name='info' value=''> Комплекс
+                                праграм, якія выкарыстоўваюцца пры распрацоўцы іншых праграм.</label>
+                            <label class="q570"><input type="radio" name='info' value=''> Поле выканаўцы Чарцёжнік.
+                            </label>
+                            <label class="q571"><input type="radio" name='info' value=''> Сукупнасць каманд, зразумелых
+                                выканаўцу Чарцёжнік.</label>
+                            <label class="q572"><input type="radio" name='info' value=''> Становішча, у якім
+                                выконваецца алгарытм.</label>
+                        </div>
+                        <button class="check eighteen1-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            У якім асяроддзі праграміравання змяшчаецца камп’ютарны выканаўца Чарцёжнік? <br>
+                            <label class="q573"><input type="radio" name='info' value=''> PascalABC.com.</label>
+                            <label class="q574"><input class='true121-2' type="radio" name='info' value=''>
+                                PascalABC.NET. </label>
+                            <label class="q575"><input type="radio" name='info' value=''> Pascal.NET.</label>
+                            <label class="q576"><input type="radio" name='info' value=''> PascalNET.ABC.</label>
+                        </div>
+                        <button class="check eighteen2-2">Праверыць</button>
+                    </li>
+                    <li>
+
+                        <div class="flex-col">
+                            Як атрымаць даведачную інфармацыю пра выканаўцу Чарцёжнік? <br>
+                            <label class="q577"><input class='true122-2' type="radio" name='info' value=''> Помощь →
+                                Справка → Указатель → ввести слово Чертежник.</label>
+                            <label class="q578"><input type="radio" name='info' value=''> Помощь → Справка → Модули →
+                                Просмотреть задания. </label>
+                            <label class="q579"><input type="radio" name='info' value=''> Помощь → Справка → Средства
+                                обучения в PascalABC.NET → Исполнитель → Чертежник.</label>
+                            <label class="q580"><input type="radio" name='info' value=''> Правка → Найти.</label>
+                            <label class="q581"><input type="radio" name='info' value=''> Правка → Перейти к строке.</label>
+                        </div>
+                        <button class="check eighteen3-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Як атрымаць даведачную інфармацыю пра каманду ToPoint?<br>
+                            <label class="q582"><input type="radio" name='info' value=''> Помощь → Справка → Модули →
+                                Просмотреть задания.</label>
+                            <label class="q583"><input class='true123-2' type="radio" name='info' value=''> Помощь →
+                                Справка → Указатель → ввести слово ToPoint. </label>
+                            <label class="q584"> <input type="radio" name='info' value=''> Помощь → Справка → Средства
+                                обучения в PascalABC.NET → Исполнитель → Чертежник.</label>
+                            <label class="q585"><input type="radio" name='info' value=''> Правка → Найти.</label>
+                            <label class="q586"><input type="radio" name='info' value=''> Правка → Перейти к строке.</label>
+                        </div>
+                        <button class="check eighteen4-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Для чаго прызначаны выканаўца Чарцёжнік? <br>
+                            <label class="q587"><input type="radio" name='info' value=''> Для напісання літар, слоў і
+                                сказаў.</label>
+                            <label class="q588"><input type="radio" name='info' value=''> Для падрыхтоўкі камп’ютарных
+                                прэзентацый. </label>
+                            <label class="q589"><input class='true124-2' type="radio" name='info' value=''> Для
+                                пабудавання рысункаў і чарцяжоў на каардынатнай плоскасці.</label>
+                            <label class="q590"><input type="radio" name='info' value=''> Для стварэння і рэдагавання
+                                відарысаў.</label>
+                            <label class="q591"><input type="radio" name='info' value=''> Для вылічэнняў.</label>
+                            <label class="q592"><input type="radio" name='info' value=''> Для работы з гукам і відэа.</label>
+                        </div>
+                        <button class="check eighteen5-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што з’яўляецца інструментам выканаўцы Чарцёжнік?<br>
+                            <label class="q593"><input type="radio" name='info' value=''> Аловак.</label>
+                            <label class="q594"><input type="radio" name='info' value=''> Ручка. </label>
+                            <label class="q595"><input type="radio" name='info' value=''> Пэндзаль.</label><br>
+                            <label class="q596"><input class='true125-2' type="radio" name='info' value=''> Пяро.</label>
+                            <label class="q597"><input type="radio" name='info' value=''> Распыляльнік.</label>
+                        </div>
+
+                        <button class="check eighteen6-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Асяроддзе існавання выканаўцы Чарцёжнік — гэта:<br>
+                            <label class="q598"><input type="radio" name='info' value=''> Клетачнае поле.</label>
+                            <label class="q599"><input class='true126-2' type="radio" name='info' value=''> Частка
+                                каардынатнай плоскасці. </label>
+                            <label class="q600"><input type="radio" name='info' value=''> Лабірынт.</label>
+                            <label class="q601"><input type="radio" name='info' value=''> Шахматнае поле.</label>
+                        </div>
+
+
+                        <button class="check eighteen7-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Выканаўца Чарцёжнік адлюстроўваецца:<br>
+                            <label class="q602"><input type="radio" name='info' value=''> Маленькім прамавугольнікам.</label>
+                            <label class="q603"><input class='true127-2' type="radio" name='info' value=''> Маленькім
+                                квадратам. </label>
+                            <label class="q604"><input type="radio" name='info' value=''> Маленькім кругам.</label>
+                            <label class="q605"><input type="radio" name='info' value=''> Пунктам.</label>
+                            <label class="q606"><input type="radio" name='info' value=''> Не адлюстроўваецца ніяк.</label>
+                        </div>
+                        <button class="check eighteen8-2">Праверыць</button>
+                    </li>
+                    <li>
+
+                        Каардынаты пункта, адлюстраванага на рысунку: <img src="images/img1/coords.jpg" alt=""> <br>
+                        <div class="flex-col">
+                            <label class="q607"><input type="radio" name='info' value=''> (2, 3).</label>
+                            <label class="q608"><input type="radio" name='info' value=''> (2, 1).</label>
+                            <label class="q609"><input type="radio" name='info' value=''> (1, 2).</label>
+                            <label class="q610"><input class='true128-2' type="radio" name='info' value=''> (3, 2).</label>
+                            <label class="q611"><input type="radio" name='info' value=''> (3, 3).</label>
+                            <label class="q612"><input type="radio" name='info' value=''> Няма правільнага адказу.</label>
+                        </div>
+                        <button class="check eighteen9-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Выканаўцу Чарцёжнік каманду «Узняць пяро» трэба запісаць так:<br>
+                            <label class="q613"><input class='true129-2' type="radio" name='info' value=''> PenUp.</label>
+                            <label class="q614"><input type="radio" name='info' value=''> PenDown. </label>
+                            <label class="q615"><input type="radio" name='info' value=''> ToPoint(x,y).</label>
+                            <label class="q616"><input type="radio" name='info' value=''> Field(n,m).</label>
+                            <label class="q617"><input type="radio" name='info' value=''> Uses Drawman.</label>
+                        </div>
+                        <button class="check eighteen10-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Для выкліку выканаўцы Чарцёжнік выкарыстоўваюць каманду:<br>
+                            <label class="q618"><input type="radio" name='info' value=''> <span class="curriered"> Uses
+                                    Graph.</span></label>
+                            <label class="q619"><input type="radio" name='info' value=''> <span class="curriered"> Uses
+                                    Robot. </span></label>
+                            <label class="q620"><input class='true130-2' type="radio" name='info' value=''> <span class="curriered">Uses
+                                    Drawman.</span></label>
+                            <label class="q621"><input type="radio" name='info' value=''> <span class="curriered"> Uses
+                                    GraphABC.</span></label>
+                            <label class="q622"> <input type="radio" name='info' value=''> <span class="curriered">
+                                    Field(6,5).</span></label>
+                        </div>
+                        <button class="check eighteen11-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            У выніку выканання фрагмента праграмы<br>
+                            <span class="curriered">Field(4,3); ToPoint(1,1); PenDown;<br>
+                                ToPoint(3,2); PenUp; ToPoint(3,1);</span><br>
+                            будзе атрыманы рысунак:<br>
+                            <label class="q623"><input class='true131-2' type="radio" name='info' value=''> <img width="20%"
+                                    src="images/img1/ris1.jpg" alt=""></label>
+                            <label class="q624"> <input type="radio" name='info' value=''> <img width="20%" src="images/img1/ris2.jpg"
+                                    alt=""> </label>
+                            <label class="q625"><input type="radio" name='info' value=''> <img width="20%" src="images/img1/ris3.jpg"
+                                    alt=""></label>
+                            <label class="q626"><input type="radio" name='info' value=''> <img width="20%" src="images/img1/ris4.jpg"
+                                    alt=""></label>
+
+                        </div>
+                        <button class="check eighteen12-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Для выканання праграмы ў сістэме праграміравання PascalABC.NET трэба націснуць кнопку на
+                            панэлі інструментаў:<br>
+                            <label class="q627"><input type="radio" name='info' value=''> <img src="images/img1/ris5.jpg"
+                                    alt=""></label>
+                            <label class="q628"><input type="radio" name='info' value=''> <img src="images/img1/ris6.jpg"
+                                    alt=""> </label>
+                            <label class="q629"><input class='true132-2' type="radio" name='info' value=''> <img src="images/img1/ris7.jpg"
+                                    alt=""></label>
+                            <label class="q630"><input type="radio" name='info' value=''> <img src="images/img1/ris8.jpg"
+                                    alt=""></label>
+                            <label class="q631"><input type="radio" name='info' value=''> <img src="images/img1/ris9.jpg"
+                                    alt=""></label>
+                        </div>
+
+                        <button class="check eighteen13-2">Праверыць</button>
+                    </li>
+                </ol>
+            </div>
+
+
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>З дапамогай даведачнай сістэмы асяроддзя праграміравання PascalABC.NET
+                        атрымайце даведку пра каманду Field.</li>
+                    <li><b class="circled">2</b>Запішыце ў акне рэдактара асяроддзя праграміравання PascalABC.NET тэкст
+                        ніжэйпрыведзенай праграмы і вызначыце
+                        вынік яе выканання.
+                        <pre>
+                                    <strong>uses</strong> Drawman;
+                                    <strong>begin</strong>
+                                            Field(4,4);
+                                            ToPoint(1,1);
+                                            PenDown;
+                                            ToPoint(2,1); ToPoint(2,3);
+                                            ToPoint(3,3); ToPoint(3,2);
+                                            ToPoint(1,2); ToPoint(1,1);
+                                            PenUp;
+                                    <strong>end</strong>.
+                                    </pre>
+                    </li>
+                    <li><b class="circled">3</b>Запішыце каманды для <a href="#eig1-1-7">прыкладу 18.7</a> пры ўмове,
+                        што Чарцёжнік пачынае перамяшчэнне ад пункта (3, 1) і
+                        зрушваецца ў пункт (1, 2).</li>
+                    <li><b class="circled">4<span class="stared">*</span></b>Складзіце праграму для пабудовы відарыса
+                        трохвугольніка. Праверце правільнасць выканання практыкавання на старонцы
+                        <a href="https://goo.gl/vCBL9U" target="_blank">https://goo.gl/vCBL9U</a> (зайдзіце госцем).</li>
+                    <div class="catalog">
+                        <img width="40%" src="images/img1/18-2.jpg" alt="">
+                    </div>
+                    <li><b class="circled">5</b>Запішыце каманды для пабудовы відарыса адвольнага: а)&nbsp;квадрата;
+                        б)&nbsp;прамавугольніка; в)&nbsp;прамавугольнага трохвугольніка;
+                        г)&nbsp;раўнабедранага трохвугольніка.</li>
+                    <li><b class="circled">6</b>Запішыце каманды для пабудовы відарыса лічбы 1.</li>
+                </ul>
+            </div>
+            <br>
+        </div>
+        <hr>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top17-1">&#8592 Папярэдні параграф</a> </div>
+        <div class="to-right next"><a href="#to-top19-1">Наступны параграф &#8594</a></div><br><br><br>
+
+    </div>
+    <script>
+        $('.eighteen1-2').click(function () {
+            if ($($('.true120-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen2-2').click(function () {
+            if ($($('.true121-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen3-2').click(function () {
+            if ($($('.true122-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen4-2').click(function () {
+            if ($($('.true123-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen5-2').click(function () {
+            if ($($('.true124-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen6-2').click(function () {
+            if ($($('.true125-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen7-2').click(function () {
+            if ($($('.true126-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen8-2').click(function () {
+            if ($($('.true127-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen9-2').click(function () {
+            if ($($('.true128-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen10-2').click(function () {
+            if ($($('.true129-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen11-2').click(function () {
+            if ($($('.true130-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen12-2').click(function () {
+            if ($($('.true131-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.eighteen13-2').click(function () {
+            if ($($('.true132-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+
+
+        function changeOrder18() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(4, 1, 4)
+            let arr3 = rand(5, 1, 5)
+            let arr4 = rand(4, 1, 4)
+            let arr5 = rand(6, 1, 6)
+            let arr6 = rand(5, 1, 5)
+            let arr7 = rand(4, 1, 4)
+            let arr8 = rand(5, 1, 5)
+            let arr9 = rand(6, 1, 6)
+            let arr10 = rand(5, 1, 5)
+            let arr11 = rand(5, 1, 5)
+            let arr12 = rand(4, 1, 4)
+            let arr13 = rand(5, 1, 5)
+
+
+
+            $('.q569').css({
+                'order': arr1[0]
+            })
+            $('.q570').css({
+                'order': arr1[1]
+            })
+            $('.q571').css({
+                'order': arr1[2]
+            })
+            $('.q572').css({
+                'order': arr1[3]
+            })
+            $('.q573').css({
+                'order': arr2[0]
+            })
+            $('.q574').css({
+                'order': arr2[1]
+            })
+            $('.q575').css({
+                'order': arr2[2]
+            })
+            $('.q576').css({
+                'order': arr2[3]
+            })
+            $('.q577').css({
+                'order': arr3[0]
+            })
+            $('.q578').css({
+                'order': arr3[1]
+            })
+            $('.q579').css({
+                'order': arr3[2]
+            })
+            $('.q580').css({
+                'order': arr3[3]
+            })
+            $('.q581').css({
+                'order': arr3[4]
+            })
+            $('.q582').css({
+                'order': arr4[0]
+            })
+            $('.q583').css({
+                'order': arr4[1]
+            })
+            $('.q584').css({
+                'order': arr4[2]
+            })
+            $('.q585').css({
+                'order': arr4[3]
+            })
+            $('.q586').css({
+                'order': arr5[0]
+            })
+            $('.q587').css({
+                'order': arr5[1]
+            })
+            $('.q588').css({
+                'order': arr5[2]
+            })
+            $('.q589').css({
+                'order': arr5[3]
+            })
+            $('.q590').css({
+                'order': arr5[4]
+            })
+            $('.q591').css({
+                'order': arr5[5]
+            })
+            $('.q592').css({
+                'order': arr6[0]
+            })
+            $('.q593').css({
+                'order': arr6[1]
+            })
+            $('.q594').css({
+                'order': arr6[2]
+            })
+            $('.q595').css({
+                'order': arr6[3]
+            })
+            $('.q596').css({
+                'order': arr6[4]
+            })
+            $('.q597').css({
+                'order': arr7[0]
+            })
+            $('.q598').css({
+                'order': arr7[1]
+            })
+            $('.q599').css({
+                'order': arr7[2]
+            })
+            $('.q600').css({
+                'order': arr7[3]
+            })
+            $('.q601').css({
+                'order': arr8[0]
+            })
+            $('.q602').css({
+                'order': arr8[1]
+            })
+            $('.q603').css({
+                'order': arr8[2]
+            })
+            $('.q604').css({
+                'order': arr8[3]
+            })
+            $('.q605').css({
+                'order': arr8[4]
+            })
+            $('.q606').css({
+                'order': arr9[0]
+            })
+            $('.q607').css({
+                'order': arr9[1]
+            })
+            $('.q608').css({
+                'order': arr9[2]
+            })
+            $('.q609').css({
+                'order': arr9[3]
+            })
+            $('.q610').css({
+                'order': arr9[4]
+            })
+            $('.q611').css({
+                'order': arr9[5]
+            })
+            $('.q612').css({
+                'order': arr10[0]
+            })
+            $('.q613').css({
+                'order': arr10[1]
+            })
+            $('.q614').css({
+                'order': arr10[2]
+            })
+            $('.q615').css({
+                'order': arr10[3]
+            })
+            $('.q616').css({
+                'order': arr10[4]
+            })
+            $('.q617').css({
+                'order': arr11[0]
+            })
+            $('.q618').css({
+                'order': arr11[1]
+            })
+            $('.q619').css({
+                'order': arr11[2]
+            })
+            $('.q620').css({
+                'order': arr11[3]
+            })
+            $('.q621').css({
+                'order': arr11[4]
+            })
+            $('.q622').css({
+                'order': arr12[0]
+            })
+            $('.q623').css({
+                'order': arr12[1]
+            })
+            $('.q624').css({
+                'order': arr12[2]
+            })
+            $('.q625').css({
+                'order': arr12[3]
+            })
+            $('.q626').css({
+                'order': arr12[4]
+            })
+            $('.q627').css({
+                'order': arr13[0]
+            })
+            $('.q628').css({
+                'order': arr13[1]
+            })
+            $('.q629').css({
+                'order': arr13[2]
+            })
+            $('.q630').css({
+                'order': arr13[3]
+            })
+            $('.q631').css({
+                'order': arr13[4]
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>

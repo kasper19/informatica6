@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <div class="blue-back">
+            <a name="tww1-2-1"><b>Пример 20.1.</b>
+                <p> Рисование елочки.</p>
+            </a>
+            <div class="info-type"><img src="images/img2/20-1.jpg" alt=""></div>
+            <figcaption>Программа построения изображения:</figcaption>
+            <img width = "99%" src="images/img2/text-ru.png" alt="">
+            <a name="tww1-2-2"><b>
+                    Пример 20.2.</b>
+                <p> Блок-схема алгоритма рисования елочки включает:
+                </p>
+            </a>
+            <ol>
+                <li>Блок-схему вспомогательного алгоритма для рисования одного элемента елочки (тре-
+                    угольника).</li>
+                <div class="info-type"><img src="images/img2/20-2.png" alt=""></div>
+                <li> Блок-схему построения елочки с использованием вспомогательного алгоритма.</li>
+                <div class="info-type"><img src="images/img2/20-3.png" alt=""></div>
+            </ol>
+
+            <a name="tww1-2-3"><b>Пример 20.3.</b>
+                <p> Программа построения елочки:</p>
+            </a>
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>procedure</strong> ELL;
+    //процедура    для    рисования
+    //одного   элемента   елочки   —   
+    //треугольника
+    <strong>begin</strong>
+        PenDown;
+        OnVector(1,1);
+        OnVector(1,-1);
+        OnVector(-2,0);
+        PenUp;
+    <strong>end;
+    begin </strong>
+        Field(4,5);
+        ToPoint(1,3);
+        ELL;
+        ToPoint(1,2);
+        ELL;
+        ToPoint(1,1);
+        ELL;
+    <strong>end.</strong>
+               </pre>
+
+            <br>
+        </div>
+        <div class="green-back">
+            <p>
+                На заре создания первых компьютеров при разработке программ применялся прием проектирования «снизу
+                вверх»: вначале создавали простейшие подпрограммы, затем их использовали в более сложных программах. В
+                середине 60-х гг.
+                XX в. стал применяться метод
+                пошаговой детализации алгоритмов (проектирование «сверху
+                вниз»). Этот метод заложен в основу процедурных языков программирования (Pascal, C и др.).
+            </p>
+        </div>
+        <div class="blue-back">
+            <a name="tww1-2-4"><b>Пример 20.4.</b>
+                <p> Программа построения изображения из <a class="link-ex0">примера 19.9</a>.</p>
+            </a>
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>procedure</strong> three;
+    <strong>begin</strong>
+        PenDown;
+        OnVector(1,0); OnVector(-1,-1);
+        OnVector(1,0); OnVector(-1,-1);
+        PenUp;
+    <strong>end;
+    begin</strong>
+        Field(7,4);
+        ToPoint(1,3);  three;
+        ToPoint(3,3);  three;
+        ToPoint(5,3);  three;  
+    <strong>end.</strong>
+        </pre>
+            <b>
+                Пример 20.5.</b>
+            <p> Программа построения изображения из цифр.
+            </p>
+            <div class="info-type"><img src="images/img2/20-4.jpg" alt=""></div>
+            <pre>
+   <strong>uses</strong> Drawman;
+   <strong>procedure</strong> _17;
+    <strong>begin</strong>
+        PenDown;
+        OnVector(1,1);//   1
+        OnVector(0,-2);PenUp;
+        OnVector(1,2);
+        PenDown;
+        OnVector(1,0);//   -
+        OnVector(-1,-1);//   /
+        OnVector(0,-1);   //   |
+        PenUp;
+    <strong>end;
+    begin</strong>
+        Field(7,3);
+        ToPoint(0,1);   _17;
+        ToPoint(4,1);   _17;
+    <strong>end.</strong>
+                </pre>
+            <a name="tww1-2-6"><b>Пример 20.6.</b></a> <br>
+            Программа:
+            <pre>
+        <strong>uses</strong> drawman;
+        <strong>procedure</strong> treug;
+        <strong>begin</strong>
+        //треугольник
+            PenDown; OnVector(1,1);
+            OnVector(1,-1); OnVector(-2,0);
+            PenUp;OnVector(2,0);
+        <strong>end;</strong>
+        <strong>procedure</strong> b_el;
+        <strong>begin</strong>
+        //большая ель
+            treug;OnVector(-2,1); 
+            treug; OnVector(-2,1);
+            treug; OnVector(-2,1);
+            treug; OnVector(0,-3);
+        <strong>end;</strong>
+        <strong>procedure</strong> m_el;
+        <strong>begin</strong>
+        //маленькая ель
+            treug; OnVector(-2,1);
+            treug; OnVector(-2,1);
+            treug; OnVector(0,-2);
+        <strong>end;</strong>
+        <strong>procedure</strong> dom;
+        <strong>begin</strong>
+        //дом
+            PenDown;OnVector(2,0);
+            OnVector(0,2);OnVector(-1,2);
+            OnVector(-1,-2);OnVector(2,0);
+            OnVector(-2,0);OnVector(0,-2);
+            PenUp;OnVector(2,0);
+        <strong>end</strong>;
+        <strong>procedure</strong> sosna;
+        <strong>begin</strong>
+        //сосна
+            OnVector(2,0); PenDown;
+            OnVector(0,4); PenUp;
+            OnVector(-1,-1); PenDown;
+            OnVector(1,1); OnVector(1,-1); 
+            PenUp; OnVector(-2,-1);
+            PenDown; OnVector(1,1);
+            OnVector(1,-1); PenUp;
+            OnVector(0,-2);
+        <strong>end;</strong>
+        <strong>begin</strong>
+            Field(10,12);ToPoint(1,1); b_el;
+            ToPoint(6,3); m_el; m_el;
+            ToPoint(3,5); dom;
+            ToPoint(6,8); sosna;
+        <strong>end.</strong>
+                </pre>
+            <br>
+        </div>
+    </div>
+    <div lang='bel'>
+        <div class="blue-back">
+            <a name="tw1-1-1"><b>Прыклад 20.1.</b>
+                <p>Рысаванне елачкі.
+                </p>
+            </a>
+            <div class="info-type"><img src="images/img2/20-1.jpg" alt=""></div>
+            <figcaption>Праграма пабудовы відарыса</figcaption>
+            <img width = "99%" src="images/img2/text-b.png" alt="">
+            <a name="tw1-1-2"><b>
+                    Прыклад 20.2.</b>
+                <p> Блок-схема алгарытму пабудовы елачкі ўключае:
+                </p>
+            </a>
+            <ol>
+                <li>Блок-схему дапаможнага алгарытму для рысавання аднаго элемента елачкі (трохвугольніка)..</li>
+                <div class="info-type"><img src="images/img2/20-2-b.png" alt=""></div>
+                <li> Блок-схему пабудовы елачкі з выкарыстаннем дапаможнага алгарытму.</li>
+                <div class="info-type"><img src="images/img2/20-3-b.png" alt=""></div>
+            </ol>
+
+            <a name="tw1-1-3"><b>Прыклад 20.3.</b>
+                <p> Праграма пабудовы елачкі:
+                </p>
+            </a>
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>procedure</strong> ELL;
+    //працэдура для рысавання
+    //аднаго элемента елачкі —
+    //трохвугольніка
+    <strong>begin</strong>
+        PenDown;
+        OnVector(1,1);
+        OnVector(1,-1);
+        OnVector(-2,0);
+        PenUp;
+    <strong>end</strong>;
+    <strong>begin</strong>
+        Field(4,5);
+        ToPoint(1,3);
+        ELL;
+        ToPoint(1,2);
+        ELL;
+        ToPoint(1,1);
+        ELL;
+    <strong>end</strong>.
+               </pre>
+
+            <br>
+        </div>
+        <div class="green-back">
+            <p>
+                На заранку стварэння першых камп’ютараў пры распрацоўцы праграм выкарыстоўваўся пры-
+                ём праектавання «знізу ўгару»: спачатку стваралі найпрасцейшыя падпраграмы, затым іх выкарыстоўвалі ў
+                больш складаных праграмах.
+                У сярэдзіне 60-х гг. XX ст. стаў ужывацца метад пакрокавай дэталізацыі алгарытмаў (праектаванне «зверху
+                ўніз»).
+                Гэты метад закладзены ў аснову працэдурных моў праграміравання (Pascal, C і інш.).
+            </p>
+        </div>
+        <div class="blue-back">
+            <a name="tw1-1-4"><b>Прыклад 20.4.</b>
+                <p> Праграма пабудовы відарыса з <a href="#ei1-2-9" class="link-ex1">прыкладу 19.9</a>
+                </p>
+            </a>
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>procedure</strong> three;
+    <strong>begin</strong>
+        PenDown;
+        OnVector(1,0); OnVector(-1,-1);
+        OnVector(1,0); OnVector(-1,-1);
+        PenUp;
+    <strong>end;
+    begin</strong>
+        Field(7,4);
+        ToPoint(1,3);  three;
+        ToPoint(3,3);  three;
+        ToPoint(5,3);  three;
+    <strong>end</strong>.
+        </pre>
+            <a name="tw1-1-5"><b>
+                    Прыклад 20.5.</b>
+                <p> Праграма пабудовы відарыса з лічбаў.
+                </p>
+            </a>
+            <div class="info-type"><img src="images/img2/20-4.jpg" alt=""></div>
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>procedure</strong> _17;
+    <strong>begin</strong>
+        PenDown;
+        OnVector(1,1);//   1
+        OnVector(0,-2);PenUp;
+        OnVector(1,2);
+        PenDown;
+        OnVector(1,0);//   -
+        OnVector(-1,-1);//   /
+        OnVector(0,-1);   //   |
+        PenUp;
+    <strong>end</strong>;
+    <strong>begin</strong>
+        Field(7,3);
+        ToPoint(0,1);   _17;
+        ToPoint(4,1);   _17;
+    <strong>end</strong>.
+                </pre>
+            <a name="tw1-1-6"><b>Прыклад 20.6.
+                </b></a> <br>
+            Праграма:
+            <pre>
+        <strong>uses</strong> drawman;
+        <strong>procedure</strong> treug;
+        <strong>begin</strong>
+        //трохвугольнiк
+            PenDown;OnVector(1,1);
+            OnVector(1,-1);OnVector(-2,0);
+            PenUp;OnVector(2,0);
+        <strong>end;</strong>
+        <strong>procedure</strong> b_el;
+        <strong>begin</strong>
+        //вялiкая елка
+            treug;OnVector(-2,1);
+            treug; OnVector(-2,1); 
+            treug; OnVector(-2,1); 
+            treug; OnVector(0,-3); 
+        <strong>end;</strong>
+        <strong>procedure</strong> m_el;
+        <strong>begin</strong>
+        //маленькая елка
+            treug; OnVector(-2,1);
+            treug; OnVector(-2,1);
+            treug; OnVector(0,-2);
+        <strong>end;</strong>
+        <strong>procedure</strong> dom;
+        <strong>begin</strong>
+        //дом
+            PenDown; OnVector(2,0);
+            OnVector(0,2); OnVector(-1,2);
+            OnVector(-1,-2); OnVector(2,0);
+            OnVector(-2,0); OnVector(0,-2);
+            PenUp; OnVector(2,0);
+        <strong>end</strong>;
+        <strong>procedure</strong> sosna;
+        <strong>begin</strong>
+        //сасна
+            OnVector(2,0); PenDown;
+            OnVector(0,4); PenUp;
+            OnVector(-1,-1); PenDown;
+            OnVector(1,1); OnVector(1,-1); 
+            PenUp; OnVector(-2,-1);
+            PenDown; OnVector(1,1);
+            OnVector(1,-1); PenUp;
+            OnVector(0,-2);
+        <strong>end;</strong>
+        <strong>begin</strong>
+            Field(10,12); ToPoint(1,1); b_el;
+            ToPoint(6,3); m_el; m_el;
+            ToPoint(3,5); dom;
+            ToPoint(6,8); sosna;
+        <strong>end.</strong>
+
+    
+                </pre>
+        </div>
+    </div>
+</body>
+
+</html>

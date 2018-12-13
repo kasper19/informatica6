@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name="to-top16-2">
+            <h1>§ 16. Понятие алгоритма и исполнителя</h1>
+        </a>
+        <h4><a name="sixt1-2">16.1. Понятие алгоритма</a></h4>
+        <p>В повседневной жизни нам приходится решать много задач, простых и сложных. Простыми могут быть звонок по
+            мобильному
+            телефону, чистка картофеля и др. Более сложно получить отметку 10 по информатике, испечь торт «Наполеон» и
+            др.
+        </p>
+        <p>Для решения любой задачи необходимо выполнить определенные действия <a href="#sixt1-2-1">(пример&nbsp;16.1)</a>.</p>
+
+        <p class="bordered">Понятная и конечная последовательность точных действий (команд), формальное выполнение
+            которых позволяет получить решение поставленной задачи, называется <b>алгоритмом</b>.</p>
+        <p class="bordered"> <b>Команда</b> в алгоритме — <b>указание</b> на выполнение конкретного действия.</p>
+        <p>Для решения одной и той же задачи могут использоваться разные алгоритмы. Например, один учащийся может
+            использовать
+            для написания поздравительной открытки графический редактор
+            <a href="#sixt1-2-2">(пример&nbsp;16.2)</a>, другой — текстовый редактор, третий — бумагу и цветные
+            карандаши.
+        </p>
+        <h4><a name="sixt2-2">16.2. Понятие исполнителя алгоритма</a></h4>
+        <p class="bordered">
+            <b>Исполнитель алгоритма</b> — человек, группа людей или техническое устройство, которые понимают команды
+            алгоритма
+            и умеют правильно их выполнять. </p>
+        <p>Человек может быть исполнителем алгоритмов из примеров 16.1 и 16.2, алгоритма по сборке робота и др.
+            Выполнять алгоритм
+            может не только человек, но и робот, фотоаппарат и др.
+            <a href="#sixt1-2-3"> (пример&nbsp;16.3).</a>
+        </p>
+        <p>Команды, которые понимает и может выполнить исполнитель, образуют <b>систему команд исполнителя</b>. В
+            <a href="#sixt1-2-4"> примере&nbsp;16.4</a> приведена система команд исполнителя Стиральная машина-автомат.
+            В
+            зависимости от степени загрязнения
+            и типа белья человек может задать разные режимы работы (алгоритмы) стиральной машины. </p>
+        <p>Алгоритмы, предназначенные для выполнения на компьютере, записывают на некотором формальном языке (языке
+            программирования).
+            Запись алгоритма на языке программирования называют <b>программой</b>. Исполнителем программ является
+            компьютер.</p>
+        <p>
+            <b>Компьютерный исполнитель</b> — виртуальный объект, действующий в виртуальной среде <a href="#sixt1-2-5">
+                (пример&nbsp;16.5). </a></p>
+
+
+        <p>Для некоторых исполнителей требуется определенная обстановка. Такую обстановку называют <b>средой обитания
+                исполнителя</b>
+            <a href="#sixt1-2-6"> (пример&nbsp;16.6).</a>
+        </p>
+        <p>Исполнитель Шестиклассник (среда обитания — 6-й класс) умеет:
+            <ul>
+                <li>задумывать натуральное число; </li>
+                <li>выполнять арифметические действия над числами; </li>
+                <li>находить наибольшее и наименьшее число среди заданных чисел; </li>
+                <li>записывать числа. </li>
+            </ul>
+        </p>
+        <p>Ему предлагается выполнить алгоритм:
+            <ol>
+                <li>Задумать некоторое натуральное число.</li>
+                <li>Умножить задуманное число на 2.</li>
+                <li>К полученному произведению прибавить 10.</li>
+                <li>Результат разделить на 2.</li>
+                <li>От частного отнять задуманное число.</li>
+                <li>Записать результат.</li>
+                <a href="#sixt1-2-7">(Рассмотрите пример&nbsp;16.7.)</a>
+            </ol>
+        </p>
+        <p>Пусть среда обитания исполнителя Кисть — лист бумаги. Система команд исполнителя:
+            <ul>
+                <li>стрелка — исполнитель рисует отрезок некоторой длины в направлении, указанном стрелкой; </li>
+                <li>зачеркнутая стрелка — исполнитель движется в направлении, указанном стрелкой, не оставляя следа
+                    <a href="#sixt1-2-8">(пример&nbsp;16.8).</a>
+                </li>
+            </ul>
+        </p>
+        <p>Рассмотрим алгоритм определения суточной амплитуды температуры воздуха. Для этого требуется:
+            <ol>
+                <li>Определить максимальную температуру воздуха за сутки.</li>
+                <li>Определить минимальную температуру воздуха за сутки.</li>
+                <li>Найти разность между максимальным и минимальным значениями температур
+                    <a href="#sixt1-2-9">(пример&nbsp;16.9).</a>
+                </li>
+            </ol>
+        </p>
+        <p>Исполнителем этого алгоритма может оказаться любой человек, которому понятны команды алгоритма.</p>
+        <p>
+            Алгоритм определения азимута может быть таким:
+            <ol>
+                <li>Совместить окрашенный конец стрелки компаса с направлением на север.</li>
+                <li>Мысленно провести прямую линию от центра компаса к объекту.</li>
+                <li>Определить угол между стрелкой на север и мысленной линией к объекту по направлению часовой стрелки
+                    (азимут
+                    на север равен 0°)
+                    <a href="#sixt1-2-10">(пример&nbsp;16.10)</a>.</li>
+            </ol>
+        </p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder16()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Что такое алгоритм? <br>
+                            <label class="q480"><input type="radio" name='info' value=''> Задача, решение которой нужно
+                                найти.</label>
+                            <label class="q481"><input type="radio" name='info' value=''> Указание на выполнение
+                                конкретного действия.</label>
+                            <label class="q482"><input class='true102' type="radio" name='info' value=''>
+                                Последовательность команд, выполнение которых приведет к решению поставленной задачи.</label>
+                            <label class="q483"><input type="radio" name='info' value=''> Набор команд для компьютера.
+                            </label>
+                        </div>
+                        <button class="check sixteen1-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что называется командой в алгоритме?<br>
+                            <label class="q484"><input type="radio" name='info' value=''> Последовательность действий
+                                для решения поставленной задачи.</label>
+                            <label class="q485"><input class='true103' type="radio" name='info' value=''> Указание на
+                                выполнение конкретного действия.</label>
+                            <label class="q486"><input type="radio" name='info' value=''> Задача, решение которой нужно
+                                найти.</label>
+                            <label class="q487"><input type="radio" name='info' value=''> Среда обитания исполнителя.
+                            </label>
+                        </div>
+                        <button class="check sixteen2-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что такое исполнитель алгоритма?<br>
+                            <label class="q488"><input type="radio" name='info' value=''> Обстановка, в которой
+                                выполняется алгоритм.</label>
+                            <label class="q489"><input type="radio" name='info' value=''> Указание на выполнение
+                                конкретного действия.</label>
+                            <label class="q490"><input type="radio" name='info' value=''> Совокупность всех команд в
+                                алгоритме.</label>
+                            <label class="q491"><input class='true104' type="radio" name='info' value=''> Человек,
+                                группа людей или техническое устройство, которые понимают команды алгоритма и умеют
+                                правильно их выполнять.</label>
+                        </div>
+                        <button class="check sixteen3-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Кто или что может быть исполнителем алгоритма? <br>
+                            <label class="q492"><input class='true105' type="checkbox" name='info' value=''> Водитель
+                                автомобиля.</label>
+                            <label class="q493"> <input class='true105' type="checkbox" name='info' value=''> Робот.</label>
+                            <label class="q494"><input class='false105' type="checkbox" name='info' value=''>
+                                Компьютерный стол.</label>
+                            <label class="q495"><input class='true105' type="checkbox" name='info' value=''> Компьютер.</label>
+                            <label class="q496"><input class='true105' type="checkbox" name='info' value=''> Детская
+                                машинка на дистанционном управлении.</label>
+                            <label class="q497"><input class='false105' type="checkbox" name='info' value=''> Школьный
+                                учебник информатики.</label>
+                        </div>
+
+                        <button class="check sixteen4-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что называют системой команд исполнителя?<br>
+                            <label class="q498"><input type="radio" name='info' value=''> Совокупность команд, понятных
+                                исполнителю.</label>
+                            <label class="q499"><input class='true106' type="radio" name='info' value=''> Команды,
+                                которые исполнитель понимает и может выполнить. </label>
+                            <label class="q500"><input type="radio" name='info' value=''> Совокупность основных команд
+                                исполнителя.</label>
+                            <label class="q501"><input type="radio" name='info' value=''> Любой набор команд, понятных
+                                исполнителю.</label>
+                        </div>
+                        <button class="check sixteen5-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что такое среда обитания исполнителя?<br>
+                            <label class="q502"><input type="radio" name='info' value=''> Совокупность команд, понятных
+                                исполнителю.</label>
+                            <label class="q503"><input type="radio" name='info' value=''> Команды, которые исполнитель
+                                понимает и может выполнить. </label>
+                            <label class="q504"><input class='true107' type="radio" name='info' value=''> Обстановка, в
+                                которой исполнитель выполняет команды.</label>
+                            <label class="q505"><input type="radio" name='info' value=''> Набор команд, понятных
+                                исполнителю.</label>
+                        </div>
+                        <button class="check sixteen6-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div style="display: flex">
+                            <div class="flex-col">
+                                Какие из следующих процессов можно описать в виде алгоритмов? <br>
+                                <label class="q506"><input class='true108' type="checkbox" name='info' value=''> Замена
+                                    колеса в автомобиле.</label>
+                                <label class="q507"> <input class='true108' type="checkbox" name='info' value=''>
+                                    Написание домашнего сочинения.</label>
+                                <label class="q508"><input class='true108' type="checkbox" name='info' value=''>
+                                    Сложение двух дробей.</label>
+                                <label class="q509"><input class='false108' type="checkbox" name='info' value=''>
+                                    Забивание гола на футбольном матче.</label>
+                                <label class="q510"><input class='true108' type="checkbox" name='info' value=''>
+                                    Получение изображения белорусского орнамента, показанного на рисунке.
+                                </label>
+
+                                <label class="q511"><input class='false108' type="checkbox" name='info' value=''>
+                                    Запись ряда всех натуральных чисел.</label>
+                            </div>
+                            <img align="top" width="120px" height="120px" src="images/img1/16-1.jpg" alt="">
+                        </div>
+                        <button class="check sixteen7-1">Проверить</button>
+                    </li>
+
+                </ol>
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref3.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Приведите примеры алгоритмов из повседневной жизни и учебной
+                        деятельности.</li>
+                    <li><b class="circled">2</b>Измените алгоритм из <a href="#sixt1-2-1">примера 16.1</a> для телефона
+                        с функцией голосового управления.</li>
+
+                    <li><b class="circled">3<span class="stared">*</span></b>Решите методом подбора задачу аль-Хорезми:
+                        «Я к трети числа прибавил единицу и к четверти числа прибавил единицу. Перемножив
+                        эти числа, получил 20. Какое число я взял?»</li>
+                    <li><b class="circled">4</b>Приведите примеры исполнителей алгоритмов.</li>
+                    <li><b class="circled">5</b>Напишите систему команд одного из исполнителей <a href="#sixt1-2-3">примера
+                            16.3</a>.</li>
+                    <li><b class="circled">6</b>Выполните алгоритм из <a href="#sixt1-2-7">примера 16.7</a> несколько
+                        раз для разных чисел. Сравните полученные результаты. Сделайте
+                        выводы.</li>
+                    <li><b class="circled">7<span class="stared">*</span></b>По командам
+
+                        <img src="images/img1/16-5.jpg" alt=""> исполнитель Кисть рисует часть окружности в указанном
+                        направлении. Определите результат выполнения алгоритма:
+                        <div class="info-type">
+                            <img src="images/img1/16-6.png" alt="">
+                        </div>
+                    </li>
+                    <li><b class="circled">8</b>Напишите алгоритм морфологического разбора прилагательного. Выполните
+                        этот алгоритм для прилагательного <em>"цифровом"</em>
+                        из предложения <em>Современный человек живет в цифровом мире</em>.</li>
+                    <li><b class="circled">9<span class="stared">*</span></b>Придумайте исполнителя алгоритмов со своей
+                        системой команд и напишите для него алгоритм решения некоторой задачи.
+                    </li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top15-2">&#8592 Предыдущий параграф </a></div>
+        <div class="to-right next"><a href="#to-top17-2">Следующий параграф &#8594</a></div><br><br><br>
+    </div>
+    <script>
+        $('.sixteen1-1').click(function(){
+                if($($('.true102')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.sixteen2-1').click(function(){
+                if($($('.true103')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.sixteen3-1').click(function(){
+                if($($('.true104')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.sixteen4-1').click(function(){
+                if($($('.true105')[0]).prop('checked')
+                    && $($('.true105')[1]).prop('checked')
+                    && $($('.true105')[2]).prop('checked')
+                    && $($('.true105')[3]).prop('checked')
+                    && !$($('.false105')[0]).prop('checked')
+                    && !$($('.false105')[1]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.sixteen5-1').click(function(){
+                if($($('.true106')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.sixteen6-1').click(function(){
+                if($($('.true107')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.sixteen7-1').click(function(){
+                if($($('.true108')[0]).prop('checked')
+                    && $($('.true108')[1]).prop('checked')
+                    && $($('.true108')[2]).prop('checked')
+                    && $($('.true108')[3]).prop('checked')
+                    && !$($('.false108')[0]).prop('checked')
+                    && !$($('.false108')[1]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+
+
+              
+    </script>
+    <div lang='bel'>
+        <a name="to-top16-1">
+            <h1>§ 16. Паняцце алгарытму і выканаўцы</h1>
+        </a>
+        <h4><a name="sixt1-1">16.1. Паняцце алгарытму</a></h4>
+        <p>У паўсядзённым жыцці нам даводзіцца вырашаць шмат задач, простых і складаных. Простымі могуць быць званок па
+            мабільным
+            тэлефоне, скрабенне бульбы і інш. Больш складана атрымаць адзнаку 10 па інфарматыцы, спячы торт «Напалеон»
+            і
+            інш. </p>
+        <p>Для рашэння любой задачы неабходна выканаць пэўныя дзеянні <a href="#sixt1-1-1">(прыклад&nbsp;16.1)</a>. </p>
+
+
+        <p class="bordered">Зразумелая і канечная паслядоўнасць дакладных дзеянняў (каманд), фармальнае выкананне якіх
+            дазваляе атрымаць рашэнне
+            пастаўленай задачы, называецца <b>алгарытмам</b>.</p>
+        <p class="bordered"><b>Каманда</b> ў алгарытме — <b>накіраванне</b> на выкананне канкрэтнага дзеяння.</p>
+        <p>Для рашэння адной і той жа задачы могуць выкарыстоўвацца розныя алгарытмы. Напрыклад, адзін навучэнец можа
+            выкарыстоўваць
+            для напісання віншавальнай паштоўкі графічны рэдактар
+            <a href="#sixt1-1-2">(прыклад&nbsp;16.2)</a>, другі — тэкставы рэдактар, трэці — паперу і каляровыя алоўкі.
+        </p>
+
+        <h4><a name="sixt2-1">16.2. Паняцце выканаўцы алгарытму</a>
+        </h4>
+        <p class="bordered">
+            <b>Выканаўца алгарытму</b> — чалавек, група людзей або тэхнічнае ўстройства, якія разумеюць каманды
+            алгарытму і
+            ўмеюць правільна іх выконваць. </p>
+        <p>Чалавек можа быць выканаўцам алгарытмаў з прыкладаў 16.1 і 16.2, алгарытму па зборцы робата і інш. Выконваць
+            алгарытм
+            можа фотаапарат, робат і інш.
+            <a href="#sixt1-1-3">(прыклад&nbsp;16.3).</a>
+        </p>
+        <p>Каманды, якія разумее і можа ажыццявіць выканаўца, утвараюць <b>сістэму каманд выканаўцы</b>. У
+            <a href="#sixt1-1-4">прыкладзе&nbsp;16.4 </a> прыведзена сістэма каманд выканаўцы Пральная машына-аўтамат.
+            У
+            залежнасці ад ступені забруджвання
+            і тыпу бялізны чалавек можа задаць розныя рэжымы работы (алгарытмы) пральнай машыны. </p>
+        <p>Алгарытмы, прызначаныя для выканання на камп’ютары, запісваюць на некаторай фармальнай мове (мове
+            праграміравання).
+            Запіс алгарытму на мове праграміравання называюць <b>праграмай</b>. Выканаўцам праграм з’яўляецца
+            камп’ютар.</p>
+        <p>
+            <b>Камп’ютарны выканаўца </b> — віртуальны аб’ект, які дзейнічае ў віртуальным асяроддзі <a href="#sixt1-1-5">(прыклад&nbsp;16.5).</a>
+        </p>
+
+
+        <p>Для некаторых выканаўцаў патрабуецца пэўнае становішча. Такое становішча называюць <b>асяроддзем існавання
+                выканаўцы</b>
+            <a href="#sixt1-1-6">(прыклад&nbsp;16.6). </a>
+        </p>
+        <p>Выканаўца Шасцікласнік (асяроддзе існавання — 6-ы клас) умее:
+            <ul>
+                <li>задумваць натуральны лік; </li>
+                <li>выконваць арыфметычныя дзеянні над лікамі; </li>
+                <li>знаходзіць найбольшы і найменшы лік сярод зададзеных лікаў; </li>
+                <li>запісваць лікі. </li>
+            </ul>
+        </p>
+
+        <p> Яму прапануецца выканаць алгарытм:
+            <ol>
+
+                <li>Задумаць некаторы натуральны лік.</li>
+                <li>Памножыць задуманы лік на 2.</li>
+                <li>Да атрыманага здабытку дадаць 10.</li>
+                <li>Вынік падзяліць на 2.</li>
+                <li>Ад дзелі адняць задуманы лік.</li>
+                <li>Запісаць вынік.</li>
+                <a href="#sixt1-1-7">(Разгледзьце прыклад&nbsp;16.7.)</a>
+            </ol>
+        </p>
+        <p>Няхай асяроддзе існавання выканаўцы Пэндзаль — ліст паперы. Сістэма каманд выканаўцы:
+            <ul>
+
+                <li>стрэлка — выканаўца рысуе адрэзак некаторай даўжыні ў напрамку, паказаным стрэлкай; </li>
+                <li>закрэсленая стрэлка — выканаўца рухаецца ў напрамку, паказаным стрэлкай, не пакідаючы следу
+                    <a href="#sixt1-1-8">(прыклад&nbsp;16.8).</a>
+                </li>
+            </ul>
+        </p>
+        <p>Разгледзім алгарытм вызначэння сутачнай амплітуды тэмпературы паветра. Для гэтага патрабуецца:
+            <ol>
+                <li>Вызначыць максімальную тэмпературу паветра за суткі.</li>
+                <li>Вызначыць мінімальную тэмпературу паветра за суткі.</li>
+                <li>Знайсці рознасць паміж максімальным і мінімальным значэннямі тэмператур
+                    <a href="#sixt1-1-9"> (прыклад&nbsp;16.9).</a>
+                </li>
+            </ol>
+        </p>
+        <p>Выканаўцам гэтага алгарытму можа аказацца любы чалавек, якому зразумелыя каманды алгарытму.</p>
+        <p>
+            Алгарытм вызначэння азімута можа быць такім:
+            <ol>
+                <li>Сумясціць афарбаваны канец стрэлкі компаса з напрамкам на поўнач.</li>
+                <li>Мысленна правесці прамую лінію ад цэнтра компаса да аб’екта.</li>
+                <li>Вызначыць вугал паміж стрэлкай на поўнач і ўяўнай лініяй да аб’екта ў напрамку гадзіннікавай
+                    стрэлкі (азімут
+                    на поўнач роўны 0°)
+                    <a href="#sixt1-1-10"> (прыклад&nbsp;16.10).</a>
+                </li>
+            </ol>
+        </p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder16()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Што такое алгарытм?<br>
+                            <label class="q480"><input type="radio" name='info' value=''> Задача, рашэнне якой трэба
+                                знайсці.</label>
+                            <label class="q481"><input type="radio" name='info' value=''> Накіраванне на выкананне
+                                канкрэтнага дзеяння.</label>
+                            <label class="q482"><input class='true102-2' type="radio" name='info' value=''>
+                                Паслядоўнасць каманд, выкананне якіх прывядзе да рашэння пастаўленай задачы.</label>
+                            <label class="q483"><input type="radio" name='info' value=''> Набор каманд для камп’ютара.
+                            </label>
+                        </div>
+                        <button class="check sixteen1-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што называецца камандай у алгарытме?<br>
+                            <label class="q484"><input type="radio" name='info' value=''> Паслядоўнасць дзеянняў для
+                                рашэння пастаўленай задачы.</label>
+                            <label class="q485"><input class='true103-2' type="radio" name='info' value=''> Накіраванне
+                                на выкананне канкрэтнага дзеяння.</label>
+                            <label class="q486"><input type="radio" name='info' value=''> Задача, рашэнне якой трэба
+                                знайсці.</label>
+                            <label class="q487"><input type="radio" name='info' value=''> Асяроддзе існавання
+                                выканаўцы.</label>
+                        </div>
+                        <button class="check sixteen2-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што такое выканаўца алгарытму?<br>
+                            <label class="q488"><input type="radio" name='info' value=''> Становішча, у якім
+                                выконваецца алгарытм.</label>
+                            <label class="q489"><input type="radio" name='info' value=''> Накіраванне на выкананне
+                                канкрэтнага дзеяння.</label>
+                            <label class="q490"><input type="radio" name='info' value=''> Сукупнасць усіх каманд у
+                                алгарытме.</label>
+                            <label class="q491"><input class='true104-2' type="radio" name='info' value=''> Чалавек,
+                                група людзей або тэхнічнае ўстройства, якія разумеюць каманды алгарытму і ўмеюць
+                                правільна іх выконваць.</label>
+                        </div>
+                        <button class="check sixteen3-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Хто або што можа быць выканаўцам алгарытму? <br>
+                            <label class="q492"><input class='true105-2' type="checkbox" name='info' value=''>
+                                Вадзіцель аўтамабіля.</label>
+                            <label class="q493"><input class='true105-2' type="checkbox" name='info' value=''> Робат.</label>
+                            <label class="q494"><input class='false105-2' type="checkbox" name='info' value=''>
+                                Камп’ютарны стол.</label>
+                            <label class="q495"><input class='true105-2' type="checkbox" name='info' value=''>
+                                Камп’ютар.</label>
+                            <label class="q496"><input class='true105-2' type="checkbox" name='info' value=''> Дзіцячая
+                                машынка на дыстанцыйным кіраванні.</label>
+                            <label class="q497"><input class='false105-2' type="checkbox" name='info' value=''> Школьны
+                                падручнік інфарматыкі.</label>
+                        </div>
+
+                        <button class="check sixteen4-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што называюць сістэмай каманд выканаўцы?<br>
+                            <label class="q498"><input type="radio" name='info' value=''> Сукупнасць каманд, зразумелых
+                                выканаўцу.</label>
+                            <label class="q499"><input class='true106-2' type="radio" name='info' value=''> Каманды,
+                                якія выканаўца разумее і можа выканаць.</label>
+                            <label class="q500"><input type="radio" name='info' value=''> Сукупнасць асноўных каманд
+                                выканаўцы.</label>
+                            <label class="q501"><input type="radio" name='info' value=''> Любы набор каманд, зразумелых
+                                выканаўцу.</label>
+                        </div>
+                        <button class="check sixteen5-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што такое асяроддзе існавання выканаўцы?<br>
+                            <label class="q502"><input type="radio" name='info' value=''> Сукупнасць каманд, зразумелых
+                                выканаўцу.</label>
+                            <label class="q503"><input type="radio" name='info' value=''> Каманды, якія выканаўца
+                                разумее і можа выканаць. </label>
+                            <label class="q504"><input class='true107-2' type="radio" name='info' value=''> Становішча,
+                                у якім выканаўца выконвае каманды.</label>
+                            <label class="q505"><input type="radio" name='info' value=''> Набор каманд, зразумелых
+                                выканаўцу.</label>
+                        </div>
+                        <button class="check sixteen6-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div style="display: flex">
+                            <div class="flex-col">
+                                Якія з наступных працэсаў можна апісаць у выглядзе алгарытмаў? <br>
+
+                                <label class="q506"><input class='true108-2' type="checkbox" name='info' value=''>
+                                    Замена кола ў аўтамабілі.</label>
+                                <label class="q507"><input class='true108-2' type="checkbox" name='info' value=''>
+                                    Напісанне дамашняга сачынення.</label>
+                                <label class="q508"><input class='true108-2' type="checkbox" name='info' value=''>
+                                    Складанне двух дробаў.</label>
+                                <label class="q509"><input class='false108-2' type="checkbox" name='info' value=''>
+                                    Забіванне гола на футбольным матчы.</label>
+                                <label class="q510"><input class='true108-2' type="checkbox" name='info' value=''>
+                                    Атрыманне відарыса беларускага арнаменту, паказанага на рысунку.
+                                </label>
+
+                                <label class="q511"><input class='false108-2' type="checkbox" name='info' value=''>
+                                    Запіс шэрага ўсіх натуральных лікаў.</label>
+
+
+
+                            </div>
+                            <img align="top" width="120px" height="120px" src="images/img1/16-1.jpg" alt="">
+                        </div>
+
+                        <button class="check sixteen7-2">Праверыць</button>
+                    </li>
+                </ol>
+            </div>
+
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref3.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Прывядзіце прыклады алгарытмаў з паўсядзённага жыцця і вучэбнай
+                        дзейнасці.</li>
+                    <li><b class="circled">2</b>Змяніце алгарытм з <a href="#sixt1-1-1">прыкладу 16.1</a> для тэлефона
+                        з функцыяй галасавога кіравання.</li>
+
+                    <li><b class="circled">3<span class="stared">*</span></b>Рашыце метадам падбору задачу аль-Харэзмі:
+                        «Я да трэці ліку дадаў адзінку і да чвэрці ліку дадаў адзінку. Перамножыўшы гэтыя
+                        лікі, атрымаў 20. Які лік я ўзяў?»</li>
+                    <li><b class="circled">4</b>Прывядзіце прыклады выканаўцаў алгарытмаў.</li>
+                    <li>5. Напішыце сістэму каманд аднаго з выканаўцаў <a href="#sixt1-1-3">прыкладу 16.3</a>.</li>
+                    <li>6. Выканайце алгарытм з <a href="#sixt1-1-7">прыкладу 16.7</a> некалькі разоў для розных лікаў.
+                        Параўнайце атрыманыя вынікі. Зрабіце
+                        высновы.
+                    </li>
+                    <li><b class="circled">7<span class="stared">*</span></b>Па камандах
+
+                        <img src="images/img1/16-5.jpg" alt=""> выканаўца Пэндзаль рысуе частку акружнасці ў паказаным
+                        напрамку. Вызначыце вынік выканання алгарытму:
+                        <div class="info-type">
+                            <img src="images/img1/16-6.png" alt="">
+                        </div>
+                    </li>
+                    <li><b class="circled">8</b>Напішыце алгарытм марфалагічнага разбору прыметніка. Выканайце гэты
+                        алгарытм для прыметніка <em>"лічбавым"</em> са сказа
+                        <em>Сучасны чалавек жыве ў лічбавым свеце</em>.</li>
+                    <li><b class="circled">9<span class="stared">*</span></b>Прыдумайце выканаўцу алгарытмаў са сваёй
+                        сістэмай каманд і напішыце для яго алгарытм рашэння некаторай задачы.
+                    </li>
+                </ul>
+                <br>
+            </div>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top15-1">&#8592 Папярэдні параграф </a></div>
+        <div class="to-right next"><a href="#to-top17-1">Наступны параграф &#8594</a></div><br><br><br>
+
+    </div>
+    <script>
+        $('.sixteen1-2').click(function () {
+            if ($($('.true102-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.sixteen2-2').click(function () {
+            if ($($('.true103-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.sixteen3-2').click(function () {
+            if ($($('.true104-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.sixteen4-2').click(function () {
+            if ($($('.true105-2')[0]).prop('checked') &&
+                $($('.true105-2')[1]).prop('checked') &&
+                $($('.true105-2')[2]).prop('checked') &&
+                $($('.true105-2')[3]).prop('checked') &&
+                !$($('.false105-2')[0]).prop('checked') &&
+                !$($('.false105-2')[1]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.sixteen5-2').click(function () {
+            if ($($('.true106-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.sixteen6-2').click(function () {
+            if ($($('.true107-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.sixteen7-2').click(function () {
+            if ($($('.true108-2')[0]).prop('checked') &&
+                $($('.true108-2')[1]).prop('checked') &&
+                $($('.true108-2')[2]).prop('checked') &&
+                $($('.true108-2')[3]).prop('checked') &&
+                !$($('.false108-2')[0]).prop('checked') &&
+                !$($('.false108-2')[1]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+
+
+        function changeOrder16() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(4, 1, 4)
+            let arr3 = rand(4, 1, 4)
+            let arr4 = rand(6, 1, 6)
+            let arr5 = rand(4, 1, 4)
+            let arr6 = rand(4, 1, 4)
+            let arr7 = rand(6, 1, 6)
+
+
+            $('.q480').css({
+                'order': arr1[0]
+            })
+            $('.q481').css({
+                'order': arr1[1]
+            })
+            $('.q482').css({
+                'order': arr1[2]
+            })
+            $('.q483').css({
+                'order': arr1[3]
+            })
+            $('.q484').css({
+                'order': arr2[0]
+            })
+            $('.q485').css({
+                'order': arr2[1]
+            })
+            $('.q486').css({
+                'order': arr2[2]
+            })
+            $('.q487').css({
+                'order': arr2[3]
+            })
+            $('.q488').css({
+                'order': arr3[0]
+            })
+            $('.q489').css({
+                'order': arr3[1]
+            })
+            $('.q490').css({
+                'order': arr3[2]
+            })
+            $('.q491').css({
+                'order': arr3[3]
+            })
+            $('.q492').css({
+                'order': arr4[0]
+            })
+            $('.q493').css({
+                'order': arr4[1]
+            })
+            $('.q494').css({
+                'order': arr4[2]
+            })
+            $('.q495').css({
+                'order': arr4[3]
+            })
+            $('.q496').css({
+                'order': arr4[4]
+            })
+            $('.q497').css({
+                'order': arr4[5]
+            })
+            $('.q498').css({
+                'order': arr5[0]
+            })
+            $('.q499').css({
+                'order': arr5[1]
+            })
+            $('.q500').css({
+                'order': arr5[2]
+            })
+            $('.q501').css({
+                'order': arr5[3]
+            })
+            $('.q502').css({
+                'order': arr6[0]
+            })
+            $('.q503').css({
+                'order': arr6[1]
+            })
+            $('.q504').css({
+                'order': arr6[2]
+            })
+            $('.q505').css({
+                'order': arr6[3]
+            })
+            $('.q506').css({
+                'order': arr7[0]
+            })
+            $('.q507').css({
+                'order': arr7[1]
+            })
+            $('.q508').css({
+                'order': arr7[2]
+            })
+            $('.q509').css({
+                'order': arr7[3]
+            })
+            $('.q510').css({
+                'order': arr7[4]
+            })
+            $('.q511').css({
+                'order': arr7[5]
+            })
+
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name="to-top17-2">
+            <h1>§ 17. Способы записи алгоритмов</h1>
+        </a>
+        <p>Издавна человек стремился записывать нужные действия в краткой и понятной форме. Так в различных сферах
+            жизни появились
+            разнообразные инструкции: правила игры, кулинарные рецепты, методы решения математических задач, схемы
+            вязания
+            и т. д.</p>
+        <p>Многие из таких записей можно считать алгоритмами, так как они записаны в виде точных и понятных команд и
+            приводят
+            к решению задач.</p>
+        <p>Существуют следующие способы записи алгоритмов:
+            <ul>
+                <li>словесное описание; </li>
+                <li>графический (блок-схема);</li>
+                <li>программный.</li>
+            </ul>
+        </p>
+        <p class="bordered">
+            <b>Словесный способ записи алгоритма</b> — запись алгоритма на естественном языке общения.</p>
+        <p>(Рассмотрите <a href="#se1-2-1">примеры 17.1 и 17.2 </a>,в которых представлено словесное описание алгоритмов.)</p>
+        <p class="bordered"><b>Графический способ записи алгоритма</b> — запись алгоритма с помощью геометрических
+            фигур (блоков), соответствующих командам алгоритма, и линий для соединения блоков.</p>
+        <p>В информатике для графического способа записи алгоритма используются блок-схемы, в которых каждый блок
+            изображается
+            в виде некоторой геометрической фигуры и имеет свое назначение.</p>
+        <p class="normal">Блоки начала и окончания алгоритма:
+            <img src="images/img1/17-1.jpg" alt="">,
+            <img src="images/img1/17-2.jpg" alt="">.</p>
+        <p class="normal">Блок для записи выполняемых команд алгоритма:
+            <img src="images/img1/17-3.jpg" alt="">.</p>
+        <p class="normal">Блоки для ввода исходных данных и вывода полученных результатов:
+            <img src="images/img1/17-4.jpg" alt="">,
+            <img src="images/img1/17-5.jpg" alt=""> .</p>
+        <p class="bordered">Запись алгоритма в виде программы называется <b>программным способом записи</b> алгоритма</p>
+        <p>Записывать алгоритмы программным способом вы научитесь на следующих уроках.</p>
+        <p>Рассмотрим такой пример. Пусть в квартире планируется проведение ремонта. Предполагается покрыть пол на
+            кухне кафельной
+            плиткой. Необходимо записать алгоритм определения минимального количества плиток, необходимых для ремонта.</p>
+        <div class="catalog">
+            <img src="images/img1/17-6.jpg" alt="">
+        </div>
+        <p>Словесное описание и блок-схема алгоритма, позволяющего определить необходимое количество плиток для
+            ремонта, представлены
+            в
+            <a href="#se1-2-3">примере 17.3</a> .</p>
+        <p>С помощью рулетки определим размеры кухни и плитки и выполним алгоритм. </p>
+        <ol>
+            <li>Размеры кухни:<em> а = 4,4 (м), b = 3,2 (м).</em></li>
+            <li><em>S<sub>кухни</sub> = 4,4 &middot; 3,2 = 14,08 (м<sup>2</sup>).</em></li>
+            <li>Размеры плитки:<em> c = 0,33 (м), d = 0,33 (м).</em></li>
+            <li><em>S<sub>плитки</sub> = 0,33 &middot;  0,33 = 0,1089 (м<sup>2</sup>).</em> </li>
+            <li><em>k &asymp; 14,08/0,1089 &asymp; 129,29 (пл.)</em></li>
+            Ответ: минимальное количество плиток для ремонта кухни — 130.
+        </ol>
+
+
+        <p>В
+            <a href="#se1-2-4"> примере 17.4 </a>показана блок-схема алгоритма копирования текстового фрагмента из
+            одной части документа
+            в другую. В алгоритме предполагается, что исполнитель понимает и умеет правильно выполнять все команды. В
+            противном случае необходимо более подробное описание отдельных команд (например, как скопировать выделенный
+            текстовый фрагмент в буфер обмена).</p>
+
+        <p>
+            В
+            <a href="#se1-2-5">примере 17.5</a> составлено словесное описание алгоритма определения особенностей
+            периода каменного века.</p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder17()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Какие способы записи алгоритмов вам известны? <br>
+                            <label class="q512"><input class='true109' type="checkbox" name='info' value=''>
+                                Графический.</label>
+                            <label class="q513"><input class='false109' type="checkbox" name='info' value=''>
+                                Буквенно-цифровой.</label>
+                            <label class="q514"><input class='true109' type="checkbox" name='info' value=''> Словесный.</label>
+                            <label class="q515"><input class='true109' type="checkbox" name='info' value=''>
+                                Программный.</label>
+                            <label class="q516"><input class='false109' type="checkbox" name='info' value=''>
+                                Математический.</label>
+                            <label class="q517"><input class='false109' type="checkbox" name='info' value=''>
+                                Вспомогательный.</label>
+                            <label class="q518"><input class='false109' type="checkbox" name='info' value=''>
+                                Последовательный.</label>
+                        </div>
+
+                        <button class="check seventeen1-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какой способ записи называют словесным? <br>
+                            <label class="q519"><input type="radio" name='info' value=''> Запись с помощью
+                                геометрических фигур.</label>
+                            <label class="q520"><input class='true110' type="radio" name='info' value=''> Запись на
+                                естественном языке общения.</label>
+                            <label class="q521"><input type="radio" name='info' value=''> Запись с помощью
+                                математических формул.</label>
+                            <label class="q522"><input type="radio" name='info' value=''> Запись в виде программы.</label>
+                        </div>
+                        <button class="check seventeen2-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что такое графическая запись алгоритма? <br>
+                            <label class="q523"><input class='true111' type="radio" name='info' value=''> Запись с
+                                помощью некоторых геометрических фигур и линий для их соединения.</label>
+                            <label class="q524"><input type="radio" name='info' value=''> Запись на естественном языке
+                                общения.</label>
+                            <label class="q525"><input type="radio" name='info' value=''> Запись с помощью
+                                математических формул.</label>
+                            <label class="q526"><input type="radio" name='info' value=''> Запись в виде программы.</label>
+                        </div>
+                        <button class="check seventeen3-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какой способ записи алгоритма называют программным? <br>
+                            <label class="q527"><input type="radio" name='info' value=''> Запись с помощью
+                                геометрических фигур и линий для их соединения.</label>
+                            <label class="q528"><input type="radio" name='info' value=''> Запись на естественном языке
+                                общения.</label>
+                            <label class="q529"><input type="radio" name='info' value=''> Запись с помощью
+                                математических формул.</label>
+                            <label class="q530"><input class='true112' type="radio" name='info' value=''> Запись в виде
+                                программы.</label>
+                        </div>
+                        <button class="check seventeen4-1">Проверить</button>
+                    </li>
+                    <li>
+
+                        В алгоритме уборки классной доски перепутаны команды. В каком порядке нужно выполнить команды,
+                        чтобы алгоритм стал правильным?<br>
+                        <label class="q531"><input size='3' type="text" name='info' value=''> Стереть все записи с
+                            доски.</label><br>
+                        <label class="q532"><input size='3' type="text" name='info' value=''> Положить тряпку.</label><br>
+                        <label class="q533"><input size='3' type="text" name='info' value=''> Отжать тряпку.</label><br>
+                        <label class="q534"><input size='3' type="text" name='info' value=''> Взять тряпку.</label><br>
+                        <label class="q535"><input size='3' type="text" name='info' value=''> Намочить тряпку.</label><br>
+
+                        <button class="check seventeen5-1">Проверить</button>
+                    </li>
+                    <li>
+
+                        В алгоритме загрузки текста из файла Пример1.doc перепутаны команды. В каком порядке нужно
+                        выполнить команды, чтобы алгоритм стал правильным?<br>
+                        <label class="q536"><input size='3' type="text" name='info' value=''> Выполнить команду &nbsp;
+                            <b>Файл Открыть.</b></label><br>
+                        <label class="q537"><input size='3' type="text" name='info' value=''> Выбрать в списке файлов
+                            файл с именем Пример1.doc.</label><br>
+                        <label class="q538"><input size='3' type="text" name='info' value=''> Выбрать нужную папку.</label><br>
+                        <label class="q539"><input size='3' type="text" name='info' value=''> Нажать кнопку Открыть.</label><br>
+                        <label class="q540"><input size='3' type="text" name='info' value=''> Открыть текстовый
+                            редактор.</label><br>
+
+                        <button class="check seventeen6-1">Проверить</button>
+                    </li>
+                    <li>
+                        Выполните алгоритм и запишите результат.<br>
+                        <ul>
+                            <li>Написать слово ФАНТАСТИКА.</li>
+                            <li>Удалить ТАС.</li>
+                            <li>Перенести букву Ф после буквы Н</li>
+                            <li>Вставить после буквы Ф сочетание ОРМА.</li>
+                            <li>Заменить первую букву полученного слова буквой И.</li>
+                        </ul><br>
+                        <input type="text" class="result17">
+
+                        <button class="check seventeen7-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Последовательность команд, выполнение которых приведет к решению поставленной задачи, —
+                            это: <br>
+                            <label class="q541"><input type="radio" name='info' value=''> Исполнитель.</label>
+                            <label class="q542"><input type="radio" name='info' value=''> Компьютер.</label>
+                            <label class="q543"> <input class='true113' type="radio" name='info' value=''> Алгоритм.</label>
+                            <label class="q544"><input type="radio" name='info' value=''> Система команд.</label>
+                        </div>
+                        <button class="check seventeen8-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Алгоритм, исполнителем которого является компьютер, — это: <br>
+                            <label class="q545"><input type="radio" name='info' value=''> Информационно-компьютерный
+                                алгоритм.</label>
+                            <label class="q546"><input class='true114' type="radio" name='info' value=''> Программа.</label>
+                            <label class="q547"><input type="radio" name='info' value=''> Команда.</label>
+                            <label class="q548"><input type="radio" name='info' value=''> Система команд.</label>
+                        </div>
+                        <button class="check seventeen9-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Отдельное действие, которое выполняет исполнитель, — это: <br>
+                            <label class="q549"><input type="radio" name='info' value=''> Алгоритм.</label>
+                            <label class="q550"> <input type="radio" name='info' value=''> Программа.</label>
+                            <label class="q551"><input type="radio" name='info' value=''> Система команд.</label>
+                            <label class="q552"><input class='true115' type="radio" name='info' value=''> Команда.</label>
+                        </div>
+                        <button class="check seventeen10-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Объект, который выполняет команды алгоритма, — это: <br>
+                            <label class="q553"><input type="radio" name='info' value=''> Работник.</label>
+                            <label class="q554"> <input type="radio" name='info' value=''> Помощник.</label>
+                            <label class="q555"><input type="radio" name='info' value=''> Программа.</label>
+                            <label class="q556"><input class='true116' type="radio" name='info' value=''> Исполнитель.</label>
+                        </div>
+                        <button class="check seventeen11-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Обстановка, в которой функционирует исполнитель, — это: <br>
+                            <label class="q557"><input type="radio" name='info' value=''> Алгоритм.</label>
+                            <label class="q558"><input type="radio" name='info' value=''> Программа.</label>
+                            <label class="q559"><input class='true117' type="radio" name='info' value=''> Среда
+                                обитания.</label>
+                            <label class="q560"><input type="radio" name='info' value=''> Система команд.</label>
+                        </div>
+                        <button class="check seventeen12-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Совокупность команд, которые понимает и может выполнить исполнитель, — это: <br>
+                            <label class="q561"><input type="radio" name='info' value=''> Среда обитания.</label>
+                            <label class="q562"><input class='true118' type="radio" name='info' value=''> Система
+                                команд.</label>
+                            <label class="q563"><input type="radio" name='info' value=''> Программа.</label>
+                            <label class="q564"><input type="radio" name='info' value=''> Алгоритм.</label>
+                        </div>
+                        <button class="check seventeen13-1">Проверить</button>
+                    </li>
+                    <li>
+                        Что обозначает блок <img src="images/img1/block.jpg" alt=""> <br>
+                        <div class="flex-col">
+                            <label class="q565"><input class='false119' type="checkbox" name='info' value=''> Начало
+                                (конец) алгоритма.</label>
+                            <label class="q566"><input class='false119' type="checkbox" name='info' value=''> Команду
+                                алгоритма.</label>
+                            <label class="q567"><input class='true119' type="checkbox" name='info' value=''> Ввод
+                                данных.</label>
+                            <label class="q568"><input class='true119' type="checkbox" name='info' value=''> Вывод
+                                результатов.</label>
+                        </div>
+                        <button class="check seventeen14-1">Проверить</button>
+                    </li>
+
+                </ol>
+            </div>
+            <button class="practise-btn">Упражнения</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref3.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Запишите алгоритм перемещения текстового фрагмента из одной части
+                        документа в другую.</li>
+                    <li><b class="circled">2</b>Приведите графическую запись алгоритмов решения <a href="#se1-2-1">примеров
+                            17.1 и 17.2.</a></li>
+                    <li><b class="circled">3</b>Составьте алгоритм для выполнения синтаксического разбора простого
+                        предложения. </li>
+                    <li><b class="circled">4</b>В курсе истории вы познакомились с этапами работы над историческими
+                        источниками. Запишите их в виде алгоритма.</li>
+                    <li><b class="circled">5</b>Запишите для исполнителя Шестиклассник алгоритм сложения дробей <em>a/b</em> и
+                        <em>c/d</em>. Выполните алгоритм для дробей 13/27
+                        и 12/27.</li>
+                    <li><b class="circled">6</b>Участок земли прямоугольной формы имеет длину <em>a</em> м и <br> ширину <em>b</em> м.
+                        <br> Запишите алгоритм определения площади участка, а также длины забора, который потребуется
+                        для ограждения
+                        участка. Выполните алгоритм на примере некоторого земельного участка.</li>
+                    <li><b class="circled">7</b>В курсе биологии вы познакомились со строением растительной клетки.
+                        Запишите алгоритм, позволяющий определить
+                        строение клеток кожицы лука. </li>
+                    <li><b class="circled">8<span class="stared">*</span></b>Запишите алгоритм, позволяющий определить
+                        толщину листа бумаги учебного пособия «Информатика, 6».</li>
+                    <li><b class="circled">9<span class="stared">*</span></b>Запишите алгоритм решения старинной
+                        задачи: «Требуется переправить на другой берег трех рыцарей и их оруженосцев.
+                        Имеется лодка, которая может вместить только двух человек. Известно, что ни один оруженосец не
+                        может находиться
+                        в обществе других рыцарей без своего рыцаря».</li>
+                    <li><b class="circled">10<span class="stared">*</span></b>Имеются кувшин емкостью 8 л, заполненный
+                        квасом, и два пустых кувшина емкостью 3 л и 5 л. Запишите алгоритм,
+                        выполняя который можно разделить квас поровну между двумя людьми (разрешается пользоваться
+                        только этими тремя
+                        кувшинами).
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top16-2">&#8592 Предыдущий параграф</a> </div>
+        <div class="to-right next"><a href="#to-top18-2">Следующий параграф &#8594</a></div><br><br><br>
+    </div>
+    <script>
+        $('.seventeen1-1').click(function(){
+                if($($('.true109')[0]).prop('checked')
+                    && $($('.true109')[1]).prop('checked')
+                    && $($('.true109')[2]).prop('checked')
+                    && !$($('.false109')[0]).prop('checked')
+                    && !$($('.false109')[1]).prop('checked')
+                    && !$($('.false109')[2]).prop('checked')
+                    && !$($('.false109')[3]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen2-1').click(function(){
+                if($($('.true110')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen3-1').click(function(){
+                if($($('.true111')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen4-1').click(function(){
+                if($($('.true112')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen5-1').click(function(){
+                    if($($(this)[0].parentElement.children[1].firstChild).val()==='4'
+                    && $($(this)[0].parentElement.children[3].firstChild).val()==='5'
+                    && $($(this)[0].parentElement.children[5].firstChild).val()==='3'
+                    && $($(this)[0].parentElement.children[7].firstChild).val()==='1'
+                    && $($(this)[0].parentElement.children[9].firstChild).val()==='2'){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seventeen6-1').click(function(){
+                    if($($(this)[0].parentElement.children[1].firstChild).val()==='2'
+                    && $($(this)[0].parentElement.children[3].firstChild).val()==='4'
+                    && $($(this)[0].parentElement.children[5].firstChild).val()==='3'
+                    && $($(this)[0].parentElement.children[7].firstChild).val()==='5'
+                    && $($(this)[0].parentElement.children[9].firstChild).val()==='1'){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seventeen7-1').click(function(){
+                    if($('.result17')[0].value==='ИНФОРМАТИКА'){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+            $('.seventeen8-1').click(function(){
+                if($($('.true113')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen9-1').click(function(){
+                if($($('.true114')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen10-1').click(function(){
+                if($($('.true115')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen11-1').click(function(){
+                if($($('.true116')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen12-1').click(function(){
+                if($($('.true117')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen13-1').click(function(){
+                if($($('.true118')[0]).prop('checked')){
+                    myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+            $('.seventeen14-1').click(function(){
+                if($($('.true119')[0]).prop('checked')
+                    && $($('.true119')[1]).prop('checked')
+                    && !$($('.false119')[0]).prop('checked')
+                    && !$($('.false119')[1]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+            })
+                
+    </script>
+    <div lang='bel'>
+        <a name="to-top17-1">
+            <h1> § 17. Спосабы запісу алгарытмаў</h1>
+        </a>
+        <p> Здаўна чалавек імкнуўся запісваць патрэбныя дзеянні ў кароткай і зразумелай форме. Так у розных сферах
+            жыцця з’явіліся
+            разнастайныя інструкцыі: правілы гульні, кулінарныя рэцэпты, метады рашэння матэматычных задач, схемы
+            вязання
+            і г. д.</p>
+        <p> Шмат якія з такіх запісаў можна лічыць алгарытмамі, паколькі яны запісаны ў выглядзе дакладных і зразумелых
+            каманд
+            і прыводзяць да рашэння задач.</p>
+        <p> Існуюць наступныя спосабы запісу алгарытмаў:
+            <ul>
+                <li>слоўнае апісанне; </li>
+                <li>графічны (блок-схема);</li>
+                <li>праграмны.</li>
+
+            </ul>
+        </p>
+        <p class="bordered">
+            <b>Слоўны спосаб запісу алгарытму</b> — запіс алгарытму на натуральнай мове зносін.</p>
+        <p>(Разгледзьце <a href="#se1-1-1"> прыклады 17.1 і 17.2 </a>, у якіх пададзена слоўнае апісанне алгарытмаў.)</p>
+        <p class="bordered"><b>Графічны спосаб запісу алгарытму</b> — запіс алгарытму з дапамогай геаметрычных фігур
+            (блокаў), якія адпавядаюць камандам алгарытму, і ліній для злучэння блокаў.</p>
+        <p>У інфарматыцы для графічнага спосабу запісу алгарытму выкарыстоўваюцца блок-схемы, у якіх кожны блок
+            адлюстроўваецца
+            ў выглядзе некаторай геаметрычнай фігуры і мае сваё прызначэнне.</p>
+        <p class="normal">Блокі пачатку і заканчэння алгарытму:
+            <img src="images/img1/17-1-b.png" alt="">,
+            <img src="images/img1/17-2-b.png" alt="">.</p>
+        <p class="normal">Блок для запісу выконваемых каманд алгарытму:
+            <img src="images/img1/17-3-b.png" alt=""> .</p>
+        <p class="normal">Блокі для ўводу зыходных даных і вываду атрыманых вынікаў:
+            <img src="images/img1/17-4-b.png" alt=""> ,
+            <img src="images/img1/17-5-b.png" alt=""> .</p>
+        <p class="bordered">Запіс алгарытму ў выглядзе праграмы называецца <b>праграмным спосабам запісу алгарытму</b>.</p>
+        <p>Запісваць алгарытмы праграмным спосабам вы навучыцеся на наступных уроках. </p>
+        <p>Разгледзім такі прыклад. Няхай у кватэры плануецца правядзенне рамонту. Мяркуецца пакрыць падлогу на кухні
+            кафлянай
+            пліткай. Неабходна запісаць алгарытм вызначэння мінімальнай колькасці плітак, неабходных для рамонту.</p>
+        <div class="catalog">
+            <img src="images/img1/17-6.jpg" alt="">
+        </div>
+        <p>Слоўнае апісанне і блок-схема алгарытму, які дазваляе вызначыць неабходную колькасць плітак для рамонту,
+            паказаны
+            ў
+            <a href="#se1-1-3">прыкладзе 17.3</a>.</p>
+        <p>З дапамогай рулеткі вызначым памеры кухні і пліткі і выканаем алгарытм.</p>
+        <ol>
+            <li>Памеры кухні: <em>а = 4,4 (м), b = 3,2 (м)</em>.</li>
+            <li><em>S<sub>кухні</sub> = 4,4 &middot; 3,2 = 14,08 (м<sup>2</sup>).</em></li>
+            <li>Памеры пліткі:<em> c = 0,33 (м), d = 0,33 (м).</em></li>
+            <li><em>S<sub>пліткі</sub> = 0,33 &middot;  0,33 = 0,1089 (м<sup>2</sup>).</em></li>
+            <li><em>k &asymp; 14,08/0,1089 &asymp; 129,29 (пл.)</em></li>
+            Адказ: мінімальная колькасць плітак для рамонту кухні — 130.
+        </ol>
+
+
+        <p>
+            У
+            <a href="#se1-1-4">прыкладзе 17.4</a> паказана блок-схема алгарытму капіравання тэкставага фрагмента з
+            адной часткі дакумента
+            ў іншую. У алгарытме мяркуецца, што выканаўца разумее і ўмее правільна выконваць усе каманды. У адваротным
+            выпадку неабходна больш падрабязнае апісанне асобных каманд (напрыклад, як скапіраваць вылучаны тэкставы
+            фрагмент у буфер абмену).</p>
+
+        <p>
+            У
+            <a href="#se1-1-5">прыкладзе 17.5</a> складзена слоўнае апісанне алгарытму вызначэння асаблівасцей перыяду
+            каменнага веку.</p>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder17()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+
+                    <li>
+                        <div class="flex-col">
+                            Якія спосабы запісу алгарытмаў вам вядомыя? <br>
+                            <label class="q512"><input class='true109-2' type="checkbox" name='info' value=''>
+                                Графічны.</label>
+                            <label class="q513"><input class='false109-2' type="checkbox" name='info' value=''>
+                                Літарна-лічбавы.</label>
+                            <label class="q514"><input class='true109-2' type="checkbox" name='info' value=''> Слоўны.</label>
+                            <label class="q515"><input class='true109-2' type="checkbox" name='info' value=''>
+                                Праграмны.</label>
+                            <label class="q516"><input class='false109-2' type="checkbox" name='info' value=''>
+                                Матэматычны.</label>
+                            <label class="q517"><input class='false109-2' type="checkbox" name='info' value=''>
+                                Дапаможны.</label>
+                            <label class="q518"><input class='false109-2' type="checkbox" name='info' value=''>
+                                Паслядоўны.</label>
+                        </div>
+
+                        <button class="check seventeen1-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Які спосаб запісу называюць слоўным? <br>
+                            <label class="q519"><input type="radio" name='info' value=''> Запіс з дапамогай
+                                геаметрычных фігур.</label>
+                            <label class="q520"><input class='true110-2' type="radio" name='info' value=''> Запіс на
+                                натуральнай мове зносін.</label>
+                            <label class="q521"><input type="radio" name='info' value=''> Запіс з дапамогай
+                                матэматычных формул.</label>
+                            <label class="q522"><input type="radio" name='info' value=''> Запіс у выглядзе праграмы.</label>
+                        </div>
+                        <button class="check seventeen2-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што такое графічны запіс алгарытму? <br>
+                            <label class="q523"><input class='true111-2' type="radio" name='info' value=''> Запіс з
+                                дапамогай некаторых геаметрычных фігур і ліній для іх злучэння.</label>
+                            <label class="q5124"><input type="radio" name='info' value=''> Запіс на натуральнай мове
+                                зносін.</label>
+                            <label class="q525"><input type="radio" name='info' value=''> Запіс з дапамогай
+                                матэматычных формул.</label>
+                            <label class="q526"><input type="radio" name='info' value=''> Запіс у выглядзе праграмы.</label>
+                        </div>
+                        <button class="check seventeen3-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Які спосаб запісу алгарытму называюць праграмным?<br>
+                            <label class="q527"> <input type="radio" name='info' value=''> Запіс з дапамогай некаторых
+                                геаметрычных фігур і ліній для іх злучэння.</label>
+                            <label class="q5128"><input type="radio" name='info' value=''> Запіс на натуральнай мове
+                                зносін.</label>
+                            <label class="q529"><input type="radio" name='info' value=''> Запіс з дапамогай
+                                матэматычных формул.</label>
+                            <label class="q530"><input class='true112-2' type="radio" name='info' value=''> Запіс у
+                                выглядзе праграмы.</label>
+                        </div>
+                        <button class="check seventeen4-2">Праверыць</button>
+                    </li>
+                    <li>
+
+                        У алгарытме прыбірання класнай дошкі пераблытаны каманды. У якім парадку трэба выканаць
+                        каманды, каб алгарытм стаў правільным?<br>
+                        <label class="q531"><input size='3' type="text" name='info' value=''> Сцерці ўсе запісы з
+                            дошкі.</label><br>
+                        <label class="q532"><input size='3' type="text" name='info' value=''> Пакласці анучу.</label><br>
+                        <label class="q533"><input size='3' type="text" name='info' value=''> Выкруціць анучу..</label><br>
+                        <label class="q534"><input size='3' type="text" name='info' value=''> Узяць анучу.</label><br>
+                        <label class="q535"><input size='3' type="text" name='info' value=''> Намачыць анучу.</label><br>
+
+                        <button class="check seventeen5-2">Праверыць</button>
+                    </li>
+                    <li>
+
+                        У алгарытме загрузкі тэксту з файла Прыклад1.doc пераблытаны каманды. У якім парадку трэба
+                        выканаць каманды, каб алгарытм стаў правільным?<br>
+                        <label class="q536"><input size='3' type="text" name='info' value=''> Выканаць каманду &nbsp;
+                            <b>Файл Открыть.</b></label><br>
+                        <label class="q537"><input size='3' type="text" name='info' value=''> Выбраць у спісе файлаў
+                            файл з імем Прыклад1.doc.</label><br>
+                        <label class="q538"><input size='3' type="text" name='info' value=''> Выбраць патрэбную папку.</label><br>
+                        <label class="q539"><input size='3' type="text" name='info' value=''> Націснуць кнопку Открыть.</label><br>
+                        <label class="q540"><input size='3' type="text" name='info' value=''> Адкрыць тэкставы
+                            рэдактар.</label><br>
+
+                        <button class="check seventeen6-2">Праверыць</button>
+                    </li>
+
+                    <li>
+
+                        Выканайце алгарытм і запішыце вынік.<br>
+                        <ul>
+                            <li>Напісаць слова ФАНТАСТЫКА.</li>
+                            <li>Выдаліць ТАС.</li>
+                            <li>Перанесці літару Ф пасля літары Н.</li>
+                            <li>Уставіць пасля літары Ф спалучэнне АРМА.</li>
+                            <li>Замяніць першую літару атрыманага слова літарай І.</li>
+                        </ul><br>
+                        <input type="text" class="result17-2">
+
+                        <button class="check seventeen7-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Паслядоўнасць каманд, выкананне якіх прывядзе да рашэння пастаўленай задачы, — гэта:
+
+                            <br>
+                            <label class="q541"><input type="radio" name='info' value=''> Выканаўца.</label>
+                            <label class="q542"><input type="radio" name='info' value=''> Камп’ютар.</label>
+                            <label class="q543"><input class='true113-2' type="radio" name='info' value=''> Алгарытм.</label>
+                            <label class="q544"><input type="radio" name='info' value=''> Сістэма каманд.</label>
+                        </div>
+                        <button class="check seventeen8-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Алгарытм, выканаўцам якога з’яўляецца камп’ютар, — гэта: <br>
+                            <label class="q545"><input type="radio" name='info' value=''> Інфармацыйна-камп’ютарны
+                                алгарытм.</label>
+                            <label class="q546"><input class='true114-2' type="radio" name='info' value=''> Праграма.</label>
+                            <label class="q547"><input type="radio" name='info' value=''> Каманда.</label>
+                            <label class="q548"><input type="radio" name='info' value=''> Сістэма каманд.</label>
+                        </div>
+                        <button class="check seventeen9-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Асобнае дзеянне, якое ажыццяўляе выканаўца, — гэта: <br>
+                            <label class="q549"><input type="radio" name='info' value=''> Алгарытм.</label>
+                            <label class="q550"><input type="radio" name='info' value=''> Праграма.</label>
+                            <label class="q551"><input type="radio" name='info' value=''> Сістэма каманд.</label>
+                            <label class="q552"><input class='true115-2' type="radio" name='info' value=''> Каманда.</label>
+                        </div>
+                        <button class="check seventeen10-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Аб’ект, які выконвае каманды алгарытму, — гэта: <br>
+                            <label class="q553"><input type="radio" name='info' value=''> Працаўнік.</label>
+                            <label class="q554"><input type="radio" name='info' value=''> Памочнік.</label>
+                            <label class="q555"><input type="radio" name='info' value=''> Праграма. </label>
+                            <label class="q556"><input class='true116-2' type="radio" name='info' value=''> Выканаўца.</label>
+                        </div>
+                        <button class="check seventeen11-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Становішча, у якім функцыянуе выканаўца, — гэта: <br>
+                            <label class="q557"><input type="radio" name='info' value=''> Алгарытм.</label>
+                            <label class="q558"><input type="radio" name='info' value=''> Праграма.</label>
+                            <label class="q559"><input class='true117-2' type="radio" name='info' value=''> Асяроддзе
+                                існавання.</label>
+                            <label class="q560"><input type="radio" name='info' value=''> Сістэма каманд.</label>
+                        </div>
+                        <button class="check seventeen12-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Сукупнасць каманд, якія разумее і можа ажыццявіць выканаўца, — гэта: <br>
+                            <label class="q561"><input type="radio" name='info' value=''> Асяроддзе існавання.</label>
+                            <label class="q562"><input class='true118-2' type="radio" name='info' value=''> Сістэма
+                                каманд.</label>
+                            <label class="q563"><input type="radio" name='info' value=''> Праграма.</label>
+                            <label class="q564"><input type="radio" name='info' value=''> Алгарытм.</label>
+                        </div>
+                        <button class="check seventeen13-2">Праверыць</button>
+                    </li>
+                    <li>
+
+                        Што абазначае блок <img src="images/img1/block.jpg" alt=""> <br>
+                        <div class="flex-col">
+                            <label class="q565"><input class='false119-2' type="checkbox" name='info' value=''> Пачатак
+                                (канец) алгарытму.</label>
+                            <label class="q566"><input class='false119-2' type="checkbox" name='info' value=''> Каманду
+                                алгарытму.</label>
+                            <label class="q567"><input class='true119-2' type="checkbox" name='info' value=''> Увод
+                                даных.</label>
+                            <label class="q568"><input class='true119-2' type="checkbox" name='info' value=''> Вывад
+                                вынікаў.</label>
+                        </div>
+                        <button class="check seventeen14-2">Праверыць</button>
+                    </li>
+                </ol>
+            </div>
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref3.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Запішыце алгарытм перамяшчэння тэкставага фрагмента з адной часткі
+                        дакумента ў іншую.</li>
+                    <li><b class="circled">2</b>Прывядзіце графічны запіс алгарытмаў рашэння <a href="#se1-1-1">прыкладаў
+                            17.1 і 17.2</a>. </li>
+                    <li><b class="circled">3</b>Складзіце алгарытм для выканання сінтаксічнага разбору простага сказа.
+                    </li>
+                    <li><b class="circled">4</b>У курсе гісторыі вы пазнаёміліся з этапамі работы над гістарычнымі
+                        крыніцамі. Запішыце іх у выглядзе алгарытму.</li>
+
+                    <li><b class="circled">5</b>Запішыце для выканаўцы Шасцікласнік алгарытм складання дробаў <em>a/b</em> і
+                        <em>c/d</em>. Выканайце алгарытм для дробаў 13/27
+                        і 12/27.</li>
+                    <li><b class="circled">6</b>Участак зямлі прамавугольнай формы мае даўжыню <em>a</em> м і шырыню <em>b</em> м.
+                        <br> Запішыце алгарытм вызначэння плошчы ўчастка, а таксама даўжыні плота, які спатрэбіцца для
+                        абгароджвання
+                        ўчастка. Выканайце алгарытм на прыкладзе некаторага зямельнага ўчастка.</li>
+                    <li><b class="circled">7</b>У курсе біялогіі вы пазнаёміліся з будовай расліннай клеткі. Запішыце
+                        алгарытм, які дазваляе вызначыць будову
+                        клетак скуркі цыбулі. </li>
+                    <li><b class="circled">8<span class="stared">*</span></b>Запішыце алгарытм, які дазваляе вызначыць
+                        таўшчыню ліста паперы вучэбнага дапаможніка «Інфарматыка, 6».</li>
+                    <li><b class="circled">9<span class="stared">*</span></b>Запішыце алгарытм рашэння старажытнай
+                        задачы: «Трэба пераправіць на іншы бераг трох рыцараў і іх збраяносцаў.
+                        Маецца лодка, якая можа змясціць толькі двух чалавек. Вядома, што ні адзін збраяносец не можа
+                        знаходзіцца
+                        з іншымі рыцарамі без свайго рыцара».</li>
+                    <li><b class="circled">10<span class="stared">*</span></b>Маюцца збан ёмістасцю 8 л, запоўнены
+                        квасам, і два пустыя збаны ёмістасцю 3 л і 5 л. Запішыце алгарытм, выконваючы
+                        які можна падзяліць квас пароўну паміж двума людзьмі (дазваляецца карыстацца толькі гэтымі
+                        трыма збанамі).
+                    </li>
+                </ul>
+            </div>
+            <br>
+            <hr>
+        </div>
+        <br><br>
+        <div class="to-Left prev"><a href="#to-top16-1">&#8592 Папярэдні параграф</a> </div>
+        <div class="to-right next"><a href="#to-top18-1">Наступны параграф &#8594</a></div><br><br><br>
+
+    </div>
+    <script>
+        $('.seventeen1-2').click(function () {
+            if ($($('.true109-2')[0]).prop('checked') &&
+                $($('.true109-2')[1]).prop('checked') &&
+                $($('.true109-2')[2]).prop('checked') &&
+                !$($('.false109-2')[0]).prop('checked') &&
+                !$($('.false109-2')[1]).prop('checked') &&
+                !$($('.false109-2')[2]).prop('checked') &&
+                !$($('.false109-2')[3]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen2-2').click(function () {
+            if ($($('.true110-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen3-2').click(function () {
+            if ($($('.true111-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen4-2').click(function () {
+            if ($($('.true112-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen5-2').click(function () {
+            if ($($(this)[0].parentElement.children[1].firstChild).val() === '4' &&
+                $($(this)[0].parentElement.children[3].firstChild).val() === '5' &&
+                $($(this)[0].parentElement.children[5].firstChild).val() === '3' &&
+                $($(this)[0].parentElement.children[7].firstChild).val() === '1' &&
+                $($(this)[0].parentElement.children[9].firstChild).val() === '2') {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen6-2').click(function () {
+            if ($($(this)[0].parentElement.children[1].firstChild).val() === '2' &&
+                $($(this)[0].parentElement.children[3].firstChild).val() === '4' &&
+                $($(this)[0].parentElement.children[5].firstChild).val() === '3' &&
+                $($(this)[0].parentElement.children[7].firstChild).val() === '5' &&
+                $($(this)[0].parentElement.children[9].firstChild).val() === '1') {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen7-2').click(function () {
+
+            if ($('.result17-2')[0].value === 'ІНФАРМАТЫКА') {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen8-2').click(function () {
+            if ($($('.true113-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen9-2').click(function () {
+            if ($($('.true114-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen10-2').click(function () {
+            if ($($('.true115-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen11-2').click(function () {
+            if ($($('.true116-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen12-2').click(function () {
+            if ($($('.true117-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen13-2').click(function () {
+            if ($($('.true118-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seventeen14-2').click(function () {
+            if ($($('.true119-2')[0]).prop('checked') &&
+                $($('.true119-2')[1]).prop('checked') &&
+                !$($('.false119-2')[0]).prop('checked') &&
+                !$($('.false119-2')[1]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+
+
+
+        function changeOrder17() {
+            let arr1 = rand(7, 1, 7)
+            let arr2 = rand(4, 1, 4)
+            let arr3 = rand(4, 1, 4)
+            let arr4 = rand(4, 1, 4)
+            let arr8 = rand(4, 1, 4)
+            let arr9 = rand(4, 1, 4)
+            let arr10 = rand(4, 1, 4)
+            let arr11 = rand(4, 1, 4)
+            let arr12 = rand(4, 1, 4)
+            let arr13 = rand(4, 1, 4)
+            let arr14 = rand(4, 1, 4)
+
+
+            $('.q512').css({
+                'order': arr1[0]
+            })
+            $('.q513').css({
+                'order': arr1[1]
+            })
+            $('.q514').css({
+                'order': arr1[2]
+            })
+            $('.q515').css({
+                'order': arr1[3]
+            })
+            $('.q516').css({
+                'order': arr1[4]
+            })
+            $('.q517').css({
+                'order': arr1[5]
+            })
+            $('.q518').css({
+                'order': arr1[6]
+            })
+            $('.q519').css({
+                'order': arr2[0]
+            })
+            $('.q520').css({
+                'order': arr2[1]
+            })
+            $('.q521').css({
+                'order': arr2[2]
+            })
+            $('.q522').css({
+                'order': arr2[3]
+            })
+            $('.q523').css({
+                'order': arr3[0]
+            })
+            $('.q524').css({
+                'order': arr3[1]
+            })
+            $('.q525').css({
+                'order': arr3[2]
+            })
+            $('.q526').css({
+                'order': arr3[3]
+            })
+            $('.q527').css({
+                'order': arr4[0]
+            })
+            $('.q528').css({
+                'order': arr4[1]
+            })
+            $('.q529').css({
+                'order': arr4[2]
+            })
+            $('.q530').css({
+                'order': arr4[3]
+            })
+            $('.q541').css({
+                'order': arr8[0]
+            })
+            $('.q542').css({
+                'order': arr8[1]
+            })
+            $('.q543').css({
+                'order': arr8[2]
+            })
+            $('.q544').css({
+                'order': arr8[3]
+            })
+            $('.q545').css({
+                'order': arr9[0]
+            })
+            $('.q546').css({
+                'order': arr9[1]
+            })
+            $('.q547').css({
+                'order': arr9[2]
+            })
+            $('.q548').css({
+                'order': arr9[3]
+            })
+            $('.q549').css({
+                'order': arr10[0]
+            })
+            $('.q550').css({
+                'order': arr10[1]
+            })
+            $('.q551').css({
+                'order': arr10[2]
+            })
+            $('.q552').css({
+                'order': arr10[3]
+            })
+            $('.q553').css({
+                'order': arr11[0]
+            })
+            $('.q554').css({
+                'order': arr11[1]
+            })
+            $('.q555').css({
+                'order': arr11[2]
+            })
+            $('.q556').css({
+                'order': arr11[3]
+            })
+            $('.q557').css({
+                'order': arr12[0]
+            })
+            $('.q558').css({
+                'order': arr12[1]
+            })
+            $('.q559').css({
+                'order': arr12[2]
+            })
+            $('.q560').css({
+                'order': arr12[3]
+            })
+            $('.q561').css({
+                'order': arr13[0]
+            })
+            $('.q562').css({
+                'order': arr13[1]
+            })
+            $('.q563').css({
+                'order': arr13[2]
+            })
+            $('.q564').css({
+                'order': arr13[3]
+            })
+            $('.q565').css({
+                'order': arr14[0]
+            })
+            $('.q566').css({
+                'order': arr14[1]
+            })
+            $('.q567').css({
+                'order': arr14[2]
+            })
+            $('.q568').css({
+                'order': arr14[3]
+            })
+
+        }
+    </script>
+</body>
+
+</html>

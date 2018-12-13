@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <div class="blue-back">
+            <a name="ei1-2-1"><b>Пример 19.1.</b>
+                <p> Изображение домика.</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-1.jpg" alt=""></div>
+            Программа:
+            <div style="display: flex; justify-content: center"><img width = "100%" src="images/img2/19-window.jpg" alt=""></div>
+            <!-- <pre>
+    <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+        Field(10,9); 
+        ToPoint(2,5);   PenDown; 
+        ToPoint(8,5);
+        ToPoint(8,1);
+        ToPoint(2,1);
+        ToPoint(2,5);
+        ToPoint(5,7);
+        ToPoint(8,5);   PenUp;
+                         
+        ToPoint(3,4);
+        PenDown;
+        ToPoint(5,4);
+        ToPoint(5,3);    Изображение 
+        ToPoint(3,3);           окна
+        ToPoint(3,4);
+        PenUp;      
+        ToPoint(6,1);
+        PenDown;
+        ToPoint(6,3);    Изображение
+        ToPoint(7,3);         дверей
+        ToPoint(7,1);
+        PenUp;      
+    <strong>end.</strong>          
+        </pre> -->
+            <a name="ei1-2-2"><b>Пример 19.2.</b>
+                <p> Программа построения измененного изображения.
+                </p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-2.jpg" alt=""></div>
+            <div style="margin-left: 30px"><img  src="images/img1/19-window1.png" alt=""></div>
+            <!-- <pre>
+    <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+        Field(10,<strike>9</strike>8);
+        ToPoint(2,5);
+        PenDown;
+        ToPoint(8,5);
+        ToPoint(8,1); 
+        ToPoint(2,1); 
+        ToPoint(2,5); 
+        ToPoint(5,7); 
+        ToPoint(8,5);
+        PenUp;
+        ToPoint(3,4);
+        PenDown;
+        ToPoint(4,4);
+        ToPoint(4,3); 
+        ToPoint(3,3); 
+        ToPoint(3,4);
+        PenUp;
+        ToPoint(6,1);
+        PenDown;
+        ToPoint(6,3); 
+        ToPoint(7,3);
+        ToPoint(7,1);
+        PenUp; 
+    <strong>end.</strong>                
+                </pre> -->
+            <a name="ei1-2-3"><b>Пример 19.3.</b></a> <br>
+
+            Программа:
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+        Field(4,3);
+        ToPoint(1,1); PenDown;
+        ToPoint(2,2); ToPoint(3,1);
+        ToPoint(1,1); PenUp;
+    <strong>end.</strong>
+                </pre>
+            <a name="ei1-2-4"><b>Пример 19.4.</b>
+                <p> Фрагмент программы из примера 19.1 с комментарием.</p>
+            </a>
+            <pre>
+    //окно
+    ToPoint(3,4); PenDown;
+    ToPoint(5,4);
+    ToPoint(5,3); ToPoint(3,3); 
+    ToPoint(3,4); PenUp;
+                </pre>
+            <a name="ei1-2-5"><b>Пример 19.5.</b>
+                <p> Пояснительный рисунок к команде OnVector(a,b).</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-3.png" alt=""></div>
+            <a name="ei1-2-6" id="div"><b>Пример 19.6.</b>
+                <p> Программа построения изображения из примера 19.3 с помощью команды OnVector. </p>
+            </a>
+            <pre>
+<strong>uses</strong> Drawman; 
+<strong>begin</strong>
+  Field(4,3);
+  ToPoint(1,1); PenDown;
+  OnVector(1,1); OnVector(1,-1);
+  OnVector(-2,0); PenUp;
+<strong>end.</strong>
+                </pre>
+            <b>
+                <a name="ei1-2-7">Пример 19.7.</b>
+            <p> Модификация программы из примера 19.6.</p></a>
+            <div class="info-type"><img src="images/img2/19n7.jpg" alt=""></div>
+            <pre>
+<strong>uses</strong> Drawman; 
+<strong>begin</strong>
+  Field(4,3);
+  ToPoint(1,2); PenDown;
+  OnVector(1,1); OnVector(1,-1);
+  OnVector(-2,0); PenUp;
+<strong>end.</strong>
+                </pre>
+            <a name="ei1-2-8"><b>Пример 19.8.</b>
+                <p> Программа построения изображения цифры 3.</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-5.jpg" alt=""></div>
+            <ol>
+                <li> С использованием команды ToPoint:
+                    <pre>
+<strong>uses</strong> Drawman;
+<strong>begin</strong>
+    Field(3,4); 
+    ToPoint(1,3);   PenDown; 
+    ToPoint(2,3);  // 1-2
+    ToPoint(1,2);  // 2-3 
+    ToPoint(2,2);  // 3-4
+    ToPoint(1,1);  // 4-5 
+    PenUp;
+<strong>end.</strong>
+                        </pre>
+                </li>
+                <li> С использованием команды OnVector:
+                    <pre>
+<strong>uses</strong> Drawman;
+<strong>begin</strong>
+    Field(3,4);
+    ToPoint(1,3);   PenDown;
+    OnVector(1,0);  // 1-2
+    OnVector(-1,-1);// 2-3
+    OnVector(1,0);  // 3-4
+    OnVector(-1,-1);// 4-5
+    PenUp;
+<strong>end.</strong>                            
+                        </pre>
+                </li>
+            </ol>
+            <a name="ei1-2-9" id="div2"><b>Пример 19.9.</b>
+                <p> Программа построения изображения из трех одинаковых цифр.</p>
+            </a>
+            <div class="info-type" style=" font: monospace;"><img src="images/img2/19-6.jpg" alt=""></div>
+            <pre ><code>
+
+        <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+        Field(7,4);
+        //первая тройка слева
+        ToPoint(1,3);
+        PenDown;
+        OnVector(1,0);
+        OnVector(-1,-1);
+        OnVector(1,0);
+        OnVector(-1,-1);
+        PenUp;
+        //средняя тройка
+        ToPoint(3,3);
+        PenDown;
+        OnVector(1,0);
+        OnVector(-1,-1);
+        OnVector(1,0);
+        OnVector(-1,-1);
+        PenUp;
+        //тройка справа
+        ToPoint(5,3);
+        PenDown;
+        OnVector(1,0);
+        OnVector(-1,-1);
+        OnVector(1,0);
+        OnVector(-1,-1);
+        PenUp;
+    <strong>end.</strong>
+    
+               </code> </pre>
+            <br>
+        </div>
+    </div>
+    <div lang='bel'>
+        <div class="blue-back">
+            <a name="ei1-1-1"><b>Прыклад 19.1.</b>
+                <p>Відарыс доміка.</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-1.jpg" alt=""></div>
+            Праграма:
+            <div  style="display: flex; justify-content: center"><img  width = "100%" src="images/img2/19-window1.jpg" alt=""></div>
+            <!-- <pre>
+    <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+    Field(10,9);
+    ToPoint(2,5);   PenDown;
+    ToPoint(8,5);
+    ToPoint(8,1);
+    ToPoint(2,1);
+    ToPoint(2,5);
+    ToPoint(5,7);
+    ToPoint(8,5);   PenUp;
+                
+    ToPoint(3,4);
+    PenDown;
+    ToPoint(5,4);     Відарыс
+    ToPoint(5,3);       акна
+    ToPoint(3,3);
+    ToPoint(3,4);
+    PenUp;     
+    ToPoint(6,1);
+    PenDown;
+    ToPoint(6,3);       Відарыс
+    ToPoint(7,3);       дзвярэй
+    ToPoint(7,1);
+    PenUp;     
+    <strong>end.</strong>
+    </pre> -->
+            <a name="ei1-1-2"><b>Прыклад 19.2.</b>
+                <p>Праграма пабудовы змененага відарыса.
+                </p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-2.jpg" alt=""></div>
+            <div style="margin-left: 30px"><img  src="images/img1/19-window1.png" alt=""></div>
+            <!-- <pre>
+    <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+    Field(10,8);
+    ToPoint(2,5);
+    PenDown;
+    ToPoint(8,5);
+    ToPoint(8,1);
+    ToPoint(2,1);
+    ToPoint(2,5);
+    ToPoint(5,7);
+    ToPoint(8,5);
+    PenUp;
+    ToPoint(3,4);
+    PenDown;
+    ToPoint(4,4);
+    ToPoint(4,3);
+    ToPoint(3,3);
+    ToPoint(3,4);
+    PenUp;
+    ToPoint(6,1);
+    PenDown;
+    ToPoint(6,3);
+    ToPoint(7,3);
+    ToPoint(7,1);
+    PenUp;
+    <strong>end.</strong>
+    </pre> -->
+            <a name="ei1-1-3"><b>Прыклад 19.3.</b></a> <br>
+
+            Праграма:
+            <pre>
+    <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+        Field(4,3);
+        ToPoint(1,1); PenDown;
+        ToPoint(2,2); ToPoint(3,1);
+        ToPoint(1,1); PenUp;
+    <strong>end.</strong>
+    </pre>
+            <a name="ei1-1-4"><b>Прыклад 19.4.</b>
+                <p>Фрагмент праграмы з прыкладу 19.1 з каментарыем.
+                </p>
+            </a>
+            <pre>
+    //aкно
+    ToPoint(3,4); PenDown;
+    ToPoint(5,4);
+    ToPoint(5,3); ToPoint(3,3);
+    ToPoint(3,4); PenUp;
+    </pre>
+            <a name="ei1-1-5"><b>Прыклад 19.5.</b>
+                <p>Паясняльны рысунак да каманды OnVector(a,b).</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-3-b.png" alt=""></div>
+            <a name="ei1-1-6"><b>Прыклад 19.6.</b>
+                <p>Праграма пабудовы відарыса з прыкладу 19.3 з дапамогай каманды
+                    OnVector. </p>
+            </a>
+        <pre>
+<strong>uses</strong> Drawman;
+<strong>begin</strong>
+    Field(4,3);
+    ToPoint(1,1); PenDown;
+    OnVector(1,1); OnVector(1,-1);
+    OnVector(-2,0); PenUp;
+<strong>end</strong>.
+</pre>
+            <a name="ei1-1-7"><b>
+                    Прыклад 19.7.</b>
+                <p> Мадыфікацыя праграмы з прыкладу 19.6.
+                </p>
+            </a>
+            <div class="info-type"><img src="images/img2/19n7.jpg" alt=""></div>
+        <pre>
+<strong>uses</strong> Drawman;
+<strong>begin</strong>
+  Field(4,3);
+  ToPoint(1,2); PenDown;
+  OnVector(1,1); OnVector(1,-1);
+  OnVector(-2,0); PenUp;
+<strong>end.</strong>
+</pre>
+            <a name="ei1-1-8"><b>Прыклад 19.8.</b>
+                <p>Праграма пабудовы відарыса лічбы 3.</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-5.jpg" alt=""></div>
+            <ol>
+                <li> З выкарыстаннем каманды ToPoint:
+            <pre>
+<strong>uses</strong> Drawman;
+<strong>begin</strong>
+Field(3,4);
+    ToPoint(1,3);   PenDown;
+    ToPoint(2,3); // 1-2
+    ToPoint(1,2); // 2-3
+    ToPoint(2,2); // 3-4
+    ToPoint(1,1); // 4-5
+PenUp;
+<strong>end.</strong>
+    </pre>
+                </li>
+                <li> З выкарыстаннем каманды OnVector:
+            <pre>
+<strong>uses</strong> Drawman;
+<strong>begin</strong>
+    Field(3,4);
+    ToPoint(1,3);   PenDown;
+    OnVector(1,0);  // 1-2
+    OnVector(-1,-1);// 2-3
+    OnVector(1,0);  // 3-4
+    OnVector(-1,-1);// 4-5
+    PenUp;
+<strong>end.</strong>
+    </pre>
+                </li>
+            </ol>
+            <a name="ei1-1-9" id="ext-link"><b>Прыклад 19.9.</b>
+                <p>Праграма пабудовы відарыса з трох аднолькавых лічбаў.</p>
+            </a>
+            <div class="info-type"><img src="images/img2/19-6.jpg" alt=""></div>
+            <pre><code>
+
+        <strong>uses</strong> Drawman;
+    <strong>begin</strong>
+        Field(7,4);
+        //першая тройка злева
+        ToPoint(1,3);
+        PenDown;
+        OnVector(1,0);
+        OnVector(-1,-1);
+        OnVector(1,0);
+        OnVector(-1,-1);
+        PenUp;
+        //сярэдняя тройка
+        ToPoint(3,3);
+        PenDown;
+        OnVector(1,0);
+        OnVector(-1,-1);
+        OnVector(1,0);
+        OnVector(-1,-1);
+        PenUp;
+        //тройка справа
+        ToPoint(5,3);
+        PenDown;
+        OnVector(1,0);
+        OnVector(-1,-1);
+        OnVector(1,0);
+        OnVector(-1,-1);
+        PenUp;
+    <strong>end.</strong>
+    </code>
+</pre>
+        </div>
+    </div>
+</body>
+
+</html>

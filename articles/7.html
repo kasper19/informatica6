@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div lang='ru'>
+        <a name="to-top7-2">
+            <h1>§ 7. Редактирование изображений в графическом редакторе Paint</h1>
+        </a>
+        <p>В процессе работы с изображением может потребоваться изменение изображения или его части. </p>
+        <p class="bordered">Изменение изображения называют
+            <b>редактированием</b>.</p>
+        <p>Действия, выполняемые в графическом редакторе Paint:
+            <ul>
+                <li>изменение размеров и цвета;</li>
+                <li>перемещение;</li>
+                <li>копирование;</li>
+                <li>поворот и отражение;</li>
+                <li>наклон.</li>
+            </ul>
+        </p>
+        <h4><a name="sev1-2">7.1. Инструменты Ластик и Масштаб</a></h4>
+        <p class="little">Для удаления отдельных пикселей изображения используется инструмент <b>Ластик</b>:
+            <img src="images/img1/7-1.jpg" alt="">. Стирание производится текущим цветом фона (Цветом 2) с выполнением
+            протягивания.</p>
+        <p class="little">При использовании <b>Ластика</b> желательно увеличивать размер изображения для более
+            детального исправления. Сделать это
+            можно с помощью инструмента <b>Масштаб</b>:
+            <img src="images/img1/7-2.jpg" alt="">. После его выбора нужно щелкнуть левой клавишей мыши по изображению
+            <a href="#sev1-2-1">(пример 7.1).</a> Уменьшается изображение щелчком правой клавишей мыши.
+        </p>
+        <p class="little">Редактируя увеличенное изображение, часто применяют инструмент <b>Карандаш</b>:
+            <img src="images/img1/7-3.jpg" alt="">
+            <a href="#sev1-2-2"> (пример 7.2). </a>
+            Он работает в двух режимах:
+            <ul>
+                <li>при нажатии левой клавиши мыши применяется Цвет 1;</li>
+                <li>при нажатии правой клавиши мыши применяется Цвет 2.</li>
+            </ul>
+        </p>
+        <h4><a name="sev2-2">7.2. Изменение размеров изображения, поворот и отражение</a></h4>
+        <p>Изменение размеров, поворот и отражение изображения осуществляются с помощью группы инструментов Изображение
+            на вкладке
+            Главная.
+        </p>
+        <P>Для изменения размера всего изображения нужно:</p>
+        <ol>
+            <li>Щелкнуть по кнопке
+                <img width="22%" src="images/img1/7-4.png" alt="">
+            </li>
+            <li>В области <b>Изменить размер</b> выбрать параметр <b>Пиксели</b> или <b>Проценты</b>, а затем указать
+                новую ширину в поле <b>По горизонтали</b>
+                и новую высоту в поле <b>По вертикали.</b> Нажать кнопку ОК.</li>
+        </ol>
+
+        <p>Если установлен флажок <b>Сохранить пропорции </b> , то достаточно указать размер по горизонтали (ширину)
+            или по вертикали
+            (высоту). Значение в другом поле области изменения размера будет установлено автоматически. <a href="#sev1-2-3">(Рассмотрите
+                пример 7.3.)</a>
+        </p>
+
+        <p>Изображение в графическом редакторе Paint можно повернуть и отразить.
+        </p>
+        <p class="bordered">
+            <b>Отражение</b> — зеркальное отображение изображения относительно невидимой оси (горизонтальной или
+            вертикальной).</p>
+        <p class="normal">Поворот или отражение изображения выполняются с помощью инструмента
+            <img src="images/img1/7-5.png" alt=""> </p>
+        <p>Для поворота или отражения исходного изображения необходимо:
+            <ol>
+                <li> Выбрать показанный выше инструмент.</li>
+                <li> Выбрать направление поворота или отражения в раскрывшемся списке. </li>
+                <a href="#sev1-2-4">(Рассмотрите пример 7.4.)</a>
+            </ol>
+        </p>
+
+        <br>
+        <br>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder7()">Тесты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+                    <li>
+                        <div class="flex-col">
+                            Что понимают под редактированием изображения?<br>
+                            <label class="little q192"><input class='true42' type="radio" name='info' value=''>
+                                Изменение изображения.</label>
+                            <label class="little q193"><input type="radio" name='info' value=''> Изменение формата
+                                файла с изображением.</label>
+                            <label class="q194"><input type="radio" name='info' value=''> Вывод изображения на бумагу.</label>
+                            <label class="q195"><input type="radio" name='info' value=''> Сохранение изображения в
+                                файл.</label>
+                        </div>
+                        <button class="check seven1-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Какие инструменты графического редактора Paint используются при
+                            редактировании изображения?<br>
+                            <label class="q196"><input class='true43' type="checkbox" name='info' value=''> <strong>Каранда</strong>.</label>
+                            <label class="q197"><input class='true43' type="checkbox" name='info' value=''> <strong>Ластик</strong>.</label>
+                            <label class="q198"><input class='true43' type="checkbox" name='info' value=''> <strong>Масштаб</strong>.</label>
+                            <label class="q199"><input class='false43' type="checkbox" name='info' value=''>
+                                Инструменты группы &nbsp; <strong>Фигуры</strong>.</label>
+                            <label class="q200"><input class='false43' type="checkbox" name='info' value=''> <strong>Текст</strong>.</label>
+                        </div>
+                        <button class="check seven2-1">Проверить</button>
+                    </li>
+                    <li class="little">
+
+                        Как увеличить изображение при помощи инструмента <strong>Масштаб</strong> <img src="images/img1/7-2.jpg"
+                            alt="">?<br>
+                        <div class="flex-col">
+                            <label class="q201"><input class='true44' type="radio" name='info' value=''> Выполнить
+                                щелчок левой клавишей мыши по изображению.</label>
+                            <label class="q202"><input type="radio" name='info' value=''> Выполнить щелчок правой
+                                клавишей мыши по изображению.</label>
+                            <label class="q203"><input type="radio" name='info' value=''> Выполнить щелчок левой
+                                клавишей мыши по кнопке инструмента.</label>
+                            <label class="q204"><input type="radio" name='info' value=''> Выполнить щелчок правой
+                                клавишей мыши по кнопке инструмента.</label>
+                        </div>
+                        <button class="check seven3-1">Проверить</button>
+                    </li>
+                    <li class="little">
+
+                        Как использовать цвет при работе с инструментом <strong>Карандаш</strong> <img src="images/img1/7-3.jpg"
+                            alt="">?<br>
+                        <div class="flex-col">
+                            <label class="q205"><input class='true45' type="checkbox" name='info' value=''> При нажатии
+                                левой клавиши мыши применяется Цвет 1.</label>
+                            <label class="q206"><input class='true45' type="checkbox" name='info' value=''> При нажатии
+                                правой клавиши мыши применяется Цвет 2.</label>
+                            <label class="q207"><input class='false45' type="checkbox" name='info' value=''> При
+                                нажатии правой клавиши мыши применяется Цвет 1.</label>
+                            <label class="q208"><input class='false45' type="checkbox" name='info' value=''> При
+                                нажатии левой клавиши мыши применяется Цвет 2.</label>
+                        </div>
+                        <button class="check seven4-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            <div>При изменении размера изображения в окне Изменение размеров и наклона установлен
+                                флажок <strong>Сохранить пропорции</strong>.
+                                Можно ли в этом случае указать только ширину изображения?</div><br>
+                            <label class="q209"><input class='true46' type="radio" name='info' value=''> Можно.</label>
+                            <label class="q210"><input type="radio" name='info' value=''> Нельзя.</label>
+                        </div>
+                        <button class="check seven5-1">Проверить</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Что понимают под отражением в графическом редакторе? <br>
+                            <label class="q211"><input class='true47' type="radio" name='info' value=''> Зеркальное
+                                отображение изображения относительно невидимой оси.</label>
+                            <label class="q212"><input type="radio" name='info' value=''> Поворот изображения по
+                                часовой стрелке.</label>
+                            <label class="q213"><input type="radio" name='info' value=''> Поворот изображения против
+                                часовой стрелки.</label>
+                            <label class="q214"><input type="radio" name='info' value=''> Изменение размера
+                                изображения.</label>
+                        </div>
+                        <button class="check seven6-1">Проверить</button>
+                    </li>
+                </ol>
+
+
+
+            </div>
+
+            <button class="practise-btn">Упражнения</button>
+            <div id="ex-lin" class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Откройте файл с изображением самолета.
+                    </li>
+                    <div class="catalog">
+                        <img width="30%" src="images/img1/7-6.jpg" alt="">
+                    </div>
+                    Измените размер изображения, уменьшив в два раза количество пикселей по горизонтали или по
+                    вертикали с сохранением пропорций.
+                    Сохраните измененное изображение.
+                    <div class="catalog">
+                        <img width="20%" src="images/img1/7-6.jpg" alt="">
+                    </div>
+                    </li>
+                    <li><b class="circled">2</b>Откройте файл с изображением клубники. Выполните действия, указанные во
+                        2-й и 3-й графах таблицы. </li>
+                    <table class="catalog">
+                        <tr>
+                            <td align="center">
+                                <img class="straberry" src="images/img1/7-8.jpg" alt="">
+                            </td>
+                            <td width="50%"> Изображение, которое нужно отредактировать </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <img class="straberry" src="images/img1/7-9.jpg" alt="">
+                            </td>
+                            <td class="little">Дорисовать контуры в изображении с помощью инструментов <strong>Масштаб</strong>
+                                (
+                                <img src="images/img1/7-2.jpg">) и <strong>Карандаш</strong> (
+                                <img src="images/img1/7-3.jpg" alt="">)</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <img class="straberry" src="images/img1/7-10.jpg" alt="">
+                            </td>
+                            <td>Выполнить заливку контуров </td>
+                        </tr>
+                    </table>
+                    Сохраните полученное изображение в новый файл.
+                    <br><br>
+                    <div class="pop-up">
+                        <img class="close-pop" src="images/close.png" alt="">
+                        <b class="circled">4</b>Нарисуйте изображения:
+                        <div class="info-type">
+                            <img src="images/img1/6-35.jpg" alt="">
+
+                        </div>
+                    </div>
+                    <li><b class="circled">3</b>Откройте рисунок яблока из <a class="link-ex7">задания 4</a> после § 6:
+                        Выполните повороты и отражения исходного изображения
+                        в соответствии с данными ниже образцами. Измените заливку. Сохраните полученные изображения.
+                        <div class="flex-row5">
+                            <img src="images/img1/7-11.jpg" alt="">
+                            <img src="images/img1/7-12.jpg" alt="">
+                            <img src="images/img1/7-13.jpg" alt="">
+
+                        </div>
+                        <div class="flex-row6">
+
+                            <img src="images/img1/7-14.jpg" alt="">
+                            <img src="images/img1/7-15.jpg" alt="">
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <hr>
+            <br><br>
+            <div class="to-Left prev"><a href="#to-top6-2">&#8592 Предыдущий параграф </a></div>
+            <div class="to-right next"><a href="#to-top8-2">Следующий параграф &#8594</a></div><br><br><br>
+        </div>
+    </div>
+    <script>
+
+        $('.seven1-1').click(function(){
+                    if($($('.true42')[0]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seven2-1').click(function(){
+                    if($($('.true43')[0]).prop('checked')
+                    && $($('.true43')[1]).prop('checked')
+                    && $($('.true43')[2]).prop('checked')
+                    && !$($('.false43')[0]).prop('checked')
+                    && !$($('.false43')[1]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seven3-1').click(function(){
+                    if($($('.true44')[0]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seven4-1').click(function(){
+                    if($($('.true45')[0]).prop('checked')
+                    && $($('.true45')[1]).prop('checked')
+                    && !$($('.false45')[0]).prop('checked')
+                    && !$($('.false45')[1]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seven5-1').click(function(){
+                    if($($('.true46')[0]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+                $('.seven6-1').click(function(){
+                    if($($('.true47')[0]).prop('checked')){
+                        myalert('Правильно')
+                    }else{
+                        myalert('Неправильно')
+                    }
+                })
+
+           
+            </script>
+    <div lang='bel'>
+        <a name="to-top7-1">
+            <h1>§ 7. Рэдагаванне відарысаў у графічным рэдактары Paint</h1>
+        </a>
+        <p> У працэсе работы з відарысам можа спатрэбіцца змяненне відарыса або яго часткі. </p>
+        <p class="bordered">Змяненне відарыса называюць
+            <b> рэдагаваннем</b>.</p>
+        <p>Дзеянні, якія можна выканаць у графічным рэдактары Paint:
+            <ul>
+                <li>змяненне памераў і колеру;</li>
+                <li>перамяшчэнне;</li>
+                <li>капіраванне;</li>
+                <li>паварот і адлюстраванне;</li>
+                <li>нахіл.</li>
+            </ul>
+        </p>
+
+        <h4><a name="sev1-1">7.1. Інструменты Ластик і Масштаб</a></h4>
+        <p class="little">Для выдалення асобных пікселяў відарыса выкарыстоўваецца інструмент <b>Ластик</b>:
+            <img src="images/img1/7-1.jpg" alt=""> . Сціранне ажыццяўляецца бягучым колерам фону (Колерам 2) з
+            выкананнем працягвання.</p>
+        <p class="little"> Пры выкарыстанні інструмента <b>Ластик</b> пажадана павялічваць памер відарыса для больш
+            дэталёвага выпраўлення. Зрабіць
+            гэта можна з дапамогай інструмента <b>Масштаб</b>:
+            <img src="images/img1/7-2.jpg" alt=""> . Пасля яго выбару неабходна пстрыкнуць левай клавішай мышы па
+            відарысе
+            <a href="#sev1-1-1">(прыклад 7.1.)</a>
+            Памяншаецца відарыс пстрычкай правай клавішай мышы.
+        </p>
+
+        <p class="little">Рэдагуючы павялічаны відарыс, часта выкарыстоўваюць інструмент <b>Карандаш</b>:
+            <img src="images/img1/7-3.jpg" alt="">
+            <a href="#sev1-1-2">(прыклад 7.2).</a>
+            Ён працуе ў двух рэжымах:
+            <ul>
+                <li>пры націсканні левай клавішы мышы выкарыстоўваецца Колер 1; </li>
+                <li>пры націсканні правай клавішы мышы выкарыстоўваецца Колер 2.</li>
+            </ul>
+        </p>
+        <h4><a name="sev2-1">7.2. Змяненне памераў відарыса, паварот і адлюстраванне</a></h4>
+        <p>Змяненне памераў, паварот і адлюстраванне відарыса ажыццяўляецца з дапамогай групы інструментаў Изображение
+            на ўкладцы
+            Главная.
+        </p>
+        <P> Для змянення памеру ўсяго відарыса трэба:
+            <ol>
+                <li>Пстрыкнуць па кнопцы
+                    <img width="22%" src="images/img1/7-4.png" alt="">.</li>
+                <li>У вобласці <b>Изменить размер</b> выбраць параметр <b>Пиксели</b> або <b>Проценты</b>, а затым
+                    задаць новую шырыню ў полі <b>По горизонтали</b>
+                    і новую вышыню ў полі <b>По вертикали</b>. Націснуць кнопку ОК.</li>
+            </ol>
+        </p>
+        <p> Калі ўстаноўлены флажок <b>Сохранить пропорции</b>, то дастаткова задаць памер па гарызанталі (шырыню) або
+            па вертыкалі
+            (вышыню). Значэнне ў іншым полі вобласці змянення памеру будзе ўстаноўлена аўтаматычна.
+            <a href="#sev1-1-3">(Разгледзьце прыклад 7.3.)</a>
+        </p>
+
+
+        <p> Відарыс у графічным рэдактары Paint можна павярнуць і адлюстраваць.
+        </p>
+        <p class="bordered">
+            <b>Адлюстраванне</b> — люстраны адбітак відарыса адносна нябачнай восі (гарызантальнай або вертыкальнай).</p>
+
+        <p class="normal">Паварот або адлюстраванне відарыса выконваюцца з дапамогай інструмента
+            <img src="images/img1/7-5.png" alt="">. </p>
+        <p>Для павароту або адлюстравання зыходнага відарыса неабходна:
+            <ol>
+                <li> Выбраць паказаны вышэй інструмент.</li>
+                <li> Выбраць напрамак павароту або адлюстравання ў спісе, які раскрыецца. </li>
+                <a href="#sev1-1-4">(Разгледзьце прыклад 7.4.)</a>
+            </ol>
+        </p>
+        <br>
+        <br>
+        <div class="not-linked">
+            <hr>
+            <button class="questions-btn" onclick="changeOrder7()">Тэсты</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref1.png" width="50px" height="50px">
+                <ol>
+
+                    <li>
+                        <div class="flex-col">
+                            Што разумеюць пад рэдагаваннем відарыса?<br>
+                            <label class="little q192"><input class='true42-2' type="radio" name='info' value=''>
+                                Змяненне відарыса.</label>
+                            <label class="little q193"><input type="radio" name='info' value=''> Змяненне фармату файла
+                                з відарысам.</label>
+                            <label class="q194"><input type="radio" name='info' value=''> Вывад відарыса на паперу.</label>
+                            <label class="q195"><input type="radio" name='info' value=''> Захаванне відарыса ў файл.</label>
+                        </div>
+                        <button class="check seven1-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Якія інструменты графічнага рэдактара Paint выкарыстоўваюцца пры рэдагаванні
+                            відарыса?<br>
+                            <label class="q196"><input class='true43-2' type="checkbox" name='info' value=''> <strong>Карандаш</strong>.</label>
+                            <label class="q197"><input class='true43-2' type="checkbox" name='info' value=''> <strong>Ластик</strong>.</label>
+                            <label class="q198"><input class='true43-2' type="checkbox" name='info' value=''> <strong>Масштаб</strong>.</label>
+                            <label class="q199"><input class='false43-2' type="checkbox" name='info' value=''>Инструменты
+                                группы &nbsp;<strong>Фигуры</strong>. </label>
+                            <label class="q200"><input class='false43-2' type="checkbox" name='info' value=''> <strong>Текст</strong>.</label>
+                        </div>
+                        <button class="check seven2-2">Праверыць</button>
+                    </li>
+                    <li class="little">
+
+                        Як павялічыць відарыс пры дапамозе інструмента <strong>Масштаб</strong> <img src="images/img1/7-2.jpg"
+                            alt="">?<br>
+                        <div class="flex-col">
+                            <label class="q201"><input class='true44-2' type="radio" name='info' value=''> Выканаць
+                                пстрычку левай клавішай мышы па відарысе.</label>
+                            <label class="q202"><input type="radio" name='info' value=''> Выканаць пстрычку правай
+                                клавішай мышы па відарысе.</label>
+                            <label class="q203"><input type="radio" name='info' value=''> Выканаць пстрычку левай
+                                клавішай мышы па кнопцы інструмента.</label>
+                            <label class="q204"><input type="radio" name='info' value=''> Выканаць пстрычку правай
+                                клавішай мышы па кнопцы інструмента.</label>
+                        </div>
+                        <button class="check seven3-2">Праверыць</button>
+                    </li>
+                    <li class="little">
+
+                        Як выкарыстоўваць колер пры рабоце з інструментам <strong>Карандаш</strong> <img src="images/img1/7-3.jpg"
+                            alt="">?<br>
+                        <div class="flex-col">
+                            <label class="q205"><input class='true45-2' type="checkbox" name='info' value=''> Пры
+                                націсканні левай клавішы мышы выкарыстоўваецца Колер 1.</label>
+                            <label class="q206"><input class='true45-2' type="checkbox" name='info' value=''> Пры
+                                націсканні правай клавішы мышы выкарыстоўваецца Колер 2.</label>
+                            <label class="q207"><input class='false45-2' type="checkbox" name='info' value=''> Пры
+                                націсканні правай клавішы мышы выкарыстоўваецца Колер 1.</label>
+                            <label class="q208"><input class='false45-2' type="checkbox" name='info' value=''> Пры
+                                націсканні левай клавішы мышы выкарыстоўваецца Колер 2.</label>
+                        </div>
+                        <button class="check seven4-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            <div>Пры змяненні памеру відарыса ў акне Изменение размеров и наклона
+                                ўстаноўлены флажок <strong>Сохранить пропорции</strong>. Ці можна ў гэтым выпадку
+                                задаць
+                                толькі шырыню відарыса?</div><br>
+                            <label class="q209"><input class='true46-2' type="radio" name='info' value=''> Можна.</label>
+                            <label class="q210"><input type="radio" name='info' value=''> Нельга.</label>
+                        </div>
+                        <button class="check seven5-2">Праверыць</button>
+                    </li>
+                    <li>
+                        <div class="flex-col">
+                            Што разумеюць пад адлюстраваннем у графічным рэдактары? <br>
+                            <label class="q211"><input class='true47-2' type="radio" name='info' value=''> Люстраны
+                                адбітак відарыса адносна нябачнай восі.</label>
+                            <label class="q212"><input type="radio" name='info' value=''> Паварот відарыса па
+                                гадзіннікавай стрэлцы.</label>
+                            <label class="q213"><input type="radio" name='info' value=''> Паварот відарыса супраць
+                                гадзіннікавай стрэлкі.</label>
+                            <label class="q214"><input type="radio" name='info' value=''> Змяненне памеру відарыса.</label>
+                        </div>
+                        <button class="check seven6-2">Праверыць</button>
+                    </li>
+                </ol>
+            </div>
+
+            <button class="practise-btn">Практыкаванні</button>
+            <div class="hiddenEl">
+                <img src="images/ref-pics/ref2.png" width="50px" height="50px">
+                <img src="images/ref-pics/ref4.png" width="50px" height="50px">
+                <ul class="not-marked">
+                    <li><b class="circled">1</b>Адкрыйце файл з відарысам самалёта.
+                    </li>
+                    <div class="catalog">
+                        <img width="30%" src="images/img1/7-6.jpg" alt="">
+                    </div>
+
+                    Змяніце памер відарыса, паменшыўшы ў два разы колькасць пікселяў па гарызанталі або па вертыкалі з
+                    захаваннем прапорцый.
+                    Захавайце зменены відарыс.
+                    <div class="catalog">
+                        <img width="20%" src="images/img1/7-6.jpg" alt="">
+                    </div>
+                    <li><b class="circled">2</b>Адкрыйце файл з відарысам ягады клубніц. Выканайце дзеянні, названыя ў
+                        2-й і 3-й графах табліцы.</li>
+                    <table class="catalog">
+                        <tr>
+                            <td align="center">
+                                <img class="straberry" src="images/img1/7-8.jpg" alt="">
+                            </td>
+                            <td width="50%"> Відарыс, які трэба адрэдагаваць</td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <img class="straberry" src="images/img1/7-9.jpg" alt="">
+                            </td>
+                            <td class="little">Дарысаваць контуры ў відарысе з дапамогай інструментаў <strong>Масштаб</strong>
+                                (
+                                <img src="images/img1/7-2.jpg">) і <strong>Карандаш</strong> (
+                                <img src="images/img1/7-3.jpg">) </td>
+                        </tr>
+                        <tr>
+                            <td align="center">
+                                <img class="straberry" src="images/img1/7-10.jpg" alt="">
+                            </td>
+                            <td>Выканаць заліўку контураў </td>
+                        </tr>
+                    </table>
+                    Захавайце атрыманы відарыс у новы файл.
+                    <br><br>
+
+                    <div class="pop-up">
+                        <img class="close-pop" src="images/close.png" alt="">
+                        <b class="circled">4</b>Нарисуйте изображения:
+                        <div class="info-type">
+                            <img src="images/img1/6-35.jpg" alt="">
+
+                        </div>
+                    </div>
+                    <li><b class="circled">3</b>Адкрыйце рысунак яблыка з <a class="link-ex7">задання 4</a> пасля § 6:
+                        Выканайце павароты і адлюстраванне зыходнага відарыса
+                        ў адпаведнасці з дадзенымі ніжэй узорамі. Змяніце заліўку. Захавайце атрыманыя відарысы.
+                        <div class="flex-row5">
+                            <img src="images/img1/7-11.jpg" alt="">
+                            <img src="images/img1/7-12.jpg" alt="">
+                            <img src="images/img1/7-13.jpg" alt="">
+
+                        </div>
+                        <div class="flex-row6">
+
+                            <img src="images/img1/7-14.jpg" alt="">
+                            <img src="images/img1/7-15.jpg" alt="">
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+            <hr>
+            <br><br>
+            <div class="to-Left prev"><a href="#to-top6-1">&#8592 Папярэдні параграф </a></div>
+            <div class="to-right next"><a href="#to-top8-1">Наступны параграф &#8594</a></div><br><br><br>
+
+        </div>
+    </div>
+    <script>
+        $('.seven1-2').click(function () {
+            if ($($('.true42-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seven2-2').click(function () {
+            if ($($('.true43-2')[0]).prop('checked') &&
+                $($('.true43-2')[1]).prop('checked') &&
+                $($('.true43-2')[2]).prop('checked') &&
+                !$($('.false43-2')[0]).prop('checked') &&
+                !$($('.false43-2')[1]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seven3-2').click(function () {
+            if ($($('.true44-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seven4-2').click(function () {
+            if ($($('.true45-2')[0]).prop('checked') &&
+                $($('.true45-2')[1]).prop('checked') &&
+                !$($('.false45-2')[0]).prop('checked') &&
+                !$($('.false45-2')[1]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seven5-2').click(function () {
+            if ($($('.true46-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+        $('.seven6-2').click(function () {
+            if ($($('.true47-2')[0]).prop('checked')) {
+                myalert('Правiльна')
+            } else {
+                myalert('Няправiльна')
+            }
+        })
+
+        function changeOrder7() {
+            let arr1 = rand(4, 1, 4)
+            let arr2 = rand(5, 1, 5)
+            let arr3 = rand(4, 1, 4)
+            let arr4 = rand(4, 1, 4)
+            let arr5 = rand(2, 1, 2)
+            let arr6 = rand(4, 1, 4)
+
+
+            $('.q192').css({
+                'order': arr1[0]
+            })
+            $('.q193').css({
+                'order': arr1[1]
+            })
+            $('.q194').css({
+                'order': arr1[2]
+            })
+            $('.q195').css({
+                'order': arr1[3]
+            })
+            $('.q196').css({
+                'order': arr2[0]
+            })
+            $('.q197').css({
+                'order': arr2[1]
+            })
+            $('.q198').css({
+                'order': arr2[2]
+            })
+            $('.q199').css({
+                'order': arr2[3]
+            })
+            $('.q200').css({
+                'order': arr2[4]
+            })
+            $('.q201').css({
+                'order': arr3[0]
+            })
+            $('.q202').css({
+                'order': arr3[1]
+            })
+            $('.q203').css({
+                'order': arr3[2]
+            })
+            $('.q204').css({
+                'order': arr3[3]
+            })
+            $('.q205').css({
+                'order': arr4[0]
+            })
+            $('.q206').css({
+                'order': arr4[1]
+            })
+            $('.q207').css({
+                'order': arr4[2]
+            })
+            $('.q208').css({
+                'order': arr4[3]
+            })
+            $('.q209').css({
+                'order': arr5[0]
+            })
+            $('.q210').css({
+                'order': arr5[1]
+            })
+            $('.q211').css({
+                'order': arr6[0]
+            })
+            $('.q212').css({
+                'order': arr6[1]
+            })
+            $('.q213').css({
+                'order': arr6[2]
+            })
+            $('.q214').css({
+                'order': arr6[3]
+            })
+
+
+
+        }
+    </script>
+</body>
+
+</html>
