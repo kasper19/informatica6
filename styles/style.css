@@ -188,7 +188,7 @@ header {
 /* скрол */
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 16px;
 }
 
 ::-webkit-scrollbar-track {
@@ -426,7 +426,7 @@ header>div {
 }
 
 #reference p {
-    text-indent: 20px;
+    text-indent: 30px;
     text-align: justify;
     margin: 2% 0 2% 0%;
 }
@@ -670,7 +670,7 @@ textarea {
     background-color: #e6ffff;
 }
 .green1{
-    color: rgb(14, 223, 14);
+    color: #4b7425;
 }
 
 .red {
@@ -682,7 +682,7 @@ textarea {
 }
 
 .yellow1 {
-    color: rgb(237, 186, 20);
+    color: #d7a437;
 }
 
 .blue1 {
@@ -1242,7 +1242,7 @@ h4{
     height: 40px;
 }
 .ref-colors>span, .colors>span{
-    width: 80%
+    width: 90%
 }
 a[href]{
     color: #0000b3;
