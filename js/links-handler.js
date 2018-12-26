@@ -55,14 +55,14 @@ let getChapterId = (chap) => {
             return '#about'
         case 'end-one.html':
             return '#end-one'
-         case 'end-two.html':
+        case 'end-two.html':
             return '#end-two'
-         case 'end-three.html':
-            return '#end-three'  
-         case 'end-four.html':
-            return '#end-four' 
-         case 'end-five.html':
-            return '#end-five' 
+        case 'end-three.html':
+            return '#end-three'
+        case 'end-four.html':
+            return '#end-four'
+        case 'end-five.html':
+            return '#end-five'
         default:
             return false
     }
@@ -149,6 +149,8 @@ let getChapterById = (chap) => {
             return 'end-five.html'
         case '':
             return 'start.html'
+        case '#idp':
+            return
         default:
             return 'start.html'
 
@@ -160,36 +162,36 @@ window.onload = function () {
 }
 window.addEventListener('hashchange', () => handleUrl(window.location.hash))
 
-function addLinkApply(){
-    if(location.hash!=='#_glossary' && location.hash!=='#_from_authors' && location.hash!=='' ){
-        if($('[lang = bel]').css('display') === 'none'){
-            setTimeout(()=>{
+function addLinkApply() {
+    if (location.hash !== '#_glossary' && location.hash !== '#_from_authors' && location.hash !== '') {
+        if ($('[lang = bel]').css('display') === 'none') {
+            setTimeout(() => {
                 addLink(glossaryItemsRu)
-            },0)
-                
-          
-           
+            }, 0)
+
+
+
         }
-        if($('[lang = ru]').css('display') === 'none'){
-            setTimeout(()=>{
+        if ($('[lang = ru]').css('display') === 'none') {
+            setTimeout(() => {
                 addLink(glossaryItemsBel)
-            },0)
-                
-           
+            }, 0)
+
+
         }
-        
+
     }
 }
 
 function handleUrl(hash) {
-   
+
     let reg = /\d-/;
     if (hash.split('-')[0] === '#to') {
         chapter = hash.split('-')[1].split('top')[1] + '.html';
-       
+
         getChapter('articles', chapter, '.main')
         getChapter('examples', chapter, '#tiltoops')
-      
+
         $('.main').animate({
             scrollTop: 0
         }, 600);
@@ -212,11 +214,11 @@ function handleUrl(hash) {
             }), 200)
 
         }
-    }else if (hash.split('')[1] === '_' || hash === '') {
-       
+    } else if (hash.split('')[1] === '_' || hash === '') {
+
         chapter = getChapterById(hash)
         getChapter('articles', chapter, '.main')
-       
+
         $('.main').animate({
             scrollTop: 0
         }, 600);
@@ -231,16 +233,16 @@ function handleUrl(hash) {
                 "left": "150%"
             }, 400)
         }
-    }else {
+    } else {
 
         let subChap = hash.split(reg)[0]
         chapter = getChapterById(subChap)
-        
+
         getChapter('articles', chapter, '.main')
         getChapter('examples', chapter, '#tiltoops')
-            
-        
-        
+
+
+
         if ($(window).width() > 850) {
             $('.main').css({
                 "width": "56%"
@@ -289,7 +291,7 @@ function handleUrl(hash) {
 
 
 function getChapter(url, chap, block) {
-    
+
     $.ajax({
             url: `./${url}/${chap}`,
             dataType: 'text',
@@ -297,21 +299,29 @@ function getChapter(url, chap, block) {
         })
         .done(function (data) {
             let res = data.split('<body>')[1].split('</body>')[0]
-                if($('[lang = ru]').css('display') === 'none'){
-                        $(`${block}`).html(res)
-                        $(`${block} [lang = ru]`).css({"display":"none"})
-                        $(`${block} [lang = bel]`).css({"display":"inline-block"})
-                        $('#dark-back1').hide() 
-                }
-                if($('[lang = bel]').css('display') === 'none'){
-                        $(`${block}`).html(res)
-                        $(`${block} [lang = bel]`).css({"display":"none"})
-                        $(`${block} [lang = ru]`).css({"display":"inline-block"})
-                        $('#dark-back1').hide()
-                }
-                
-            
-        }).then(()=>{
+            if ($('[lang = ru]').css('display') === 'none') {
+                $(`${block}`).html(res)
+                $(`${block} [lang = ru]`).css({
+                    "display": "none"
+                })
+                $(`${block} [lang = bel]`).css({
+                    "display": "inline-block"
+                })
+                $('#dark-back1').hide()
+            }
+            if ($('[lang = bel]').css('display') === 'none') {
+                $(`${block}`).html(res)
+                $(`${block} [lang = bel]`).css({
+                    "display": "none"
+                })
+                $(`${block} [lang = ru]`).css({
+                    "display": "inline-block"
+                })
+                $('#dark-back1').hide()
+            }
+
+
+        }).then(() => {
             addLinkApply()
         })
         .fail(function (xhr) {
@@ -326,7 +336,7 @@ function getChapter(url, chap, block) {
 
 $('.main').click((e) => {
     if (e.target.matches('.next')) {
-        
+
         let nextChapter = ''
         if (chapter === '23.html') {
             nextChapter = 'end.html'
@@ -508,42 +518,42 @@ $('.main').on('mouseover', function (e) {
     if (e.target.matches('.glossary-word')) {
         let def = ''
         if ($('[lang = ru]').css('display') === 'block') {
-            
-            glossaryItemsRu.forEach(el=>{
-                el.name.forEach(item=>{
-                    if(item === e.target.innerText){
+
+            glossaryItemsRu.forEach(el => {
+                el.name.forEach(item => {
+                    if (item === e.target.innerText) {
                         def = el.definition;
                     }
                 })
-                
+
             })
         }
         if ($('[lang = ru]').css('display') === 'none') {
-            
-            glossaryItemsBel.forEach(el=>{
-                el.name.forEach(item=>{
-                    if(item === e.target.innerText){
+
+            glossaryItemsBel.forEach(el => {
+                el.name.forEach(item => {
+                    if (item === e.target.innerText) {
                         def = el.definition;
                     }
                 })
-                
+
             })
         }
-            var coords = getCoords(e.target)
-            $('.glossary-link').show()
-            $('.glossary-link').text(def)
-            if ($(window).width() > 850) {
-                $('.glossary-link').css({
-                    "top": coords.top + 20,
-                    "left": coords.left
-                })
-            }else{
-                $('.glossary-link').css({
-                    "top": coords.top + 20,
-                    "left": '3%'
-                })
-            }
-            
+        var coords = getCoords(e.target)
+        $('.glossary-link').show()
+        $('.glossary-link').text(def)
+        if ($(window).width() > 850) {
+            $('.glossary-link').css({
+                "top": coords.top + 20,
+                "left": coords.left
+            })
+        } else {
+            $('.glossary-link').css({
+                "top": coords.top + 20,
+                "left": '3%'
+            })
+        }
+
     }
 })
 $('.main').on('mouseout', function (e) {

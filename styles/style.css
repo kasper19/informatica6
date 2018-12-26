@@ -336,6 +336,7 @@ header>div {
     color: white;
 }
 
+
 .questions-btn {
     margin: 3% 3% 3% 18%;
 }
@@ -422,13 +423,13 @@ header>div {
     border: 1px solid grey;
     border-radius: 8px;
     font-size: 0.8em;
-    padding: 4% 2% 0 2%;
+    padding: 6% 2% 0 2%;
 }
 
 #reference p {
     text-indent: 30px;
     text-align: justify;
-    margin: 2% 0 2% 0%;
+    margin: 1% 0 2% 0%;
 }
 
 #close-ref {
@@ -482,6 +483,7 @@ header>div {
     width: 50px;
     height: 50px;
 }
+
 /* ref*/
 
 .blue-back {
@@ -750,7 +752,6 @@ textarea {
     width: 80%
 }
 
-
 a [href] {
     text-decoration: none;
     color: red
@@ -988,6 +989,7 @@ word-wrap: normal;
 opacity: 0.9;
 cursor: pointer;
 } */
+
 .main .hidden-el br{
     display: none;
     
@@ -1055,8 +1057,9 @@ cursor: pointer;
 }
 .flex-row3 img{
     width: 30%;
-    height: 10%
+    height: 10%;
 }
+
 .main .curriered{
     font-family: 'Courier !important';
 }
@@ -1320,3 +1323,12 @@ a[href]:visited{
         width: 100%;
       }
   }
+  
+  
+.main button.rebus-button{
+	border: 2px solid green;
+}
+
+.main button.rebus-button:hover{
+	background-color: green;
+}
