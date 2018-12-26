@@ -346,12 +346,20 @@
                         </tr>
                     </table>
                     <li><b class="circled">3</b>Разгадайте ребусы.
-                        <div class="flex-row1">
-                            1) <img src="images/img1/4-6.jpg" alt="">
+                        <div class="flex-row">
+                            1 <img width="50%" height="200px" src="images/img1/4-6.jpg" alt="">
 
 
-                            2) <img src="images/img1/4-7.jpg" alt="">
+                            2 <img width="50%" height="200px" src="images/img1/4-7.jpg" alt="">
                         </div>
+						<div class="flex-row1">
+						<label>Ответ: <input type="text" id="pract4-1"></label> 
+						<label>Ответ: <input type="text" id="pract4-2"></label><br> 
+						</div><br>
+						<div class="flex-row">
+						<button  id="cht17-2" class="rebus-button">Проверить</button>
+						<button  id="cht17-3" class="rebus-button">Проверить</button>
+					</div>
 
                     </li>
                 </ul>
@@ -359,12 +367,38 @@
             <hr>
             <br><br>
             <div class="to-Left prev"><a href="#to-top3-2">&#8592 Предыдущий параграф </a></div>
-            <div class="to-right next"><a href="#to-top5-2">Следующий параграф &#8594</a></div><br><br><br>
+            <div class="to-right next"><a href="#to-top5-2">Следующий параграф &#8594 </a></div><br><br><br>
 
         </div>
     </div>
     <script>
-
+$("#cht17-2").click(function () {
+            var ch1 = $("#pract4-1").val();
+            
+            
+             
+           
+            if (ch1 === "Окно") {
+                myalert("Правильно!");
+            } else {
+                myalert("Неправильно!");
+            }
+        });  
+		$("#cht17-3").click(function () {
+            var ch2 = $("#pract4-2").val();
+            
+            
+             
+           
+            if (ch2 === "Каталог") {
+                myalert("Правильно!");
+            } else {
+                myalert("Неправильно!");
+            }
+        });  
+		
+		
+	
         $('.four1-1').click(function(){
             if($($('.true17')[0]).prop('checked')
             && $($('.true17')[1]).prop('checked')
@@ -783,6 +817,14 @@
 
                             2) <img src="images/img1/4-7-b.png" alt="">
                         </div>
+						<div class="flex-row1">
+						<label>Адказ: <input type="text" id="pract4-1b"></label> 
+						<label>Адказ: <input type="text" id="pract4-2b"></label><br> 
+						</div><br>
+						<div class="flex-row">
+						<button  id="cht17-2b">Проверить</button>
+						<button  id="cht17-3b">Проверить</button>
+					</div>
                     </li>
                 </ul>
             </div>
@@ -798,6 +840,32 @@
 	
 	 
     <script>
+	$("#cht17-2b").click(function () {
+            var ch1 = $("#pract4-1b").val();
+            
+            
+             
+           
+            if (ch1 === "Акно") {
+                myalert("Правiльна!");
+            } else {
+                myalert("Няправiльна!");
+            }
+        });  
+		$("#cht17-3b").click(function () {
+            var ch2 = $("#pract4-2b").val();
+            
+            
+             
+           
+            if (ch2 === "Каталог") {
+                myalert("Правiльна!");
+            } else {
+                myalert("Няправiльна!");
+            }
+        });  
+		
+		
         $('.four1-2').click(function () {
             if ($($('.true17-2')[0]).prop('checked') &&
                 $($('.true17-2')[1]).prop('checked') &&

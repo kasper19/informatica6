@@ -160,7 +160,13 @@
                         <li><b class="circled">4</b>Разгадайте ребус.
                             <div class="flex-row">
                                 <img width = "90%" src="images/img1/3.12.jpg" alt="">
+								<br>
+                            
                             </div>
+							<div class="flex-row">
+							<label>Ответ:<input type="text" id="pract3-1"></label>
+							</div>
+							 <button class="check" id="cht17-1">Праверыць</button>
                         </li>
                     </ul>
                 </div>
@@ -171,6 +177,18 @@
             </div>
     </div>
     <script>
+	$("#cht17-1").click(function () {
+            var ch1 = $("#pract3-1").val();
+            
+            
+             
+           
+            if (ch1 === "Сканер") {
+                myalert("Правильно!");
+            } else {
+                myalert("Неправильно!");
+            }
+        });  
    $('.three1-1').click(function(){
             if($($('.true11')[0]).prop('checked')){
                 myalert('Правильно')
@@ -388,6 +406,10 @@
                             <div class="flex-row">
                                 <img width = "90%" src="images/img1/3.12.jpg" alt="">
                             </div>
+							<div class="flex-row">
+							<label>Ответ:<input type="text" id="pract3-1b"></label>
+							</div>
+							 <button class="check" id="cht17-1b">Праверыць</button>
                         </li>
                     </ul>
                 </div>
@@ -401,6 +423,20 @@
 	
 	 
     <script>
+	
+	$("#cht17-1b").click(function () {
+            var ch1 = $("#pract3-1b").val();
+            
+            
+             
+           
+            if (ch1 === "Сканер") {
+                myalert("Правiльна!");
+            } else {
+                myalert("Няправiльна!");
+            }
+        });  
+		
         $('.three1-2').click(function(){
             if($($('.true11-2')[0]).prop('checked')){
                 myalert('Правiльна')

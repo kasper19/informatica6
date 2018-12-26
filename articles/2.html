@@ -156,11 +156,20 @@
                     <li><b class="circled">2</b>Подготовьте сообщение о назначении какого-либо устройства для работы с данными.</li>
                     <li><b class="circled">3</b>Разгадайте ребусы.
                        <div class="flex-row">
-                           1. <img width="50%" height="200px" src="images/img1/2.10.jpg" alt="">
-                           2. <img width="50%" height="200px" src="images/img1/2.11.jpg" alt="">
+                           1. <img width="50%" height="200px" src="images/img1/2.10.jpg" alt=""> 
+						  
+                           2. <img width="50%" height="200px" src="images/img1/2.11.jpg" alt=""><br>
+						    
                             
-                        </div><br>
-                       
+                        </div>
+						<div class="flex-row">
+						<label>Ответ: <input type="text" id="pract2-1"></label> 
+						<label>Ответ: <input type="text" id="pract2-2"></label><br> 
+						</div><br>
+						<div class="flex-row">
+						<button  id="cht17-7" class="rebus-button">Проверить</button>
+						<button  id="cht17-8" class="rebus-button">Проверить</button>
+					</div>
                     </li>
                     <li><b class="circled">4</b>Какие правила поведения в компьютерном классе нарушены?
                         <div class="flex-centered">
@@ -177,6 +186,32 @@
         </div>
     </div>
     <script>
+	
+		$("#cht17-7").click(function () {
+            var ch1 = $("#pract2-1").val();
+            
+            
+             
+           
+            if (ch1 === "Планшет") {
+                myalert("Правильно!");
+            } else {
+                myalert("Неправильно!");
+            }
+        });  
+		$("#cht17-8").click(function () {
+            var ch2 = $("#pract2-2").val();
+            
+            
+             
+           
+            if (ch2 === "Ноутбук") {
+                myalert("Правильно!");
+            } else {
+                myalert("Неправильно!");
+            }
+        });  
+		
           $('.two1-1').click(function(){
             if($($('.true1')[0]).prop('checked')
             && $($('.true1')[1]).prop('checked')
@@ -379,10 +414,17 @@
                     <li><b class="circled">2</b>Падрыхтуйце паведамленне пра прызначэнне якога-небудзь устройства для работы з данымі.</li>
                     <li><b class="circled">3</b>Разгадайце рэбусы.
                         <div class="flex-row">
-                                <img src="images/img1/2.10.1-b.jpg" alt="">
-                                <img src="images/img1/2.11.1-b.jpg" alt="">
-                            </div><br>
-                            
+                               1 <img width="50%" height="200px" src="images/img1/2.10-b.jpg" alt="">
+                               2 <img width="50%" height="200px" src="images/img1/2.11-b.jpg" alt="">
+                            </div>
+						<div class="flex-row">
+						<label>Адказ: <input type="text" id="pract2-1b"></label> 
+						<label>Адказ: <input type="text" id="pract2-2b"></label><br> 
+						</div><br>
+						<div class="flex-row">
+						<button  id="cht17-7b">Праверыць</button>
+						<button  id="cht17-8b">Праверыць</button>
+					</div>	<br>						
                     </li>
                     <li><b class="circled">4</b>Якія правілы паводзін у камп’ютарным класе парушаны?
                         <div class="flex-centered">
@@ -405,6 +447,32 @@
 	
 	
     <script>
+	$("#cht17-7b").click(function () {
+            var ch1 = $("#pract2-1b").val();
+            
+            
+             
+           
+            if (ch1 === "Планшэт") {
+                myalert("Правiльна!");
+            } else {
+                myalert("Няправiльна!");
+            }
+        });  
+		
+		$("#cht17-8b").click(function () {
+            var ch2 = $("#pract2-2b").val();
+            
+            
+             
+           
+            if (ch2 === "Ноўтбук") {
+                myalert("Правiльна!");
+            } else {
+                myalert("Няправiльна!");
+            }
+        });  
+		
         $('body').on('click',(e)=>{
             if(e.target.matches('.two1-2')){
                 if($($('.true1-2')[0]).prop('checked')
