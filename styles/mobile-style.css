@@ -139,4 +139,15 @@
        
     
     }
+	
+	.infimg {
+	width: 20%;
+	}
+	.infimg1 {
+	width: 40%;
+	}
+	.textcenter p {
+	text-align: center;
+	}
 }
+

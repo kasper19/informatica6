@@ -1332,3 +1332,18 @@ a[href]:visited{
 .main button.rebus-button:hover{
 	background-color: green;
 }
+
+
+.infimg {
+	width: 10%;
+}
+.infimg1 {
+	width: 20%;
+}
+
+.textcenter {
+	text-align: center;
+}
+ .end > .img2 {
+	width: 20%;
+}
