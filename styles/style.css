@@ -672,7 +672,7 @@ textarea {
     background-color: #e6ffff;
 }
 .green1{
-    color: #4b7425;
+    color: #00FF00;
 }
 
 .red {
@@ -680,7 +680,7 @@ textarea {
 }
 
 .purple {
-    color: purple;
+    color: #f37e32;
 }
 
 .yellow1 {
@@ -698,7 +698,7 @@ textarea {
 }
 
 .blue1 {
-    color: blue;
+    color: #33CCFF;
     text-align: center;
 }
 
@@ -1346,4 +1346,25 @@ a[href]:visited{
 }
  .end > .img2 {
 	width: 20%;
+}
+.flex-row > .img3 {
+width: 260px;
+height: 200px;	
+}
+.flex-row>label{
+     margin-top: 10px;
+
+ }
+ 
+ .flex-row > .img4 {
+width: 560px;
+height: 300px;	
+}
+.flex-row > .img5 {
+width: 300px;
+height: 280px;	
+}
+.flex-row > .img6 {
+width: 100px;
+height: 170px;	
 }

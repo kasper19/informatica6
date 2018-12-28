@@ -149,5 +149,21 @@
 	.textcenter p {
 	text-align: center;
 	}
+	.flex-row > .img3 {
+	width: 120px;
+	height: 60px;	
+	}
+	.flex-row > .img4 {
+	width: 250px;
+	height: 100px;	
+	}
+	.flex-row > .img5 {
+	width: 120px;
+	height: 80px;	
+	}
+	.flex-row > .img6 {
+	width: 100px;
+	height: 170px;	
+	}
 }
 
