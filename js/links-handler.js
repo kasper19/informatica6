@@ -269,10 +269,10 @@ function handleUrl(hash) {
 
     if ($(activeParagraf[0])) {
         $($(activeParagraf[0])[0].children[0].children[0]).css({
-            'color': '#3385ff'
+            'color': '#00a57d'
         })
         $($(activeParagraf[0])[0].children[1].children[0]).css({
-            'color': '#3385ff'
+            'color': '#00a57d'
         })
         for (var i = 1; i < activeParagraf.length; i++) {
             if (activeParagraf[i] !== activeParagraf[0]) {
