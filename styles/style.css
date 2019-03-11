@@ -39,7 +39,7 @@ header {
     background-size: cover;
     color: white;
     position: fixed;
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
 #container {
@@ -430,7 +430,7 @@ header>div {
     left: 20%;
     border: 1px solid grey;
     border-radius: 8px;
-    font-size: 0.8em;
+    font-size: 1em;
     padding: 4% 2% 0 2%;
 }
 
